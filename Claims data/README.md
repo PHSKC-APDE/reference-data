@@ -15,3 +15,6 @@
 
 **CA avoidable ED visits ICD 9 and 10 codes - appendix II.xlsx**
 - A list of ICD-9-CM and ICD-10-CM codes used to define an "avoidable" Emergency Room visit developed by the California Department of Health Care Services (DHCS)
+
+**mh_sud_dx_lookup_rda.xlsx**
+- A list of ICD-9-CM and ICD-10-CM codes used to define individuals with Mental Health and Substance Use Disorder-related diagnosis, developed by the WA State Department of Social and Health Services, available at https://www.dshs.wa.gov/sesa/research-and-data-analysis/cross-system-outcome-measures-adults-enrolled-medicaid

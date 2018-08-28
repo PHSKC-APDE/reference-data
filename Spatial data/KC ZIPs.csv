@@ -1,121 +1,134 @@
-ZIPCODE,COUNTY,ZIP_TYPE,PREFERRED_CITY
-98009,33,PO Box,BELLEVUE
-98015,33,PO Box,BELLEVUE
-98025,33,PO Box,HOBART
-98035,33,PO Box,KENT
-98041,33,PO Box,BOTHELL
-98050,33,PO Box,PRESTON
-98062,33,PO Box,SEAHURST
-98063,33,PO Box,FEDERAL WAY
-98064,33,PO Box,KENT
-98071,33,PO Box,AUBURN
-98083,33,PO Box,KIRKLAND
-98093,33,PO Box,FEDERAL WAY
-98124,33,PO Box,SEATTLE
-98138,33,PO Box,SEATTLE
-98145,33,PO Box,SEATTLE
-98160,33,PO Box,SEATTLE
-98181,33,Unique,SEATTLE
-98185,33,Unique,SEATTLE
-98191,33,Unique,SEATTLE
-98054,33,Former,REDONDO
-98073,33,PO Box,REDMOND
-98089,33,PO Box,KENT
-98111,33,PO Box,SEATTLE
-98113,33,PO Box,SEATTLE
-98114,33,PO Box,SEATTLE
-98127,33,PO Box,SEATTLE
-98129,33,Unique,SEATTLE
-98139,33,PO Box,SEATTLE
-98174,33,Standard,SEATTLE
-98194,33,PO Box,SEATTLE
-98161,33,Standard,SEATTLE
-98165,33,PO Box,SEATTLE
-98170,33,Unique,SEATTLE
-98189,33,Unique,SEATTLE
-98048,33,Former,PALMER
-98001,33,Standard,AUBURN
-98002,33,Standard,AUBURN
-98003,33,Standard,FEDERAL WAY
-98004,33,Standard,BELLEVUE
-98005,33,Standard,BELLEVUE
-98006,33,Standard,BELLEVUE
-98007,33,Standard,BELLEVUE
-98008,33,Standard,BELLEVUE
-98010,33,Standard,BLACK DIAMOND
-98011,33,Standard,BOTHELL
-98014,33,Standard,CARNATION
-98019,33,Standard,DUVALL
-98022,33,Standard,ENUMCLAW
-98023,33,Standard,FEDERAL WAY
-98024,33,Standard,FALL CITY
-98027,33,Standard,ISSAQUAH
-98028,33,Standard,KENMORE
-98029,33,Standard,ISSAQUAH
-98030,33,Standard,KENT
-98031,33,Standard,KENT
-98032,33,Standard,KENT
-98033,33,Standard,KIRKLAND
-98034,33,Standard,KIRKLAND
-98038,33,Standard,MAPLE VALLEY
-98039,33,Standard,MEDINA
-98040,33,Standard,MERCER ISLAND
-98042,33,Standard,KENT
-98045,33,Standard,NORTH BEND
-98047,33,Standard,PACIFIC
-98051,33,Standard,RAVENSDALE
-98052,33,Standard,REDMOND
-98053,33,Standard,REDMOND
-98055,33,Standard,RENTON
-98056,33,Standard,RENTON
-98057,33,Standard,RENTON
-98058,33,Standard,RENTON
-98059,33,Standard,RENTON
-98065,33,Standard,SNOQUALMIE
-98070,33,Standard,VASHON
-98072,33,Standard,WOODINVILLE
-98074,33,Standard,SAMMAMISH
-98075,33,Standard,SAMMAMIISH
-98077,33,Standard,WOODINVILLE
-98092,33,Standard,AUBURN
-98101,33,Standard,SEATTLE
-98102,33,Standard,SEATTLE
-98103,33,Standard,SEATTLE
-98104,33,Standard,SEATTLE
-98105,33,Standard,SEATTLE
-98106,33,Standard,SEATTLE
-98107,33,Standard,SEATTLE
-98108,33,Standard,SEATTLE
-98109,33,Standard,SEATTLE
-98112,33,Standard,SEATTLE
-98115,33,Standard,SEATTLE
-98116,33,Standard,SEATTLE
-98117,33,Standard,SEATTLE
-98118,33,Standard,SEATTLE
-98119,33,Standard,SEATTLE
-98121,33,Standard,SEATTLE
-98122,33,Standard,SEATTLE
-98125,33,Standard,SEATTLE
-98126,33,Standard,SEATTLE
-98133,33,Standard,SEATTLE
-98134,33,Standard,SEATTLE
-98136,33,Standard,SEATTLE
-98144,33,Standard,SEATTLE
-98146,33,Standard,SEATTLE
-98148,33,Standard,SEATTLE
-98154,33,Standard,SEATTLE
-98155,33,Standard,SEATTLE
-98158,33,Standard,SEATTLE
-98164,33,Standard,SEATTLE
-98166,33,Standard,SEATTLE
-98168,33,Standard,SEATTLE
-98177,33,Standard,SEATTLE
-98178,33,Standard,SEATTLE
-98188,33,Standard,SEATTLE
-98195,33,Standard,SEATTLE
-98198,33,Standard,SEATTLE
-98199,33,Standard,SEATTLE
-98224,33,PO Box,BARING
-98288,33,PO Box,SKYKOMISH
-98354,33,Standard,MILTON
-98422,33,Standard,TACOMA
+ZIP_code,ZIP_type,City
+98001,Standard,Auburn
+98002,Standard,Auburn
+98003,Standard,Federal Way
+98004,Standard,Bellevue
+98005,Standard,Bellevue
+98006,Standard,Bellevue
+98007,Standard,Bellevue
+98008,Standard,Bellevue
+98009,PO Box,Bellevue
+98010,Standard,Black Diamond
+98011,Standard,Bothell
+98013,PO Box,Burton/Vashon
+98014,Standard,Carnation
+98015,PO Box,Bellevue
+98019,Standard,Duvall
+98022,Standard,Enumclaw
+98023,Standard,Federal Way
+98024,Standard,Fall City
+98025,PO Box,Hobart
+98027,Standard,Issaquah
+98028,Standard,Bothell
+98029,Standard,Issaquah
+98030,Standard,Kent
+98031,Standard,Kent
+98032,Standard,Kent
+98033,Standard,Kirkland
+98034,Standard,Kirkland
+98035,PO Box,Kent
+98038,Standard,Maple Valley
+98039,Standard,Medina
+98040,Standard,Mercer Island
+98041,PO Box,Bothell
+98042,Standard,Kent
+98045,Standard,North Bend
+98047,Standard,Auburn
+98048,Former,Palmer
+98050,PO Box,Preston
+98051,Standard,Reavensdale
+98052,Standard,Redmond
+98053,Standard,Redmond
+98054,PO Box,Auburn-Redondo
+98055,Standard,Renton
+98056,Standard,Renton
+98057,PO Box,Renton
+98058,Standard,Renton
+98059,Standard,Renton
+98062,PO Box,Seahurst
+98063,PO Box,Auburn
+98064,PO Box,Kent
+98065,Standard,Snoqualmie
+98068,PO Box,Snoqualmie Pass
+98070,Standard,Vashon
+98071,PO Box,Auburn
+98072,Standard,Woodinville/2counties
+98073,PO Box,Redmond
+98074,Standard,Samamish/Redmond
+98075,Standard,Samamish/Issaquah
+98077,Standard,Woodinville/2counties
+98082,PO Box,Mill Creek
+98083,PO Box,Kirkland
+98089,PO Box,Kent
+98092,Standard,Auburn
+98093,PO Box,Auburn
+98101,Standard,Seattle
+98102,Standard,Seattle
+98103,Standard,Seattle
+98104,Standard,Seattle
+98105,Standard,Seattle
+98106,Standard,Seattle
+98107,Standard,Seattle
+98108,Standard,Seattle
+98109,Standard,Seattle
+98111,PO Box,Seattle
+98112,Standard,Seattle
+98113,PO Box,Seattle
+98114,PO Box,Seattle
+98115,Standard,Seattle
+98116,Standard,Seattle
+98117,Standard,Seattle
+98118,Standard,Seattle
+98119,Standard,Seattle
+98121,Standard,Seattle
+98122,Standard,Seattle
+98124,PO Box,Seattle
+98125,Standard,Seattle
+98126,Standard,Seattle
+98127,PO Box,Seattle
+98129,PO Box,Seatle
+98130,PO Box,Unknown
+98131,PO Box,Seattle
+98132,Standard,Seattle
+98133,Standard,Seattle/N County
+98134,Standard,Seattle
+98136,Standard,Seattle
+98138,PO Box,Seattle
+98139,PO Box,Seattle
+98140,PO Box,Unknown
+98141,PO Box,Seattle
+98144,Standard,Seattle
+98145,PO Box,Seattle
+98146,Standard,Seattle
+98148,Standard,Seattle
+98151,PO Box,West of Tukwila
+98154,PO Box,Seattle
+98155,Standard,Seattle/N County
+98158,Standard,Seattle
+98160,PO Box,Seattle
+98161,PO Box,Seattle
+98164,PO Box,Seattle
+98165,PO Box,Seattle
+98166,Standard,Seattle
+98168,Standard,Seattle
+98170,PO Box,Seattle
+98171,PO Box,Seattle
+98174,PO Box,Seattle
+98175,PO Box,Seattle
+98177,Standard,Seattle/N County
+98178,Standard,Seattle
+98181,PO Box,Seattle
+98184,PO Box,Downtown/5th and Marion
+98185,PO Box,Seattle
+98188,Standard,Seattle
+98189,PO Box,West Valley Business Park in Kent
+98190,PO Box,Seattle
+98191,PO Box,Seattle
+98194,PO Box,Seattle
+98195,Standard,Seattle
+98198,Standard,Seattle
+98199,Standard,Seattle
+98224,PO Box,Baring
+98288,PO Box,Skykomish
+98354,Standard,Milton
+98422,Standard,Tacoma

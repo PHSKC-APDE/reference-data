@@ -1,49 +1,49 @@
-region,vid,hra
-South,1000,Auburn-North
-South,1100,Auburn-South
-Seattle,2000,Ballard
-Seattle,2100,Beacon/Gtown/S.Park
-Seattle,2200,Capitol Hill/E.lake
-Seattle,2300,Central Seattle
-Seattle,2400,Delridge
-Seattle,2500,Downtown
-Seattle,2550,Fremont/Greenlake
-Seattle,2600,NE Seattle
-Seattle,2700,North Seattle
-Seattle,2800,NW Seattle
-Seattle,2900,QA/Magnolia
-Seattle,2950,SE Seattle
-Seattle,2960,West Seattle
-East,3000,Bear Creek/Carnation/Duvall
-East,4000,Bellevue-Central
-East,4100,Bellevue-NE
-East,4200,Bellevue-South
-East,4300,Bellevue-West
-South,5000,Black Diamond/Enumclaw/SE County
-North,6000,Bothell/Woodinville
-South,7000,Burien
-South,8000,Covington/Maple Valley
-South,9000,Des Moines/Normandy Park
-South,10000,East Federal Way
-South,10100,Fed Way-Central/Military Rd
-South,10200,Fed Way-Dash Pt
-South,11000,Fairwood
-East,12000,Issaquah
-North,13000, Kenmore/LFP
-South,14000,Kent-East
-South,14100,Kent-SE
-South,14200,Kent-West
-East,15000,Kirkland
-East,15100,Kirkland North
-East,16000,Mercer Isle/Pt Cities
-East,17000,Newcastle/Four Creeks
-South,18000,North Highline
-East,19000,Redmond
-South,20000,Renton-East
-South,20100,Renton-North
-South,20200,Renton-South
-East,21000,Sammamish
-South,22000,SeaTac/Tukwila
-North,23000,Shoreline
-East,24000,Snoqualmie/N.Bend/Skykomish
-South,25000,Vashon Island
+hra,vid,region
+Auburn-North,1000,South
+Auburn-South,1100,South
+Ballard,2000,Seattle
+Beacon/Gtown/S.Park,2100,Seattle
+Capitol Hill/E.lake,2200,Seattle
+Central Seattle,2300,Seattle
+Delridge,2400,Seattle
+Downtown,2500,Seattle
+Fremont/Greenlake,2550,Seattle
+NE Seattle,2600,Seattle
+North Seattle,2700,Seattle
+NW Seattle,2800,Seattle
+QA/Magnolia,2900,Seattle
+SE Seattle,2950,Seattle
+West Seattle,2960,Seattle
+Bear Creek/Carnation/Duvall,3000,East
+Bellevue-Central,4000,East
+Bellevue-NE,4100,East
+Bellevue-South,4200,East
+Bellevue-West,4300,East
+Black Diamond/Enumclaw/SE County,5000,South
+Bothell/Woodinville,6000,North
+Burien,7000,South
+Covington/Maple Valley,8000,South
+Des Moines/Normandy Park,9000,South
+East Federal Way,10000,South
+Fed Way-Central/Military Rd,10100,South
+Fed Way-Dash Pt,10200,South
+Fairwood,11000,South
+Issaquah,12000,East
+Kenmore/LFP,13000,North
+Kent-East,14000,South
+Kent-SE,14100,South
+Kent-West,14200,South
+Kirkland,15000,East
+Kirkland North,15100,East
+Mercer Isle/Pt Cities,16000,East
+Newcastle/Four Creeks,17000,East
+North Highline,18000,South
+Redmond,19000,East
+Renton-East,20000,South
+Renton-North,20100,South
+Renton-South,20200,South
+Sammamish,21000,East
+SeaTac/Tukwila,22000,South
+Shoreline,23000,North
+Snoqualmie/N.Bend/Skykomish,24000,East
+Vashon Island,25000,South

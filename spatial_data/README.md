@@ -5,7 +5,7 @@ These files are used for cross-walking between different levels of geography. In
 
 All but one of the CSVs were originally created from tabs in '[composition of places-HRA.xlsx](https://kc1.sharepoint.com/:x:/r/teams/PHc/datareq/_layouts/15/Doc.aspx?sourcedoc=%7BB791BD4F-1554-49F9-8E12-29F132764949%7D&file=composition%20of%20places-HRA.xlsx)' on SharePoint. The exception is [geocomp_blk10_kps.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/geocomp_blk10_kps.csv), which was copied from [PH_APDEStore].[dbo].[geocomp_blk10_kps] on server 51 on 8/19/2019. It was prepared by Mike Smyser and is the most complete set of cross-walks that we have available. 
 
-The complete commit history for these files is visible in GitHub Bash and GitHub Desktop. Unfortunately, GitHub online does not display commits prior to renaming this folder. You can view a synopsis of these commits [online](https://github.com/PHSKC-APDE/reference-data/commit/d86c4ccaa6b02c41e2f06cb485d9efa11cb73ec4). Individual commits can also be viewed online using the commit id from your log. 
+The complete commit history for these files is visible in GitHub Bash and GitHub Desktop. Unfortunately, GitHub online does not display commits prior to renaming this folder. You can view a synopsis of this commit [online](https://github.com/PHSKC-APDE/reference-data/commit/d86c4ccaa6b02c41e2f06cb485d9efa11cb73ec4). Individual commits can still be viewed online using the commit id from your log. 
 
 ## Table of Contents
 ### The best!

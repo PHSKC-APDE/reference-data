@@ -3,9 +3,13 @@
 ## Notes
 These files are used for cross-walk between different levels of geography. In August 2019 there was an attempt to reduce reduancy and combine files. However, some redudancy continues to exist, so the user will have to examine the files to ensure they are using the one best suited to their needs.  
 
-The CSVs were originally created from tabs in '[composition of places-HRA.xlsx](https://kc1.sharepoint.com/:x:/r/teams/PHc/datareq/_layouts/15/Doc.aspx?sourcedoc=%7BB791BD4F-1554-49F9-8E12-29F132764949%7D&file=composition%20of%20places-HRA.xlsx)' on SharePoint.
+All but one of the CSVs were originally created from tabs in '[composition of places-HRA.xlsx](https://kc1.sharepoint.com/:x:/r/teams/PHc/datareq/_layouts/15/Doc.aspx?sourcedoc=%7BB791BD4F-1554-49F9-8E12-29F132764949%7D&file=composition%20of%20places-HRA.xlsx)' on SharePoint. The exception is [geocomp_blk10_kps.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/geocomp_blk10_kps.csv), which was copied from [PH_APDEStore].[dbo].[geocomp_blk10_kps]on server 51 on 8/19/2019. It was prepared by Mike Smyser and is the most complete set of cross-walks that we have available. 
 
 ## Table of Contents
+### The best!
+[geocomp_blk10_kps.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/geocomp_blk10_kps.csv) = Mike Smyzer's extensive cross-walking file for King, Pierce, and Snomhomis counties. It starts with 2010 census block ids and cross walks to HRAs, KC regions, seattle/non-seattle, communities count regions, school districts, legislative districts, KC council districs and Seattle City Council Districs.
+
+### The rest
 * **[acs_council_districts.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/acs_council_districts.csv)** = Cross-walk from 2010 census geoid / tract to King County and Seattle City Council districts
 * **[acs_hra_region_place_etc.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/acs_hra_region_place_etc.csv)** = Cross-walk between HRA names, KC regions, COO places, 2010 census geoids, places, tracts, and block groups
 * **[blocks00_to_hra.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/blocks00_to_hra.csv)** = Cross-walk between 2000 (?) census blocks and HRA names ... legacy, no longer used

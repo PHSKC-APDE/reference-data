@@ -6,7 +6,7 @@ These files are used for cross-walk between different levels of geography. In Au
 The CSVs were originally created from tabs in '[composition of places-HRA.xlsx](https://kc1.sharepoint.com/:x:/r/teams/PHc/datareq/_layouts/15/Doc.aspx?sourcedoc=%7BB791BD4F-1554-49F9-8E12-29F132764949%7D&file=composition%20of%20places-HRA.xlsx)' on SharePoint.
 
 ## Table of Contents
-* **acs_council_districts.csv** = Cross-walk from 2010 census geoid / tract to King County and Seattle City Council districts
+* **[acs_council_districts.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/acs_council_districts.csv)** = Cross-walk from 2010 census geoid / tract to King County and Seattle City Council districts
 * **acs_hra_region_place_etc.csv** = Cross-walk between HRA names, KC regions, COO places, 2010 census geoids, places, tracts, and block groups
 * **blocks00_to_hra.csv** = Cross-walk between 2000 (?) census blocks and HRA names ... legacy, no longer used
 * **blocks10_to_city_council_dist.csv** = Cross-walk between 2010 census blocks and council districts; includes acreage of land and and water

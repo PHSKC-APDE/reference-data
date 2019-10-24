@@ -17,6 +17,7 @@ The complete commit history for these files is visible in GitHub Bash and GitHub
 * **[blocks10_to_city_council_dist.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/blocks10_to_city_council_dist.csv)** = Cross-walk between 2010 census blocks and council districts; includes acreage of land and and water
 * **[blocks10_to_hra.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/blocks10_to_hra.csv)** = Cross-walk between 2010 census blocks and HRAs
 * **[blocks10_to_region.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/blocks10_to_region.csv)** = Crosswalk between 2010 census blocks, HRAs, and KC regions
+* **[hra_names_crosswalk.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/hra_names_crosswalk.csv)** = Crosswalk between HRA shortnames and RADS/CHI standard names
 * **[hra_vid_region.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/hra_vid_region.csv)** = Crosswalk between HRAs, vids, and KC regions
 * **[school_dist_to_region.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/school_dist_to_region.csv)** = Crosswalk between King County school districts and KC regions
 * **[tract_to_county_council_dist.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/tract_to_county_council_dist.csv)** = Crosswalk between 2010 census tracts and King County Council Districts.

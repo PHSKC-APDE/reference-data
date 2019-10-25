@@ -1,49 +1,49 @@
-hra_shortname,chi_geo_hra
-Auburn-North,Auburn-North
-Auburn-South,Auburn-South
-Ballard,Ballard
-Beacon/Gtown/S.Park,Beacon Hill/Georgetown/South Park
-Bear Creek/Carnation/Duvall,Bear Creek/Carnation/Duvall
-Bellevue-Central,Bellevue-Central
-Bellevue-NE,Bellevue-Northeast
-Bellevue-South,Bellevue-South
-Bellevue-West,Bellevue-West
-Black Diamond/Enumclaw/SE County,Black Diamond/Enumclaw/Southeast County
-Bothell/Woodinville,Bothell/Woodinville
-Burien,Burien
-Capitol Hill/E.lake,Capitol Hill/Eastlake
-Central Seattle,Central Seattle
-Covington/Maple Valley,Covington/Maple Valley
-Delridge,Delridge
-Des Moines/Normandy Park,Des Moines/Normandy Park
-Downtown,Downtown
-East Federal Way,East Federal Way
-Fairwood,Fairwood
-Fed Way-Central/Military Rd,Federal Way-Central/Military Rd
-Fed Way-Dash Pt,Federal Way-Dash Point/Woodmont
-Fremont/Greenlake,Fremont/Greenlake
-Issaquah,Issaquah
-Kenmore/LFP,Kenmore/Lake Forest Park
-Kent-East,Kent-East
-Kent-SE,Kent-Southeast
-Kent-West,Kent-West
-Kirkland,Kirkland
-Kirkland North,Kirkland North
-Mercer Isle/Pt Cities,Mercer Island/Point Cities
-NE Seattle,Northeast Seattle
-Newcastle/Four Creeks,Newcastle/Four Creeks
-North Highline,North Highline
-North Seattle,North Seattle
-NW Seattle,Northwest Seattle
-QA/Magnolia,Queen Anne/Magnolia
-Redmond,Redmond
-Renton-East,Renton-East
-Renton-North,Renton-North
-Renton-South,Renton-South
-Sammamish,Sammamish
-SE Seattle,Southeast Seattle
-SeaTac/Tukwila,SeaTac/Tukwila
-Shoreline,Shoreline
-Snoqualmie/North Bend/Skykomish,Snoqualmie/North Bend/Skykomish
-Vashon Island,Vashon Island
-West Seattle,West Seattle
+hra_shortname,chi_geo_hra,chi_geo_big_cities,chi_geo_coo_places
+Auburn-North,Auburn-North,Auburn city,Balance of King County
+Auburn-South,Auburn-South,Auburn city,Balance of King County
+Ballard,Ballard,Seattle city,Balance of King County
+Bear Creek/Carnation/Duvall,Bear Creek/Carnation/Duvall,,Balance of King County
+Bellevue-Central,Bellevue-Central,Bellevue city,Balance of King County
+Bellevue-NE,Bellevue-Northeast,Bellevue city,Balance of King County
+Bellevue-South,Bellevue-South,Bellevue city,Balance of King County
+Bellevue-West,Bellevue-West,Bellevue city,Balance of King County
+Black Diamond/Enumclaw/SE County,Black Diamond/Enumclaw/Southeast County,,Balance of King County
+Bothell/Woodinville,Bothell/Woodinville,,Balance of King County
+Burien,Burien,,Balance of King County
+Capitol Hill/E.lake,Capitol Hill/Eastlake,Seattle city,Balance of King County
+Central Seattle,Central Seattle,Seattle city,Balance of King County
+Covington/Maple Valley,Covington/Maple Valley,,Balance of King County
+Delridge,Delridge,Seattle city,Balance of King County
+Des Moines/Normandy Park,Des Moines/Normandy Park,,Balance of King County
+Downtown,Downtown,Seattle city,Balance of King County
+East Federal Way,East Federal Way,,Balance of King County
+Fairwood,Fairwood,,Balance of King County
+Fed Way-Central/Military Rd,Federal Way-Central/Military Rd,Federal Way city,Balance of King County
+Fed Way-Dash Pt,Federal Way-Dash Point/Woodmont,Federal Way city,Balance of King County
+Fremont/Greenlake,Fremont/Greenlake,Seattle city,Balance of King County
+Issaquah,Issaquah,,Balance of King County
+Kenmore/LFP,Kenmore/Lake Forest Park,,Balance of King County
+Kent-East,Kent-East,Kent city,Balance of King County
+Kent-SE,Kent-Southeast,Kent city,Balance of King County
+Kent-West,Kent-West,Kent city,Balance of King County
+Kirkland,Kirkland,Kirkland city,Balance of King County
+Kirkland North,Kirkland North,Kirkland city,Balance of King County
+Mercer Isle/Pt Cities,Mercer Island/Point Cities,,Balance of King County
+NE Seattle,Northeast Seattle,Seattle city,Balance of King County
+Newcastle/Four Creeks,Newcastle/Four Creeks,,Balance of King County
+North Seattle,North Seattle,Seattle city,Balance of King County
+NW Seattle,Northwest Seattle,Seattle city,Balance of King County
+QA/Magnolia,Queen Anne/Magnolia,Seattle city,Balance of King County
+Redmond,Redmond,,Balance of King County
+Renton-East,Renton-East,Renton city,Balance of King County
+Renton-North,Renton-North,Renton city,Balance of King County
+Renton-South,Renton-South,Renton city,Balance of King County
+Sammamish,Sammamish,,Balance of King County
+Shoreline,Shoreline,,Balance of King County
+Snoqualmie/North Bend/Skykomish,Snoqualmie/North Bend/Skykomish,,Balance of King County
+Vashon Island,Vashon Island,,Balance of King County
+West Seattle,West Seattle,Seattle city,Balance of King County
+Beacon/Gtown/S.Park,Beacon Hill/Georgetown/South Park,Seattle city,Rainier Valley
+SE Seattle,Southeast Seattle,Seattle city,Rainier Valley
+SeaTac/Tukwila,SeaTac/Tukwila,,SeaTac/Tukwila
+North Highline,North Highline,,White Center

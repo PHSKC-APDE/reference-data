@@ -9,7 +9,7 @@ The complete commit history for these files is visible in GitHub Bash and GitHub
 
 ## Table of Contents
 ### The best!
-* **[geocomp_blk10_kps.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/geocomp_blk10_kps.csv)** = Mike Smyzer's extensive cross-walking file for King, Pierce, and Snomhomis counties. It starts with 2010 census block ids and cross walks to HRAs, KC regions, Seattle/Non-Seattle, Communities Count regions, school districts, legislative districts, KC Council Districts and Seattle City Council Districts.
+* **[geocomp_blk10_kps.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/geocomp_blk10_kps.csv)** = Mike Smyser's extensive cross-walking file for King, Pierce, and Snomhomis counties. It starts with 2010 census block ids and cross walks to HRAs, KC regions, Seattle/Non-Seattle, Communities Count regions, school districts, legislative districts, KC Council Districts and Seattle City Council Districts.
 
 ### The rest
 * **[acs_council_districts.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/acs_council_districts.csv)** = Cross-walk from 2010 census geoid / tract to King County and Seattle City Council districts

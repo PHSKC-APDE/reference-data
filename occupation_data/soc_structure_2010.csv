@@ -1,0 +1,1422 @@
+"major","minor","broad","detailed","title","notes"
+"11-0000",NA,NA,NA,"Management Occupations","Downloaded 2020-11-09, final structure for BLS 2010 SOC"
+"11-0000","11-1000",NA,NA,"Top Executives",NA
+"11-0000","11-1000","11-1010",NA,"Chief Executives",NA
+"11-0000","11-1000","11-1010","11-1011","Chief Executives",NA
+"11-0000","11-1000","11-1020",NA,"General and Operations Managers",NA
+"11-0000","11-1000","11-1020","11-1021","General and Operations Managers",NA
+"11-0000","11-1000","11-1030",NA,"Legislators",NA
+"11-0000","11-1000","11-1030","11-1031","Legislators",NA
+"11-0000","11-2000","11-1030",NA,"Advertising, Marketing, Promotions, Public Relations, and Sales Managers",NA
+"11-0000","11-2000","11-2010",NA,"Advertising and Promotions Managers",NA
+"11-0000","11-2000","11-2010","11-2011","Advertising and Promotions Managers",NA
+"11-0000","11-2000","11-2020",NA,"Marketing and Sales Managers",NA
+"11-0000","11-2000","11-2020","11-2021","Marketing Managers",NA
+"11-0000","11-2000","11-2020","11-2022","Sales Managers",NA
+"11-0000","11-2000","11-2030",NA,"Public Relations and Fundraising Managers",NA
+"11-0000","11-2000","11-2030","11-2031","Public Relations and Fundraising Managers",NA
+"11-0000","11-3000","11-2030",NA,"Operations Specialties Managers",NA
+"11-0000","11-3000","11-3010",NA,"Administrative Services Managers",NA
+"11-0000","11-3000","11-3010","11-3011","Administrative Services Managers",NA
+"11-0000","11-3000","11-3020",NA,"Computer and Information Systems Managers",NA
+"11-0000","11-3000","11-3020","11-3021","Computer and Information Systems Managers",NA
+"11-0000","11-3000","11-3030",NA,"Financial Managers",NA
+"11-0000","11-3000","11-3030","11-3031","Financial Managers",NA
+"11-0000","11-3000","11-3050",NA,"Industrial Production Managers",NA
+"11-0000","11-3000","11-3050","11-3051","Industrial Production Managers",NA
+"11-0000","11-3000","11-3060",NA,"Purchasing Managers",NA
+"11-0000","11-3000","11-3060","11-3061","Purchasing Managers",NA
+"11-0000","11-3000","11-3070",NA,"Transportation, Storage, and Distribution Managers",NA
+"11-0000","11-3000","11-3070","11-3071","Transportation, Storage, and Distribution Managers",NA
+"11-0000","11-3000","11-3110",NA,"Compensation and Benefits Managers",NA
+"11-0000","11-3000","11-3110","11-3111","Compensation and Benefits Managers",NA
+"11-0000","11-3000","11-3120",NA,"Human Resources Managers",NA
+"11-0000","11-3000","11-3120","11-3121","Human Resources Managers",NA
+"11-0000","11-3000","11-3130",NA,"Training and Development Managers",NA
+"11-0000","11-3000","11-3130","11-3131","Training and Development Managers",NA
+"11-0000","11-9000","11-3130",NA,"Other Management Occupations",NA
+"11-0000","11-9000","11-9010",NA,"Farmers, Ranchers, and Other Agricultural Managers",NA
+"11-0000","11-9000","11-9010","11-9013","Farmers, Ranchers, and Other Agricultural Managers",NA
+"11-0000","11-9000","11-9020",NA,"Construction Managers",NA
+"11-0000","11-9000","11-9020","11-9021","Construction Managers",NA
+"11-0000","11-9000","11-9030",NA,"Education Administrators",NA
+"11-0000","11-9000","11-9030","11-9031","Education Administrators, Preschool and Childcare Center/Program",NA
+"11-0000","11-9000","11-9030","11-9032","Education Administrators, Elementary and Secondary School",NA
+"11-0000","11-9000","11-9030","11-9033","Education Administrators, Postsecondary",NA
+"11-0000","11-9000","11-9030","11-9039","Education Administrators, All Other",NA
+"11-0000","11-9000","11-9040",NA,"Architectural and Engineering Managers",NA
+"11-0000","11-9000","11-9040","11-9041","Architectural and Engineering Managers",NA
+"11-0000","11-9000","11-9050",NA,"Food Service Managers",NA
+"11-0000","11-9000","11-9050","11-9051","Food Service Managers",NA
+"11-0000","11-9000","11-9060",NA,"Funeral Service Managers",NA
+"11-0000","11-9000","11-9060","11-9061","Funeral Service Managers",NA
+"11-0000","11-9000","11-9070",NA,"Gaming Managers",NA
+"11-0000","11-9000","11-9070","11-9071","Gaming Managers",NA
+"11-0000","11-9000","11-9080",NA,"Lodging Managers",NA
+"11-0000","11-9000","11-9080","11-9081","Lodging Managers",NA
+"11-0000","11-9000","11-9110",NA,"Medical and Health Services Managers",NA
+"11-0000","11-9000","11-9110","11-9111","Medical and Health Services Managers",NA
+"11-0000","11-9000","11-9120",NA,"Natural Sciences Managers",NA
+"11-0000","11-9000","11-9120","11-9121","Natural Sciences Managers",NA
+"11-0000","11-9000","11-9130",NA,"Postmasters and Mail Superintendents",NA
+"11-0000","11-9000","11-9130","11-9131","Postmasters and Mail Superintendents",NA
+"11-0000","11-9000","11-9140",NA,"Property, Real Estate, and Community Association Managers",NA
+"11-0000","11-9000","11-9140","11-9141","Property, Real Estate, and Community Association Managers",NA
+"11-0000","11-9000","11-9150",NA,"Social and Community Service Managers",NA
+"11-0000","11-9000","11-9150","11-9151","Social and Community Service Managers",NA
+"11-0000","11-9000","11-9160",NA,"Emergency Management Directors",NA
+"11-0000","11-9000","11-9160","11-9161","Emergency Management Directors",NA
+"11-0000","11-9000","11-9190",NA,"Miscellaneous Managers",NA
+"11-0000","11-9000","11-9190","11-9199","Managers, All Other",NA
+"13-0000","11-9000","11-9190",NA,"Business and Financial Operations Occupations",NA
+"13-0000","13-1000","11-9190",NA,"Business Operations Specialists",NA
+"13-0000","13-1000","13-1010",NA,"Agents and Business Managers of Artists, Performers, and Athletes",NA
+"13-0000","13-1000","13-1010","13-1011","Agents and Business Managers of Artists, Performers, and Athletes",NA
+"13-0000","13-1000","13-1020",NA,"Buyers and Purchasing Agents",NA
+"13-0000","13-1000","13-1020","13-1021","Buyers and Purchasing Agents, Farm Products",NA
+"13-0000","13-1000","13-1020","13-1022","Wholesale and Retail Buyers, Except Farm Products",NA
+"13-0000","13-1000","13-1020","13-1023","Purchasing Agents, Except Wholesale, Retail, and Farm Products",NA
+"13-0000","13-1000","13-1030",NA,"Claims Adjusters, Appraisers, Examiners, and Investigators",NA
+"13-0000","13-1000","13-1030","13-1031","Claims Adjusters, Examiners, and Investigators",NA
+"13-0000","13-1000","13-1030","13-1032","Insurance Appraisers, Auto Damage",NA
+"13-0000","13-1000","13-1040",NA,"Compliance Officers",NA
+"13-0000","13-1000","13-1040","13-1041","Compliance Officers",NA
+"13-0000","13-1000","13-1050",NA,"Cost Estimators",NA
+"13-0000","13-1000","13-1050","13-1051","Cost Estimators",NA
+"13-0000","13-1000","13-1070",NA,"Human Resources Workers",NA
+"13-0000","13-1000","13-1070","13-1071","Human Resources Specialists",NA
+"13-0000","13-1000","13-1070","13-1074","Farm Labor Contractors",NA
+"13-0000","13-1000","13-1070","13-1075","Labor Relations Specialists",NA
+"13-0000","13-1000","13-1080",NA,"Logisticians",NA
+"13-0000","13-1000","13-1080","13-1081","Logisticians",NA
+"13-0000","13-1000","13-1110",NA,"Management Analysts",NA
+"13-0000","13-1000","13-1110","13-1111","Management Analysts",NA
+"13-0000","13-1000","13-1120",NA,"Meeting, Convention, and Event Planners",NA
+"13-0000","13-1000","13-1120","13-1121","Meeting, Convention, and Event Planners",NA
+"13-0000","13-1000","13-1130",NA,"Fundraisers",NA
+"13-0000","13-1000","13-1130","13-1131","Fundraisers",NA
+"13-0000","13-1000","13-1140",NA,"Compensation, Benefits, and Job Analysis Specialists",NA
+"13-0000","13-1000","13-1140","13-1141","Compensation, Benefits, and Job Analysis Specialists",NA
+"13-0000","13-1000","13-1150",NA,"Training and Development Specialists",NA
+"13-0000","13-1000","13-1150","13-1151","Training and Development Specialists",NA
+"13-0000","13-1000","13-1160",NA,"Market Research Analysts and Marketing Specialists",NA
+"13-0000","13-1000","13-1160","13-1161","Market Research Analysts and Marketing Specialists",NA
+"13-0000","13-1000","13-1190",NA,"Miscellaneous Business Operations Specialists",NA
+"13-0000","13-1000","13-1190","13-1199","Business Operations Specialists, All Other",NA
+"13-0000","13-2000","13-1190",NA,"Financial Specialists",NA
+"13-0000","13-2000","13-2010",NA,"Accountants and Auditors",NA
+"13-0000","13-2000","13-2010","13-2011","Accountants and Auditors",NA
+"13-0000","13-2000","13-2020",NA,"Appraisers and Assessors of Real Estate",NA
+"13-0000","13-2000","13-2020","13-2021","Appraisers and Assessors of Real Estate",NA
+"13-0000","13-2000","13-2030",NA,"Budget Analysts",NA
+"13-0000","13-2000","13-2030","13-2031","Budget Analysts",NA
+"13-0000","13-2000","13-2040",NA,"Credit Analysts",NA
+"13-0000","13-2000","13-2040","13-2041","Credit Analysts",NA
+"13-0000","13-2000","13-2050",NA,"Financial Analysts and Advisors",NA
+"13-0000","13-2000","13-2050","13-2051","Financial Analysts",NA
+"13-0000","13-2000","13-2050","13-2052","Personal Financial Advisors",NA
+"13-0000","13-2000","13-2050","13-2053","Insurance Underwriters",NA
+"13-0000","13-2000","13-2060",NA,"Financial Examiners",NA
+"13-0000","13-2000","13-2060","13-2061","Financial Examiners",NA
+"13-0000","13-2000","13-2070",NA,"Credit Counselors and Loan Officers",NA
+"13-0000","13-2000","13-2070","13-2071","Credit Counselors",NA
+"13-0000","13-2000","13-2070","13-2072","Loan Officers",NA
+"13-0000","13-2000","13-2080",NA,"Tax Examiners, Collectors and Preparers, and Revenue Agents",NA
+"13-0000","13-2000","13-2080","13-2081","Tax Examiners and Collectors, and Revenue Agents",NA
+"13-0000","13-2000","13-2080","13-2082","Tax Preparers",NA
+"13-0000","13-2000","13-2090",NA,"Miscellaneous Financial Specialists",NA
+"13-0000","13-2000","13-2090","13-2099","Financial Specialists, All Other",NA
+"15-0000","13-2000","13-2090",NA,"Computer and Mathematical Occupations",NA
+"15-0000","15-1100","13-2090",NA,"Computer Occupations",NA
+"15-0000","15-1100","15-1110",NA,"Computer and Information Research Scientists",NA
+"15-0000","15-1100","15-1110","15-1111","Computer and Information Research Scientists",NA
+"15-0000","15-1100","15-1120",NA,"Computer and Information Analysts",NA
+"15-0000","15-1100","15-1120","15-1121","Computer Systems Analysts",NA
+"15-0000","15-1100","15-1120","15-1122","Information Security Analysts",NA
+"15-0000","15-1100","15-1130",NA,"Software Developers and Programmers",NA
+"15-0000","15-1100","15-1130","15-1131","Computer Programmers",NA
+"15-0000","15-1100","15-1130","15-1132","Software Developers, Applications",NA
+"15-0000","15-1100","15-1130","15-1133","Software Developers, Systems Software",NA
+"15-0000","15-1100","15-1130","15-1134","Web Developers",NA
+"15-0000","15-1100","15-1140",NA,"Database and Systems Administrators and Network Architects",NA
+"15-0000","15-1100","15-1140","15-1141","Database Administrators",NA
+"15-0000","15-1100","15-1140","15-1142","Network and Computer Systems Administrators",NA
+"15-0000","15-1100","15-1140","15-1143","Computer Network Architects",NA
+"15-0000","15-1100","15-1150",NA,"Computer Support Specialists",NA
+"15-0000","15-1100","15-1150","15-1151","Computer User Support Specialists",NA
+"15-0000","15-1100","15-1150","15-1152","Computer Network Support Specialists",NA
+"15-0000","15-1100","15-1190",NA,"Miscellaneous Computer Occupations",NA
+"15-0000","15-1100","15-1190","15-1199","Computer Occupations, All Other",NA
+"15-0000","15-2000","15-1190",NA,"Mathematical Science Occupations",NA
+"15-0000","15-2000","15-2010",NA,"Actuaries",NA
+"15-0000","15-2000","15-2010","15-2011","Actuaries",NA
+"15-0000","15-2000","15-2020",NA,"Mathematicians",NA
+"15-0000","15-2000","15-2020","15-2021","Mathematicians",NA
+"15-0000","15-2000","15-2030",NA,"Operations Research Analysts",NA
+"15-0000","15-2000","15-2030","15-2031","Operations Research Analysts",NA
+"15-0000","15-2000","15-2040",NA,"Statisticians",NA
+"15-0000","15-2000","15-2040","15-2041","Statisticians",NA
+"15-0000","15-2000","15-2090",NA,"Miscellaneous Mathematical Science Occupations",NA
+"15-0000","15-2000","15-2090","15-2091","Mathematical Technicians",NA
+"15-0000","15-2000","15-2090","15-2099","Mathematical Science Occupations, All Other",NA
+"17-0000","15-2000","15-2090",NA,"Architecture and Engineering Occupations",NA
+"17-0000","17-1000","15-2090",NA,"Architects, Surveyors, and Cartographers",NA
+"17-0000","17-1000","17-1010",NA,"Architects, Except Naval",NA
+"17-0000","17-1000","17-1010","17-1011","Architects, Except Landscape and Naval",NA
+"17-0000","17-1000","17-1010","17-1012","Landscape Architects",NA
+"17-0000","17-1000","17-1020",NA,"Surveyors, Cartographers, and Photogrammetrists",NA
+"17-0000","17-1000","17-1020","17-1021","Cartographers and Photogrammetrists",NA
+"17-0000","17-1000","17-1020","17-1022","Surveyors",NA
+"17-0000","17-2000","17-1020",NA,"Engineers",NA
+"17-0000","17-2000","17-2010",NA,"Aerospace Engineers",NA
+"17-0000","17-2000","17-2010","17-2011","Aerospace Engineers",NA
+"17-0000","17-2000","17-2020",NA,"Agricultural Engineers",NA
+"17-0000","17-2000","17-2020","17-2021","Agricultural Engineers",NA
+"17-0000","17-2000","17-2030",NA,"Biomedical Engineers",NA
+"17-0000","17-2000","17-2030","17-2031","Biomedical Engineers",NA
+"17-0000","17-2000","17-2040",NA,"Chemical Engineers",NA
+"17-0000","17-2000","17-2040","17-2041","Chemical Engineers",NA
+"17-0000","17-2000","17-2050",NA,"Civil Engineers",NA
+"17-0000","17-2000","17-2050","17-2051","Civil Engineers",NA
+"17-0000","17-2000","17-2060",NA,"Computer Hardware Engineers",NA
+"17-0000","17-2000","17-2060","17-2061","Computer Hardware Engineers",NA
+"17-0000","17-2000","17-2070",NA,"Electrical and Electronics Engineers",NA
+"17-0000","17-2000","17-2070","17-2071","Electrical Engineers",NA
+"17-0000","17-2000","17-2070","17-2072","Electronics Engineers, Except Computer",NA
+"17-0000","17-2000","17-2080",NA,"Environmental Engineers",NA
+"17-0000","17-2000","17-2080","17-2081","Environmental Engineers",NA
+"17-0000","17-2000","17-2110",NA,"Industrial Engineers, Including Health and Safety",NA
+"17-0000","17-2000","17-2110","17-2111","Health and Safety Engineers, Except Mining Safety Engineers and Inspectors",NA
+"17-0000","17-2000","17-2110","17-2112","Industrial Engineers",NA
+"17-0000","17-2000","17-2120",NA,"Marine Engineers and Naval Architects",NA
+"17-0000","17-2000","17-2120","17-2121","Marine Engineers and Naval Architects",NA
+"17-0000","17-2000","17-2130",NA,"Materials Engineers",NA
+"17-0000","17-2000","17-2130","17-2131","Materials Engineers",NA
+"17-0000","17-2000","17-2140",NA,"Mechanical Engineers",NA
+"17-0000","17-2000","17-2140","17-2141","Mechanical Engineers",NA
+"17-0000","17-2000","17-2150",NA,"Mining and Geological Engineers, Including Mining Safety Engineers",NA
+"17-0000","17-2000","17-2150","17-2151","Mining and Geological Engineers, Including Mining Safety Engineers",NA
+"17-0000","17-2000","17-2160",NA,"Nuclear Engineers",NA
+"17-0000","17-2000","17-2160","17-2161","Nuclear Engineers",NA
+"17-0000","17-2000","17-2170",NA,"Petroleum Engineers",NA
+"17-0000","17-2000","17-2170","17-2171","Petroleum Engineers",NA
+"17-0000","17-2000","17-2190",NA,"Miscellaneous Engineers",NA
+"17-0000","17-2000","17-2190","17-2199","Engineers, All Other",NA
+"17-0000","17-3000","17-2190",NA,"Drafters, Engineering Technicians, and Mapping Technicians",NA
+"17-0000","17-3000","17-3010",NA,"Drafters",NA
+"17-0000","17-3000","17-3010","17-3011","Architectural and Civil Drafters",NA
+"17-0000","17-3000","17-3010","17-3012","Electrical and Electronics Drafters",NA
+"17-0000","17-3000","17-3010","17-3013","Mechanical Drafters",NA
+"17-0000","17-3000","17-3010","17-3019","Drafters, All Other",NA
+"17-0000","17-3000","17-3020",NA,"Engineering Technicians, Except Drafters",NA
+"17-0000","17-3000","17-3020","17-3021","Aerospace Engineering and Operations Technicians",NA
+"17-0000","17-3000","17-3020","17-3022","Civil Engineering Technicians",NA
+"17-0000","17-3000","17-3020","17-3023","Electrical and Electronics Engineering Technicians",NA
+"17-0000","17-3000","17-3020","17-3024","Electro-Mechanical Technicians",NA
+"17-0000","17-3000","17-3020","17-3025","Environmental Engineering Technicians",NA
+"17-0000","17-3000","17-3020","17-3026","Industrial Engineering Technicians",NA
+"17-0000","17-3000","17-3020","17-3027","Mechanical Engineering Technicians",NA
+"17-0000","17-3000","17-3020","17-3029","Engineering Technicians, Except Drafters, All Other",NA
+"17-0000","17-3000","17-3030",NA,"Surveying and Mapping Technicians",NA
+"17-0000","17-3000","17-3030","17-3031","Surveying and Mapping Technicians",NA
+"19-0000","17-3000","17-3030",NA,"Life, Physical, and Social Science Occupations",NA
+"19-0000","19-1000","17-3030",NA,"Life Scientists",NA
+"19-0000","19-1000","19-1010",NA,"Agricultural and Food Scientists",NA
+"19-0000","19-1000","19-1010","19-1011","Animal Scientists",NA
+"19-0000","19-1000","19-1010","19-1012","Food Scientists and Technologists",NA
+"19-0000","19-1000","19-1010","19-1013","Soil and Plant Scientists",NA
+"19-0000","19-1000","19-1020",NA,"Biological Scientists",NA
+"19-0000","19-1000","19-1020","19-1021","Biochemists and Biophysicists",NA
+"19-0000","19-1000","19-1020","19-1022","Microbiologists",NA
+"19-0000","19-1000","19-1020","19-1023","Zoologists and Wildlife Biologists",NA
+"19-0000","19-1000","19-1020","19-1029","Biological Scientists, All Other",NA
+"19-0000","19-1000","19-1030",NA,"Conservation Scientists and Foresters",NA
+"19-0000","19-1000","19-1030","19-1031","Conservation Scientists",NA
+"19-0000","19-1000","19-1030","19-1032","Foresters",NA
+"19-0000","19-1000","19-1040",NA,"Medical Scientists",NA
+"19-0000","19-1000","19-1040","19-1041","Epidemiologists",NA
+"19-0000","19-1000","19-1040","19-1042","Medical Scientists, Except Epidemiologists",NA
+"19-0000","19-1000","19-1090",NA,"Miscellaneous Life Scientists",NA
+"19-0000","19-1000","19-1090","19-1099","Life Scientists, All Other",NA
+"19-0000","19-2000","19-1090",NA,"Physical Scientists",NA
+"19-0000","19-2000","19-2010",NA,"Astronomers and Physicists",NA
+"19-0000","19-2000","19-2010","19-2011","Astronomers",NA
+"19-0000","19-2000","19-2010","19-2012","Physicists",NA
+"19-0000","19-2000","19-2020",NA,"Atmospheric and Space Scientists",NA
+"19-0000","19-2000","19-2020","19-2021","Atmospheric and Space Scientists",NA
+"19-0000","19-2000","19-2030",NA,"Chemists and Materials Scientists",NA
+"19-0000","19-2000","19-2030","19-2031","Chemists",NA
+"19-0000","19-2000","19-2030","19-2032","Materials Scientists",NA
+"19-0000","19-2000","19-2040",NA,"Environmental Scientists and Geoscientists",NA
+"19-0000","19-2000","19-2040","19-2041","Environmental Scientists and Specialists, Including Health",NA
+"19-0000","19-2000","19-2040","19-2042","Geoscientists, Except Hydrologists and Geographers",NA
+"19-0000","19-2000","19-2040","19-2043","Hydrologists",NA
+"19-0000","19-2000","19-2090",NA,"Miscellaneous Physical Scientists",NA
+"19-0000","19-2000","19-2090","19-2099","Physical Scientists, All Other",NA
+"19-0000","19-3000","19-2090",NA,"Social Scientists and Related Workers",NA
+"19-0000","19-3000","19-3010",NA,"Economists",NA
+"19-0000","19-3000","19-3010","19-3011","Economists",NA
+"19-0000","19-3000","19-3020",NA,"Survey Researchers",NA
+"19-0000","19-3000","19-3020","19-3022","Survey Researchers",NA
+"19-0000","19-3000","19-3030",NA,"Psychologists",NA
+"19-0000","19-3000","19-3030","19-3031","Clinical, Counseling, and School Psychologists",NA
+"19-0000","19-3000","19-3030","19-3032","Industrial-Organizational Psychologists",NA
+"19-0000","19-3000","19-3030","19-3039","Psychologists, All Other",NA
+"19-0000","19-3000","19-3040",NA,"Sociologists",NA
+"19-0000","19-3000","19-3040","19-3041","Sociologists",NA
+"19-0000","19-3000","19-3050",NA,"Urban and Regional Planners",NA
+"19-0000","19-3000","19-3050","19-3051","Urban and Regional Planners",NA
+"19-0000","19-3000","19-3090",NA,"Miscellaneous Social Scientists and Related Workers",NA
+"19-0000","19-3000","19-3090","19-3091","Anthropologists and Archeologists",NA
+"19-0000","19-3000","19-3090","19-3092","Geographers",NA
+"19-0000","19-3000","19-3090","19-3093","Historians",NA
+"19-0000","19-3000","19-3090","19-3094","Political Scientists",NA
+"19-0000","19-3000","19-3090","19-3099","Social Scientists and Related Workers, All Other",NA
+"19-0000","19-4000","19-3090",NA,"Life, Physical, and Social Science Technicians",NA
+"19-0000","19-4000","19-4010",NA,"Agricultural and Food Science Technicians",NA
+"19-0000","19-4000","19-4010","19-4011","Agricultural and Food Science Technicians",NA
+"19-0000","19-4000","19-4020",NA,"Biological Technicians",NA
+"19-0000","19-4000","19-4020","19-4021","Biological Technicians",NA
+"19-0000","19-4000","19-4030",NA,"Chemical Technicians",NA
+"19-0000","19-4000","19-4030","19-4031","Chemical Technicians",NA
+"19-0000","19-4000","19-4040",NA,"Geological and Petroleum Technicians",NA
+"19-0000","19-4000","19-4040","19-4041","Geological and Petroleum Technicians",NA
+"19-0000","19-4000","19-4050",NA,"Nuclear Technicians",NA
+"19-0000","19-4000","19-4050","19-4051","Nuclear Technicians",NA
+"19-0000","19-4000","19-4060",NA,"Social Science Research Assistants",NA
+"19-0000","19-4000","19-4060","19-4061","Social Science Research Assistants",NA
+"19-0000","19-4000","19-4090",NA,"Miscellaneous Life, Physical, and Social Science Technicians",NA
+"19-0000","19-4000","19-4090","19-4091","Environmental Science and Protection Technicians, Including Health",NA
+"19-0000","19-4000","19-4090","19-4092","Forensic Science Technicians",NA
+"19-0000","19-4000","19-4090","19-4093","Forest and Conservation Technicians",NA
+"19-0000","19-4000","19-4090","19-4099","Life, Physical, and Social Science Technicians, All Other",NA
+"21-0000","19-4000","19-4090",NA,"Community and Social Service Occupations",NA
+"21-0000","21-1000","19-4090",NA,"Counselors, Social Workers, and Other Community and Social Service Specialists",NA
+"21-0000","21-1000","21-1010",NA,"Counselors",NA
+"21-0000","21-1000","21-1010","21-1011","Substance Abuse and Behavioral Disorder Counselors",NA
+"21-0000","21-1000","21-1010","21-1012","Educational, Guidance, School, and Vocational Counselors",NA
+"21-0000","21-1000","21-1010","21-1013","Marriage and Family Therapists",NA
+"21-0000","21-1000","21-1010","21-1014","Mental Health Counselors",NA
+"21-0000","21-1000","21-1010","21-1015","Rehabilitation Counselors",NA
+"21-0000","21-1000","21-1010","21-1019","Counselors, All Other",NA
+"21-0000","21-1000","21-1020",NA,"Social Workers",NA
+"21-0000","21-1000","21-1020","21-1021","Child, Family, and School Social Workers",NA
+"21-0000","21-1000","21-1020","21-1022","Healthcare Social Workers",NA
+"21-0000","21-1000","21-1020","21-1023","Mental Health and Substance Abuse Social Workers",NA
+"21-0000","21-1000","21-1020","21-1029","Social Workers, All Other",NA
+"21-0000","21-1000","21-1090",NA,"Miscellaneous Community and Social Service Specialists",NA
+"21-0000","21-1000","21-1090","21-1091","Health Educators",NA
+"21-0000","21-1000","21-1090","21-1092","Probation Officers and Correctional Treatment Specialists",NA
+"21-0000","21-1000","21-1090","21-1093","Social and Human Service Assistants",NA
+"21-0000","21-1000","21-1090","21-1094","Community Health Workers",NA
+"21-0000","21-1000","21-1090","21-1099","Community and Social Service Specialists, All Other",NA
+"21-0000","21-2000","21-1090",NA,"Religious Workers",NA
+"21-0000","21-2000","21-2010",NA,"Clergy",NA
+"21-0000","21-2000","21-2010","21-2011","Clergy",NA
+"21-0000","21-2000","21-2020",NA,"Directors, Religious Activities and Education",NA
+"21-0000","21-2000","21-2020","21-2021","Directors, Religious Activities and Education",NA
+"21-0000","21-2000","21-2090",NA,"Miscellaneous Religious Workers",NA
+"21-0000","21-2000","21-2090","21-2099","Religious Workers, All Other",NA
+"23-0000","21-2000","21-2090",NA,"Legal Occupations",NA
+"23-0000","23-1000","21-2090",NA,"Lawyers, Judges, and Related Workers",NA
+"23-0000","23-1000","23-1010",NA,"Lawyers and Judicial Law Clerks",NA
+"23-0000","23-1000","23-1010","23-1011","Lawyers",NA
+"23-0000","23-1000","23-1010","23-1012","Judicial Law Clerks",NA
+"23-0000","23-1000","23-1020",NA,"Judges, Magistrates, and Other Judicial Workers",NA
+"23-0000","23-1000","23-1020","23-1021","Administrative Law Judges, Adjudicators, and Hearing Officers",NA
+"23-0000","23-1000","23-1020","23-1022","Arbitrators, Mediators, and Conciliators",NA
+"23-0000","23-1000","23-1020","23-1023","Judges, Magistrate Judges, and Magistrates",NA
+"23-0000","23-2000","23-1020",NA,"Legal Support Workers",NA
+"23-0000","23-2000","23-2010",NA,"Paralegals and Legal Assistants",NA
+"23-0000","23-2000","23-2010","23-2011","Paralegals and Legal Assistants",NA
+"23-0000","23-2000","23-2090",NA,"Miscellaneous Legal Support Workers",NA
+"23-0000","23-2000","23-2090","23-2091","Court Reporters",NA
+"23-0000","23-2000","23-2090","23-2093","Title Examiners, Abstractors, and Searchers",NA
+"23-0000","23-2000","23-2090","23-2099","Legal Support Workers, All Other",NA
+"25-0000","23-2000","23-2090",NA,"Education, Training, and Library Occupations",NA
+"25-0000","25-1000","23-2090",NA,"Postsecondary Teachers",NA
+"25-0000","25-1000","25-1010",NA,"Business Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1010","25-1011","Business Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1020",NA,"Math and Computer Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1020","25-1021","Computer Science Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1020","25-1022","Mathematical Science Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1030",NA,"Engineering and Architecture Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1030","25-1031","Architecture Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1030","25-1032","Engineering Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1040",NA,"Life Sciences Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1040","25-1041","Agricultural Sciences Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1040","25-1042","Biological Science Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1040","25-1043","Forestry and Conservation Science Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1050",NA,"Physical Sciences Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1050","25-1051","Atmospheric, Earth, Marine, and Space Sciences Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1050","25-1052","Chemistry Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1050","25-1053","Environmental Science Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1050","25-1054","Physics Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1060",NA,"Social Sciences Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1060","25-1061","Anthropology and Archeology Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1060","25-1062","Area, Ethnic, and Cultural Studies Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1060","25-1063","Economics Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1060","25-1064","Geography Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1060","25-1065","Political Science Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1060","25-1066","Psychology Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1060","25-1067","Sociology Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1060","25-1069","Social Sciences Teachers, Postsecondary, All Other",NA
+"25-0000","25-1000","25-1070",NA,"Health Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1070","25-1071","Health Specialties Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1070","25-1072","Nursing Instructors and Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1080",NA,"Education and Library Science Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1080","25-1081","Education Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1080","25-1082","Library Science Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1110",NA,"Law, Criminal Justice, and Social Work Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1110","25-1111","Criminal Justice and Law Enforcement Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1110","25-1112","Law Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1110","25-1113","Social Work Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1120",NA,"Arts, Communications, and Humanities Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1120","25-1121","Art, Drama, and Music Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1120","25-1122","Communications Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1120","25-1123","English Language and Literature Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1120","25-1124","Foreign Language and Literature Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1120","25-1125","History Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1120","25-1126","Philosophy and Religion Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1190",NA,"Miscellaneous Postsecondary Teachers",NA
+"25-0000","25-1000","25-1190","25-1191","Graduate Teaching Assistants",NA
+"25-0000","25-1000","25-1190","25-1192","Home Economics Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1190","25-1193","Recreation and Fitness Studies Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1190","25-1194","Vocational Education Teachers, Postsecondary",NA
+"25-0000","25-1000","25-1190","25-1199","Postsecondary Teachers, All Other",NA
+"25-0000","25-2000","25-1190",NA,"Preschool, Primary, Secondary, and Special Education School Teachers",NA
+"25-0000","25-2000","25-2010",NA,"Preschool and Kindergarten Teachers",NA
+"25-0000","25-2000","25-2010","25-2011","Preschool Teachers, Except Special Education",NA
+"25-0000","25-2000","25-2010","25-2012","Kindergarten Teachers, Except Special Education",NA
+"25-0000","25-2000","25-2020",NA,"Elementary and Middle School Teachers",NA
+"25-0000","25-2000","25-2020","25-2021","Elementary School Teachers, Except Special Education",NA
+"25-0000","25-2000","25-2020","25-2022","Middle School Teachers, Except Special and Career/Technical Education",NA
+"25-0000","25-2000","25-2020","25-2023","Career/Technical Education Teachers, Middle School",NA
+"25-0000","25-2000","25-2030",NA,"Secondary School Teachers",NA
+"25-0000","25-2000","25-2030","25-2031","Secondary School Teachers, Except Special and Career/Technical Education",NA
+"25-0000","25-2000","25-2030","25-2032","Career/Technical Education Teachers, Secondary School",NA
+"25-0000","25-2000","25-2050",NA,"Special Education Teachers",NA
+"25-0000","25-2000","25-2050","25-2051","Special Education Teachers, Preschool",NA
+"25-0000","25-2000","25-2050","25-2052","Special Education Teachers, Kindergarten and Elementary School",NA
+"25-0000","25-2000","25-2050","25-2053","Special Education Teachers, Middle School",NA
+"25-0000","25-2000","25-2050","25-2054","Special Education Teachers, Secondary School",NA
+"25-0000","25-2000","25-2050","25-2059","Special Education Teachers, All Other",NA
+"25-0000","25-3000","25-2050",NA,"Other Teachers and Instructors",NA
+"25-0000","25-3000","25-3010",NA,"Adult Basic and Secondary Education and Literacy Teachers and Instructors",NA
+"25-0000","25-3000","25-3010","25-3011","Adult Basic and Secondary Education and Literacy Teachers and Instructors",NA
+"25-0000","25-3000","25-3020",NA,"Self-Enrichment Education Teachers",NA
+"25-0000","25-3000","25-3020","25-3021","Self-Enrichment Education Teachers",NA
+"25-0000","25-3000","25-3090",NA,"Miscellaneous Teachers and Instructors",NA
+"25-0000","25-3000","25-3090","25-3099","Teachers and Instructors, All Other",NA
+"25-0000","25-4000","25-3090",NA,"Librarians, Curators, and Archivists",NA
+"25-0000","25-4000","25-4010",NA,"Archivists, Curators, and Museum Technicians",NA
+"25-0000","25-4000","25-4010","25-4011","Archivists",NA
+"25-0000","25-4000","25-4010","25-4012","Curators",NA
+"25-0000","25-4000","25-4010","25-4013","Museum Technicians and Conservators",NA
+"25-0000","25-4000","25-4020",NA,"Librarians",NA
+"25-0000","25-4000","25-4020","25-4021","Librarians",NA
+"25-0000","25-4000","25-4030",NA,"Library Technicians",NA
+"25-0000","25-4000","25-4030","25-4031","Library Technicians",NA
+"25-0000","25-9000","25-4030",NA,"Other Education, Training, and Library Occupations",NA
+"25-0000","25-9000","25-9010",NA,"Audio-Visual and Multimedia Collections Specialists",NA
+"25-0000","25-9000","25-9010","25-9011","Audio-Visual and Multimedia Collections Specialists",NA
+"25-0000","25-9000","25-9020",NA,"Farm and Home Management Advisors",NA
+"25-0000","25-9000","25-9020","25-9021","Farm and Home Management Advisors",NA
+"25-0000","25-9000","25-9030",NA,"Instructional Coordinators",NA
+"25-0000","25-9000","25-9030","25-9031","Instructional Coordinators",NA
+"25-0000","25-9000","25-9040",NA,"Teacher Assistants",NA
+"25-0000","25-9000","25-9040","25-9041","Teacher Assistants",NA
+"25-0000","25-9000","25-9090",NA,"Miscellaneous Education, Training, and Library Workers",NA
+"25-0000","25-9000","25-9090","25-9099","Education, Training, and Library Workers, All Other",NA
+"27-0000","25-9000","25-9090",NA,"Arts, Design, Entertainment, Sports, and Media Occupations",NA
+"27-0000","27-1000","25-9090",NA,"Art and Design Workers",NA
+"27-0000","27-1000","27-1010",NA,"Artists and Related Workers",NA
+"27-0000","27-1000","27-1010","27-1011","Art Directors",NA
+"27-0000","27-1000","27-1010","27-1012","Craft Artists",NA
+"27-0000","27-1000","27-1010","27-1013","Fine Artists, Including Painters, Sculptors, and Illustrators",NA
+"27-0000","27-1000","27-1010","27-1014","Multimedia Artists and Animators",NA
+"27-0000","27-1000","27-1010","27-1019","Artists and Related Workers, All Other",NA
+"27-0000","27-1000","27-1020",NA,"Designers",NA
+"27-0000","27-1000","27-1020","27-1021","Commercial and Industrial Designers",NA
+"27-0000","27-1000","27-1020","27-1022","Fashion Designers",NA
+"27-0000","27-1000","27-1020","27-1023","Floral Designers",NA
+"27-0000","27-1000","27-1020","27-1024","Graphic Designers",NA
+"27-0000","27-1000","27-1020","27-1025","Interior Designers",NA
+"27-0000","27-1000","27-1020","27-1026","Merchandise Displayers and Window Trimmers",NA
+"27-0000","27-1000","27-1020","27-1027","Set and Exhibit Designers",NA
+"27-0000","27-1000","27-1020","27-1029","Designers, All Other",NA
+"27-0000","27-2000","27-1020",NA,"Entertainers and Performers, Sports and Related Workers",NA
+"27-0000","27-2000","27-2010",NA,"Actors, Producers, and Directors",NA
+"27-0000","27-2000","27-2010","27-2011","Actors",NA
+"27-0000","27-2000","27-2010","27-2012","Producers and Directors",NA
+"27-0000","27-2000","27-2020",NA,"Athletes, Coaches, Umpires, and Related Workers",NA
+"27-0000","27-2000","27-2020","27-2021","Athletes and Sports Competitors",NA
+"27-0000","27-2000","27-2020","27-2022","Coaches and Scouts",NA
+"27-0000","27-2000","27-2020","27-2023","Umpires, Referees, and Other Sports Officials",NA
+"27-0000","27-2000","27-2030",NA,"Dancers and Choreographers",NA
+"27-0000","27-2000","27-2030","27-2031","Dancers",NA
+"27-0000","27-2000","27-2030","27-2032","Choreographers",NA
+"27-0000","27-2000","27-2040",NA,"Musicians, Singers, and Related Workers",NA
+"27-0000","27-2000","27-2040","27-2041","Music Directors and Composers",NA
+"27-0000","27-2000","27-2040","27-2042","Musicians and Singers",NA
+"27-0000","27-2000","27-2090",NA,"Miscellaneous Entertainers and Performers, Sports and Related Workers",NA
+"27-0000","27-2000","27-2090","27-2099","Entertainers and Performers, Sports and Related Workers, All Other",NA
+"27-0000","27-3000","27-2090",NA,"Media and Communication Workers",NA
+"27-0000","27-3000","27-3010",NA,"Announcers",NA
+"27-0000","27-3000","27-3010","27-3011","Radio and Television Announcers",NA
+"27-0000","27-3000","27-3010","27-3012","Public Address System and Other Announcers",NA
+"27-0000","27-3000","27-3020",NA,"News Analysts, Reporters and Correspondents",NA
+"27-0000","27-3000","27-3020","27-3021","Broadcast News Analysts",NA
+"27-0000","27-3000","27-3020","27-3022","Reporters and Correspondents",NA
+"27-0000","27-3000","27-3030",NA,"Public Relations Specialists",NA
+"27-0000","27-3000","27-3030","27-3031","Public Relations Specialists",NA
+"27-0000","27-3000","27-3040",NA,"Writers and Editors",NA
+"27-0000","27-3000","27-3040","27-3041","Editors",NA
+"27-0000","27-3000","27-3040","27-3042","Technical Writers",NA
+"27-0000","27-3000","27-3040","27-3043","Writers and Authors",NA
+"27-0000","27-3000","27-3090",NA,"Miscellaneous Media and Communication Workers",NA
+"27-0000","27-3000","27-3090","27-3091","Interpreters and Translators",NA
+"27-0000","27-3000","27-3090","27-3099","Media and Communication Workers, All Other",NA
+"27-0000","27-4000","27-3090",NA,"Media and Communication Equipment Workers",NA
+"27-0000","27-4000","27-4010",NA,"Broadcast and Sound Engineering Technicians and Radio Operators",NA
+"27-0000","27-4000","27-4010","27-4011","Audio and Video Equipment Technicians",NA
+"27-0000","27-4000","27-4010","27-4012","Broadcast Technicians",NA
+"27-0000","27-4000","27-4010","27-4013","Radio Operators",NA
+"27-0000","27-4000","27-4010","27-4014","Sound Engineering Technicians",NA
+"27-0000","27-4000","27-4020",NA,"Photographers",NA
+"27-0000","27-4000","27-4020","27-4021","Photographers",NA
+"27-0000","27-4000","27-4030",NA,"Television, Video, and Motion Picture Camera Operators and Editors",NA
+"27-0000","27-4000","27-4030","27-4031","Camera Operators, Television, Video, and Motion Picture",NA
+"27-0000","27-4000","27-4030","27-4032","Film and Video Editors",NA
+"27-0000","27-4000","27-4090",NA,"Miscellaneous Media and Communication Equipment Workers",NA
+"27-0000","27-4000","27-4090","27-4099","Media and Communication Equipment Workers, All Other",NA
+"29-0000","27-4000","27-4090",NA,"Healthcare Practitioners and Technical Occupations",NA
+"29-0000","29-1000","27-4090",NA,"Health Diagnosing and Treating Practitioners",NA
+"29-0000","29-1000","29-1010",NA,"Chiropractors",NA
+"29-0000","29-1000","29-1010","29-1011","Chiropractors",NA
+"29-0000","29-1000","29-1020",NA,"Dentists",NA
+"29-0000","29-1000","29-1020","29-1021","Dentists, General",NA
+"29-0000","29-1000","29-1020","29-1022","Oral and Maxillofacial Surgeons",NA
+"29-0000","29-1000","29-1020","29-1023","Orthodontists",NA
+"29-0000","29-1000","29-1020","29-1024","Prosthodontists",NA
+"29-0000","29-1000","29-1020","29-1029","Dentists, All Other Specialists",NA
+"29-0000","29-1000","29-1030",NA,"Dietitians and Nutritionists",NA
+"29-0000","29-1000","29-1030","29-1031","Dietitians and Nutritionists",NA
+"29-0000","29-1000","29-1040",NA,"Optometrists",NA
+"29-0000","29-1000","29-1040","29-1041","Optometrists",NA
+"29-0000","29-1000","29-1050",NA,"Pharmacists",NA
+"29-0000","29-1000","29-1050","29-1051","Pharmacists",NA
+"29-0000","29-1000","29-1060",NA,"Physicians and Surgeons",NA
+"29-0000","29-1000","29-1060","29-1061","Anesthesiologists",NA
+"29-0000","29-1000","29-1060","29-1062","Family and General Practitioners",NA
+"29-0000","29-1000","29-1060","29-1063","Internists, General",NA
+"29-0000","29-1000","29-1060","29-1064","Obstetricians and Gynecologists",NA
+"29-0000","29-1000","29-1060","29-1065","Pediatricians, General",NA
+"29-0000","29-1000","29-1060","29-1066","Psychiatrists",NA
+"29-0000","29-1000","29-1060","29-1067","Surgeons",NA
+"29-0000","29-1000","29-1060","29-1069","Physicians and Surgeons, All Other",NA
+"29-0000","29-1000","29-1070",NA,"Physician Assistants",NA
+"29-0000","29-1000","29-1070","29-1071","Physician Assistants",NA
+"29-0000","29-1000","29-1080",NA,"Podiatrists",NA
+"29-0000","29-1000","29-1080","29-1081","Podiatrists",NA
+"29-0000","29-1000","29-1120",NA,"Therapists",NA
+"29-0000","29-1000","29-1120","29-1122","Occupational Therapists",NA
+"29-0000","29-1000","29-1120","29-1123","Physical Therapists",NA
+"29-0000","29-1000","29-1120","29-1124","Radiation Therapists",NA
+"29-0000","29-1000","29-1120","29-1125","Recreational Therapists",NA
+"29-0000","29-1000","29-1120","29-1126","Respiratory Therapists",NA
+"29-0000","29-1000","29-1120","29-1127","Speech-Language Pathologists",NA
+"29-0000","29-1000","29-1120","29-1128","Exercise Physiologists",NA
+"29-0000","29-1000","29-1120","29-1129","Therapists, All Other",NA
+"29-0000","29-1000","29-1130",NA,"Veterinarians",NA
+"29-0000","29-1000","29-1130","29-1131","Veterinarians",NA
+"29-0000","29-1000","29-1140",NA,"Registered Nurses",NA
+"29-0000","29-1000","29-1140","29-1141","Registered Nurses",NA
+"29-0000","29-1000","29-1150",NA,"Nurse Anesthetists",NA
+"29-0000","29-1000","29-1150","29-1151","Nurse Anesthetists",NA
+"29-0000","29-1000","29-1160",NA,"Nurse Midwives",NA
+"29-0000","29-1000","29-1160","29-1161","Nurse Midwives",NA
+"29-0000","29-1000","29-1170",NA,"Nurse Practitioners",NA
+"29-0000","29-1000","29-1170","29-1171","Nurse Practitioners",NA
+"29-0000","29-1000","29-1180",NA,"Audiologists",NA
+"29-0000","29-1000","29-1180","29-1181","Audiologists",NA
+"29-0000","29-1000","29-1190",NA,"Miscellaneous Health Diagnosing and Treating Practitioners",NA
+"29-0000","29-1000","29-1190","29-1199","Health Diagnosing and Treating Practitioners, All Other",NA
+"29-0000","29-2000","29-1190",NA,"Health Technologists and Technicians",NA
+"29-0000","29-2000","29-2010",NA,"Clinical Laboratory Technologists and Technicians",NA
+"29-0000","29-2000","29-2010","29-2011","Medical and Clinical Laboratory Technologists",NA
+"29-0000","29-2000","29-2010","29-2012","Medical and Clinical Laboratory Technicians",NA
+"29-0000","29-2000","29-2020",NA,"Dental Hygienists",NA
+"29-0000","29-2000","29-2020","29-2021","Dental Hygienists",NA
+"29-0000","29-2000","29-2030",NA,"Diagnostic Related Technologists and Technicians",NA
+"29-0000","29-2000","29-2030","29-2031","Cardiovascular Technologists and Technicians",NA
+"29-0000","29-2000","29-2030","29-2032","Diagnostic Medical Sonographers",NA
+"29-0000","29-2000","29-2030","29-2033","Nuclear Medicine Technologists",NA
+"29-0000","29-2000","29-2030","29-2034","Radiologic Technologists",NA
+"29-0000","29-2000","29-2030","29-2035","Magnetic Resonance Imaging Technologists",NA
+"29-0000","29-2000","29-2040",NA,"Emergency Medical Technicians and Paramedics",NA
+"29-0000","29-2000","29-2040","29-2041","Emergency Medical Technicians and Paramedics",NA
+"29-0000","29-2000","29-2050",NA,"Health Practitioner Support Technologists and Technicians",NA
+"29-0000","29-2000","29-2050","29-2051","Dietetic Technicians",NA
+"29-0000","29-2000","29-2050","29-2052","Pharmacy Technicians",NA
+"29-0000","29-2000","29-2050","29-2053","Psychiatric Technicians",NA
+"29-0000","29-2000","29-2050","29-2054","Respiratory Therapy Technicians",NA
+"29-0000","29-2000","29-2050","29-2055","Surgical Technologists",NA
+"29-0000","29-2000","29-2050","29-2056","Veterinary Technologists and Technicians",NA
+"29-0000","29-2000","29-2050","29-2057","Ophthalmic Medical Technicians",NA
+"29-0000","29-2000","29-2060",NA,"Licensed Practical and Licensed Vocational Nurses",NA
+"29-0000","29-2000","29-2060","29-2061","Licensed Practical and Licensed Vocational Nurses",NA
+"29-0000","29-2000","29-2070",NA,"Medical Records and Health Information Technicians",NA
+"29-0000","29-2000","29-2070","29-2071","Medical Records and Health Information Technicians",NA
+"29-0000","29-2000","29-2080",NA,"Opticians, Dispensing",NA
+"29-0000","29-2000","29-2080","29-2081","Opticians, Dispensing",NA
+"29-0000","29-2000","29-2090",NA,"Miscellaneous Health Technologists and Technicians",NA
+"29-0000","29-2000","29-2090","29-2091","Orthotists and Prosthetists",NA
+"29-0000","29-2000","29-2090","29-2092","Hearing Aid Specialists",NA
+"29-0000","29-2000","29-2090","29-2099","Health Technologists and Technicians, All Other",NA
+"29-0000","29-9000","29-2090",NA,"Other Healthcare Practitioners and Technical Occupations",NA
+"29-0000","29-9000","29-9010",NA,"Occupational Health and Safety Specialists and Technicians",NA
+"29-0000","29-9000","29-9010","29-9011","Occupational Health and Safety Specialists",NA
+"29-0000","29-9000","29-9010","29-9012","Occupational Health and Safety Technicians",NA
+"29-0000","29-9000","29-9090",NA,"Miscellaneous Health Practitioners and Technical Workers",NA
+"29-0000","29-9000","29-9090","29-9091","Athletic Trainers",NA
+"29-0000","29-9000","29-9090","29-9092","Genetic Counselors",NA
+"29-0000","29-9000","29-9090","29-9099","Healthcare Practitioners and Technical Workers, All Other",NA
+"31-0000","29-9000","29-9090",NA,"Healthcare Support Occupations",NA
+"31-0000","31-1000","29-9090",NA,"Nursing, Psychiatric, and Home Health Aides",NA
+"31-0000","31-1000","31-1010",NA,"Nursing, Psychiatric, and Home Health Aides",NA
+"31-0000","31-1000","31-1010","31-1011","Home Health Aides",NA
+"31-0000","31-1000","31-1010","31-1013","Psychiatric Aides",NA
+"31-0000","31-1000","31-1010","31-1014","Nursing Assistants",NA
+"31-0000","31-1000","31-1010","31-1015","Orderlies",NA
+"31-0000","31-2000","31-1010",NA,"Occupational Therapy and Physical Therapist Assistants and Aides",NA
+"31-0000","31-2000","31-2010",NA,"Occupational Therapy Assistants and Aides",NA
+"31-0000","31-2000","31-2010","31-2011","Occupational Therapy Assistants",NA
+"31-0000","31-2000","31-2010","31-2012","Occupational Therapy Aides",NA
+"31-0000","31-2000","31-2020",NA,"Physical Therapist Assistants and Aides",NA
+"31-0000","31-2000","31-2020","31-2021","Physical Therapist Assistants",NA
+"31-0000","31-2000","31-2020","31-2022","Physical Therapist Aides",NA
+"31-0000","31-9000","31-2020",NA,"Other Healthcare Support Occupations",NA
+"31-0000","31-9000","31-9010",NA,"Massage Therapists",NA
+"31-0000","31-9000","31-9010","31-9011","Massage Therapists",NA
+"31-0000","31-9000","31-9090",NA,"Miscellaneous Healthcare Support Occupations",NA
+"31-0000","31-9000","31-9090","31-9091","Dental Assistants",NA
+"31-0000","31-9000","31-9090","31-9092","Medical Assistants",NA
+"31-0000","31-9000","31-9090","31-9093","Medical Equipment Preparers",NA
+"31-0000","31-9000","31-9090","31-9094","Medical Transcriptionists",NA
+"31-0000","31-9000","31-9090","31-9095","Pharmacy Aides",NA
+"31-0000","31-9000","31-9090","31-9096","Veterinary Assistants and Laboratory Animal Caretakers",NA
+"31-0000","31-9000","31-9090","31-9097","Phlebotomists",NA
+"31-0000","31-9000","31-9090","31-9099","Healthcare Support Workers, All Other",NA
+"33-0000","31-9000","31-9090",NA,"Protective Service Occupations",NA
+"33-0000","33-1000","31-9090",NA,"Supervisors of Protective Service Workers",NA
+"33-0000","33-1000","33-1010",NA,"First-Line Supervisors of Law Enforcement Workers",NA
+"33-0000","33-1000","33-1010","33-1011","First-Line Supervisors of Correctional Officers",NA
+"33-0000","33-1000","33-1010","33-1012","First-Line Supervisors of Police and Detectives",NA
+"33-0000","33-1000","33-1020",NA,"First-Line Supervisors of Fire Fighting and Prevention Workers",NA
+"33-0000","33-1000","33-1020","33-1021","First-Line Supervisors of Fire Fighting and Prevention Workers",NA
+"33-0000","33-1000","33-1090",NA,"Miscellaneous First-Line Supervisors, Protective Service Workers",NA
+"33-0000","33-1000","33-1090","33-1099","First-Line Supervisors of Protective Service Workers, All Other",NA
+"33-0000","33-2000","33-1090",NA,"Fire Fighting and Prevention Workers",NA
+"33-0000","33-2000","33-2010",NA,"Firefighters",NA
+"33-0000","33-2000","33-2010","33-2011","Firefighters",NA
+"33-0000","33-2000","33-2020",NA,"Fire Inspectors",NA
+"33-0000","33-2000","33-2020","33-2021","Fire Inspectors and Investigators",NA
+"33-0000","33-2000","33-2020","33-2022","Forest Fire Inspectors and Prevention Specialists",NA
+"33-0000","33-3000","33-2020",NA,"Law Enforcement Workers",NA
+"33-0000","33-3000","33-3010",NA,"Bailiffs, Correctional Officers, and Jailers",NA
+"33-0000","33-3000","33-3010","33-3011","Bailiffs",NA
+"33-0000","33-3000","33-3010","33-3012","Correctional Officers and Jailers",NA
+"33-0000","33-3000","33-3020",NA,"Detectives and Criminal Investigators",NA
+"33-0000","33-3000","33-3020","33-3021","Detectives and Criminal Investigators",NA
+"33-0000","33-3000","33-3030",NA,"Fish and Game Wardens",NA
+"33-0000","33-3000","33-3030","33-3031","Fish and Game Wardens",NA
+"33-0000","33-3000","33-3040",NA,"Parking Enforcement Workers",NA
+"33-0000","33-3000","33-3040","33-3041","Parking Enforcement Workers",NA
+"33-0000","33-3000","33-3050",NA,"Police Officers",NA
+"33-0000","33-3000","33-3050","33-3051","Police and Sheriff's Patrol Officers",NA
+"33-0000","33-3000","33-3050","33-3052","Transit and Railroad Police",NA
+"33-0000","33-9000","33-3050",NA,"Other Protective Service Workers",NA
+"33-0000","33-9000","33-9010",NA,"Animal Control Workers",NA
+"33-0000","33-9000","33-9010","33-9011","Animal Control Workers",NA
+"33-0000","33-9000","33-9020",NA,"Private Detectives and Investigators",NA
+"33-0000","33-9000","33-9020","33-9021","Private Detectives and Investigators",NA
+"33-0000","33-9000","33-9030",NA,"Security Guards and Gaming Surveillance Officers",NA
+"33-0000","33-9000","33-9030","33-9031","Gaming Surveillance Officers and Gaming Investigators",NA
+"33-0000","33-9000","33-9030","33-9032","Security Guards",NA
+"33-0000","33-9000","33-9090",NA,"Miscellaneous Protective Service Workers",NA
+"33-0000","33-9000","33-9090","33-9091","Crossing Guards",NA
+"33-0000","33-9000","33-9090","33-9092","Lifeguards, Ski Patrol, and Other Recreational Protective Service Workers",NA
+"33-0000","33-9000","33-9090","33-9093","Transportation Security Screeners",NA
+"33-0000","33-9000","33-9090","33-9099","Protective Service Workers, All Other",NA
+"35-0000","33-9000","33-9090",NA,"Food Preparation and Serving Related Occupations",NA
+"35-0000","35-1000","33-9090",NA,"Supervisors of Food Preparation and Serving Workers",NA
+"35-0000","35-1000","35-1010",NA,"Supervisors of Food Preparation and Serving Workers",NA
+"35-0000","35-1000","35-1010","35-1011","Chefs and Head Cooks",NA
+"35-0000","35-1000","35-1010","35-1012","First-Line Supervisors of Food Preparation and Serving Workers",NA
+"35-0000","35-2000","35-1010",NA,"Cooks and Food Preparation Workers",NA
+"35-0000","35-2000","35-2010",NA,"Cooks",NA
+"35-0000","35-2000","35-2010","35-2011","Cooks, Fast Food",NA
+"35-0000","35-2000","35-2010","35-2012","Cooks, Institution and Cafeteria",NA
+"35-0000","35-2000","35-2010","35-2013","Cooks, Private Household",NA
+"35-0000","35-2000","35-2010","35-2014","Cooks, Restaurant",NA
+"35-0000","35-2000","35-2010","35-2015","Cooks, Short Order",NA
+"35-0000","35-2000","35-2010","35-2019","Cooks, All Other",NA
+"35-0000","35-2000","35-2020",NA,"Food Preparation Workers",NA
+"35-0000","35-2000","35-2020","35-2021","Food Preparation Workers",NA
+"35-0000","35-3000","35-2020",NA,"Food and Beverage Serving Workers",NA
+"35-0000","35-3000","35-3010",NA,"Bartenders",NA
+"35-0000","35-3000","35-3010","35-3011","Bartenders",NA
+"35-0000","35-3000","35-3020",NA,"Fast Food and Counter Workers",NA
+"35-0000","35-3000","35-3020","35-3021","Combined Food Preparation and Serving Workers, Including Fast Food",NA
+"35-0000","35-3000","35-3020","35-3022","Counter Attendants, Cafeteria, Food Concession, and Coffee Shop",NA
+"35-0000","35-3000","35-3030",NA,"Waiters and Waitresses",NA
+"35-0000","35-3000","35-3030","35-3031","Waiters and Waitresses",NA
+"35-0000","35-3000","35-3040",NA,"Food Servers, Nonrestaurant",NA
+"35-0000","35-3000","35-3040","35-3041","Food Servers, Nonrestaurant",NA
+"35-0000","35-9000","35-3040",NA,"Other Food Preparation and Serving Related Workers",NA
+"35-0000","35-9000","35-9010",NA,"Dining Room and Cafeteria Attendants and Bartender Helpers",NA
+"35-0000","35-9000","35-9010","35-9011","Dining Room and Cafeteria Attendants and Bartender Helpers",NA
+"35-0000","35-9000","35-9020",NA,"Dishwashers",NA
+"35-0000","35-9000","35-9020","35-9021","Dishwashers",NA
+"35-0000","35-9000","35-9030",NA,"Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop",NA
+"35-0000","35-9000","35-9030","35-9031","Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop",NA
+"35-0000","35-9000","35-9090",NA,"Miscellaneous Food Preparation and Serving Related Workers",NA
+"35-0000","35-9000","35-9090","35-9099","Food Preparation and Serving Related Workers, All Other",NA
+"37-0000","35-9000","35-9090",NA,"Building and Grounds Cleaning and Maintenance Occupations",NA
+"37-0000","37-1000","35-9090",NA,"Supervisors of Building and Grounds Cleaning and Maintenance Workers",NA
+"37-0000","37-1000","37-1010",NA,"First-Line Supervisors of Building and Grounds Cleaning and Maintenance Workers",NA
+"37-0000","37-1000","37-1010","37-1011","First-Line Supervisors of Housekeeping and Janitorial Workers",NA
+"37-0000","37-1000","37-1010","37-1012","First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers",NA
+"37-0000","37-2000","37-1010",NA,"Building Cleaning and Pest Control Workers",NA
+"37-0000","37-2000","37-2010",NA,"Building Cleaning Workers",NA
+"37-0000","37-2000","37-2010","37-2011","Janitors and Cleaners, Except Maids and Housekeeping Cleaners",NA
+"37-0000","37-2000","37-2010","37-2012","Maids and Housekeeping Cleaners",NA
+"37-0000","37-2000","37-2010","37-2019","Building Cleaning Workers, All Other",NA
+"37-0000","37-2000","37-2020",NA,"Pest Control Workers",NA
+"37-0000","37-2000","37-2020","37-2021","Pest Control Workers",NA
+"37-0000","37-3000","37-2020",NA,"Grounds Maintenance Workers",NA
+"37-0000","37-3000","37-3010",NA,"Grounds Maintenance Workers",NA
+"37-0000","37-3000","37-3010","37-3011","Landscaping and Groundskeeping Workers",NA
+"37-0000","37-3000","37-3010","37-3012","Pesticide Handlers, Sprayers, and Applicators, Vegetation",NA
+"37-0000","37-3000","37-3010","37-3013","Tree Trimmers and Pruners",NA
+"37-0000","37-3000","37-3010","37-3019","Grounds Maintenance Workers, All Other",NA
+"39-0000","37-3000","37-3010",NA,"Personal Care and Service Occupations",NA
+"39-0000","39-1000","37-3010",NA,"Supervisors of Personal Care and Service Workers",NA
+"39-0000","39-1000","39-1010",NA,"First-Line Supervisors of Gaming Workers",NA
+"39-0000","39-1000","39-1010","39-1011","Gaming Supervisors",NA
+"39-0000","39-1000","39-1010","39-1012","Slot Supervisors",NA
+"39-0000","39-1000","39-1020",NA,"First-Line Supervisors of Personal Service Workers",NA
+"39-0000","39-1000","39-1020","39-1021","First-Line Supervisors of Personal Service Workers",NA
+"39-0000","39-2000","39-1020",NA,"Animal Care and Service Workers",NA
+"39-0000","39-2000","39-2010",NA,"Animal Trainers",NA
+"39-0000","39-2000","39-2010","39-2011","Animal Trainers",NA
+"39-0000","39-2000","39-2020",NA,"Nonfarm Animal Caretakers",NA
+"39-0000","39-2000","39-2020","39-2021","Nonfarm Animal Caretakers",NA
+"39-0000","39-3000","39-2020",NA,"Entertainment Attendants and Related Workers",NA
+"39-0000","39-3000","39-3010",NA,"Gaming Services Workers",NA
+"39-0000","39-3000","39-3010","39-3011","Gaming Dealers",NA
+"39-0000","39-3000","39-3010","39-3012","Gaming and Sports Book Writers and Runners",NA
+"39-0000","39-3000","39-3010","39-3019","Gaming Service Workers, All Other",NA
+"39-0000","39-3000","39-3020",NA,"Motion Picture Projectionists",NA
+"39-0000","39-3000","39-3020","39-3021","Motion Picture Projectionists",NA
+"39-0000","39-3000","39-3030",NA,"Ushers, Lobby Attendants, and Ticket Takers",NA
+"39-0000","39-3000","39-3030","39-3031","Ushers, Lobby Attendants, and Ticket Takers",NA
+"39-0000","39-3000","39-3090",NA,"Miscellaneous Entertainment Attendants and Related Workers",NA
+"39-0000","39-3000","39-3090","39-3091","Amusement and Recreation Attendants",NA
+"39-0000","39-3000","39-3090","39-3092","Costume Attendants",NA
+"39-0000","39-3000","39-3090","39-3093","Locker Room, Coatroom, and Dressing Room Attendants",NA
+"39-0000","39-3000","39-3090","39-3099","Entertainment Attendants and Related Workers, All Other",NA
+"39-0000","39-4000","39-3090",NA,"Funeral Service Workers",NA
+"39-0000","39-4000","39-4010",NA,"Embalmers",NA
+"39-0000","39-4000","39-4010","39-4011","Embalmers",NA
+"39-0000","39-4000","39-4020",NA,"Funeral Attendants",NA
+"39-0000","39-4000","39-4020","39-4021","Funeral Attendants",NA
+"39-0000","39-4000","39-4030",NA,"Morticians, Undertakers, and Funeral Directors",NA
+"39-0000","39-4000","39-4030","39-4031","Morticians, Undertakers, and Funeral Directors",NA
+"39-0000","39-5000","39-4030",NA,"Personal Appearance Workers",NA
+"39-0000","39-5000","39-5010",NA,"Barbers, Hairdressers, Hairstylists and Cosmetologists",NA
+"39-0000","39-5000","39-5010","39-5011","Barbers",NA
+"39-0000","39-5000","39-5010","39-5012","Hairdressers, Hairstylists, and Cosmetologists",NA
+"39-0000","39-5000","39-5090",NA,"Miscellaneous Personal Appearance Workers",NA
+"39-0000","39-5000","39-5090","39-5091","Makeup Artists, Theatrical and Performance",NA
+"39-0000","39-5000","39-5090","39-5092","Manicurists and Pedicurists",NA
+"39-0000","39-5000","39-5090","39-5093","Shampooers",NA
+"39-0000","39-5000","39-5090","39-5094","Skincare Specialists",NA
+"39-0000","39-6000","39-5090",NA,"Baggage Porters, Bellhops, and Concierges",NA
+"39-0000","39-6000","39-6010",NA,"Baggage Porters, Bellhops, and Concierges",NA
+"39-0000","39-6000","39-6010","39-6011","Baggage Porters and Bellhops",NA
+"39-0000","39-6000","39-6010","39-6012","Concierges",NA
+"39-0000","39-7000","39-6010",NA,"Tour and Travel Guides",NA
+"39-0000","39-7000","39-7010",NA,"Tour and Travel Guides",NA
+"39-0000","39-7000","39-7010","39-7011","Tour Guides and Escorts",NA
+"39-0000","39-7000","39-7010","39-7012","Travel Guides",NA
+"39-0000","39-9000","39-7010",NA,"Other Personal Care and Service Workers",NA
+"39-0000","39-9000","39-9010",NA,"Childcare Workers",NA
+"39-0000","39-9000","39-9010","39-9011","Childcare Workers",NA
+"39-0000","39-9000","39-9020",NA,"Personal Care Aides",NA
+"39-0000","39-9000","39-9020","39-9021","Personal Care Aides",NA
+"39-0000","39-9000","39-9030",NA,"Recreation and Fitness Workers",NA
+"39-0000","39-9000","39-9030","39-9031","Fitness Trainers and Aerobics Instructors",NA
+"39-0000","39-9000","39-9030","39-9032","Recreation Workers",NA
+"39-0000","39-9000","39-9040",NA,"Residential Advisors",NA
+"39-0000","39-9000","39-9040","39-9041","Residential Advisors",NA
+"39-0000","39-9000","39-9090",NA,"Miscellaneous Personal Care and Service Workers",NA
+"39-0000","39-9000","39-9090","39-9099","Personal Care and Service Workers, All Other",NA
+"41-0000","39-9000","39-9090",NA,"Sales and Related Occupations",NA
+"41-0000","41-1000","39-9090",NA,"Supervisors of Sales Workers",NA
+"41-0000","41-1000","41-1010",NA,"First-Line Supervisors of Sales Workers",NA
+"41-0000","41-1000","41-1010","41-1011","First-Line Supervisors of Retail Sales Workers",NA
+"41-0000","41-1000","41-1010","41-1012","First-Line Supervisors of Non-Retail Sales Workers",NA
+"41-0000","41-2000","41-1010",NA,"Retail Sales Workers",NA
+"41-0000","41-2000","41-2010",NA,"Cashiers",NA
+"41-0000","41-2000","41-2010","41-2011","Cashiers",NA
+"41-0000","41-2000","41-2010","41-2012","Gaming Change Persons and Booth Cashiers",NA
+"41-0000","41-2000","41-2020",NA,"Counter and Rental Clerks and Parts Salespersons",NA
+"41-0000","41-2000","41-2020","41-2021","Counter and Rental Clerks",NA
+"41-0000","41-2000","41-2020","41-2022","Parts Salespersons",NA
+"41-0000","41-2000","41-2030",NA,"Retail Salespersons",NA
+"41-0000","41-2000","41-2030","41-2031","Retail Salespersons",NA
+"41-0000","41-3000","41-2030",NA,"Sales Representatives, Services",NA
+"41-0000","41-3000","41-3010",NA,"Advertising Sales Agents",NA
+"41-0000","41-3000","41-3010","41-3011","Advertising Sales Agents",NA
+"41-0000","41-3000","41-3020",NA,"Insurance Sales Agents",NA
+"41-0000","41-3000","41-3020","41-3021","Insurance Sales Agents",NA
+"41-0000","41-3000","41-3030",NA,"Securities, Commodities, and Financial Services Sales Agents",NA
+"41-0000","41-3000","41-3030","41-3031","Securities, Commodities, and Financial Services Sales Agents",NA
+"41-0000","41-3000","41-3040",NA,"Travel Agents",NA
+"41-0000","41-3000","41-3040","41-3041","Travel Agents",NA
+"41-0000","41-3000","41-3090",NA,"Miscellaneous Sales Representatives, Services",NA
+"41-0000","41-3000","41-3090","41-3099","Sales Representatives, Services, All Other",NA
+"41-0000","41-4000","41-3090",NA,"Sales Representatives, Wholesale and Manufacturing",NA
+"41-0000","41-4000","41-4010",NA,"Sales Representatives, Wholesale and Manufacturing",NA
+"41-0000","41-4000","41-4010","41-4011","Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",NA
+"41-0000","41-4000","41-4010","41-4012","Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",NA
+"41-0000","41-9000","41-4010",NA,"Other Sales and Related Workers",NA
+"41-0000","41-9000","41-9010",NA,"Models, Demonstrators, and Product Promoters",NA
+"41-0000","41-9000","41-9010","41-9011","Demonstrators and Product Promoters",NA
+"41-0000","41-9000","41-9010","41-9012","Models",NA
+"41-0000","41-9000","41-9020",NA,"Real Estate Brokers and Sales Agents",NA
+"41-0000","41-9000","41-9020","41-9021","Real Estate Brokers",NA
+"41-0000","41-9000","41-9020","41-9022","Real Estate Sales Agents",NA
+"41-0000","41-9000","41-9030",NA,"Sales Engineers",NA
+"41-0000","41-9000","41-9030","41-9031","Sales Engineers",NA
+"41-0000","41-9000","41-9040",NA,"Telemarketers",NA
+"41-0000","41-9000","41-9040","41-9041","Telemarketers",NA
+"41-0000","41-9000","41-9090",NA,"Miscellaneous Sales and Related Workers",NA
+"41-0000","41-9000","41-9090","41-9091","Door-to-Door Sales Workers, News and Street Vendors, and Related Workers",NA
+"41-0000","41-9000","41-9090","41-9099","Sales and Related Workers, All Other",NA
+"43-0000","41-9000","41-9090",NA,"Office and Administrative Support Occupations",NA
+"43-0000","43-1000","41-9090",NA,"Supervisors of Office and Administrative Support Workers",NA
+"43-0000","43-1000","43-1010",NA,"First-Line Supervisors of Office and Administrative Support Workers",NA
+"43-0000","43-1000","43-1010","43-1011","First-Line Supervisors of Office and Administrative Support Workers",NA
+"43-0000","43-2000","43-1010",NA,"Communications Equipment Operators",NA
+"43-0000","43-2000","43-2010",NA,"Switchboard Operators, Including Answering Service",NA
+"43-0000","43-2000","43-2010","43-2011","Switchboard Operators, Including Answering Service",NA
+"43-0000","43-2000","43-2020",NA,"Telephone Operators",NA
+"43-0000","43-2000","43-2020","43-2021","Telephone Operators",NA
+"43-0000","43-2000","43-2090",NA,"Miscellaneous Communications Equipment Operators",NA
+"43-0000","43-2000","43-2090","43-2099","Communications Equipment Operators, All Other",NA
+"43-0000","43-3000","43-2090",NA,"Financial Clerks",NA
+"43-0000","43-3000","43-3010",NA,"Bill and Account Collectors",NA
+"43-0000","43-3000","43-3010","43-3011","Bill and Account Collectors",NA
+"43-0000","43-3000","43-3020",NA,"Billing and Posting Clerks",NA
+"43-0000","43-3000","43-3020","43-3021","Billing and Posting Clerks",NA
+"43-0000","43-3000","43-3030",NA,"Bookkeeping, Accounting, and Auditing Clerks",NA
+"43-0000","43-3000","43-3030","43-3031","Bookkeeping, Accounting, and Auditing Clerks",NA
+"43-0000","43-3000","43-3040",NA,"Gaming Cage Workers",NA
+"43-0000","43-3000","43-3040","43-3041","Gaming Cage Workers",NA
+"43-0000","43-3000","43-3050",NA,"Payroll and Timekeeping Clerks",NA
+"43-0000","43-3000","43-3050","43-3051","Payroll and Timekeeping Clerks",NA
+"43-0000","43-3000","43-3060",NA,"Procurement Clerks",NA
+"43-0000","43-3000","43-3060","43-3061","Procurement Clerks",NA
+"43-0000","43-3000","43-3070",NA,"Tellers",NA
+"43-0000","43-3000","43-3070","43-3071","Tellers",NA
+"43-0000","43-3000","43-3090",NA,"Miscellaneous Financial Clerks",NA
+"43-0000","43-3000","43-3090","43-3099","Financial Clerks, All Other",NA
+"43-0000","43-4000","43-3090",NA,"Information and Record Clerks",NA
+"43-0000","43-4000","43-4010",NA,"Brokerage Clerks",NA
+"43-0000","43-4000","43-4010","43-4011","Brokerage Clerks",NA
+"43-0000","43-4000","43-4020",NA,"Correspondence Clerks",NA
+"43-0000","43-4000","43-4020","43-4021","Correspondence Clerks",NA
+"43-0000","43-4000","43-4030",NA,"Court, Municipal, and License Clerks",NA
+"43-0000","43-4000","43-4030","43-4031","Court, Municipal, and License Clerks",NA
+"43-0000","43-4000","43-4040",NA,"Credit Authorizers, Checkers, and Clerks",NA
+"43-0000","43-4000","43-4040","43-4041","Credit Authorizers, Checkers, and Clerks",NA
+"43-0000","43-4000","43-4050",NA,"Customer Service Representatives",NA
+"43-0000","43-4000","43-4050","43-4051","Customer Service Representatives",NA
+"43-0000","43-4000","43-4060",NA,"Eligibility Interviewers, Government Programs",NA
+"43-0000","43-4000","43-4060","43-4061","Eligibility Interviewers, Government Programs",NA
+"43-0000","43-4000","43-4070",NA,"File Clerks",NA
+"43-0000","43-4000","43-4070","43-4071","File Clerks",NA
+"43-0000","43-4000","43-4080",NA,"Hotel, Motel, and Resort Desk Clerks",NA
+"43-0000","43-4000","43-4080","43-4081","Hotel, Motel, and Resort Desk Clerks",NA
+"43-0000","43-4000","43-4110",NA,"Interviewers, Except Eligibility and Loan",NA
+"43-0000","43-4000","43-4110","43-4111","Interviewers, Except Eligibility and Loan",NA
+"43-0000","43-4000","43-4120",NA,"Library Assistants, Clerical",NA
+"43-0000","43-4000","43-4120","43-4121","Library Assistants, Clerical",NA
+"43-0000","43-4000","43-4130",NA,"Loan Interviewers and Clerks",NA
+"43-0000","43-4000","43-4130","43-4131","Loan Interviewers and Clerks",NA
+"43-0000","43-4000","43-4140",NA,"New Accounts Clerks",NA
+"43-0000","43-4000","43-4140","43-4141","New Accounts Clerks",NA
+"43-0000","43-4000","43-4150",NA,"Order Clerks",NA
+"43-0000","43-4000","43-4150","43-4151","Order Clerks",NA
+"43-0000","43-4000","43-4160",NA,"Human Resources Assistants, Except Payroll and Timekeeping",NA
+"43-0000","43-4000","43-4160","43-4161","Human Resources Assistants, Except Payroll and Timekeeping",NA
+"43-0000","43-4000","43-4170",NA,"Receptionists and Information Clerks",NA
+"43-0000","43-4000","43-4170","43-4171","Receptionists and Information Clerks",NA
+"43-0000","43-4000","43-4180",NA,"Reservation and Transportation Ticket Agents and Travel Clerks",NA
+"43-0000","43-4000","43-4180","43-4181","Reservation and Transportation Ticket Agents and Travel Clerks",NA
+"43-0000","43-4000","43-4190",NA,"Miscellaneous Information and Record Clerks",NA
+"43-0000","43-4000","43-4190","43-4199","Information and Record Clerks, All Other",NA
+"43-0000","43-5000","43-4190",NA,"Material Recording, Scheduling, Dispatching, and Distributing Workers",NA
+"43-0000","43-5000","43-5010",NA,"Cargo and Freight Agents",NA
+"43-0000","43-5000","43-5010","43-5011","Cargo and Freight Agents",NA
+"43-0000","43-5000","43-5020",NA,"Couriers and Messengers",NA
+"43-0000","43-5000","43-5020","43-5021","Couriers and Messengers",NA
+"43-0000","43-5000","43-5030",NA,"Dispatchers",NA
+"43-0000","43-5000","43-5030","43-5031","Police, Fire, and Ambulance Dispatchers",NA
+"43-0000","43-5000","43-5030","43-5032","Dispatchers, Except Police, Fire, and Ambulance",NA
+"43-0000","43-5000","43-5040",NA,"Meter Readers, Utilities",NA
+"43-0000","43-5000","43-5040","43-5041","Meter Readers, Utilities",NA
+"43-0000","43-5000","43-5050",NA,"Postal Service Workers",NA
+"43-0000","43-5000","43-5050","43-5051","Postal Service Clerks",NA
+"43-0000","43-5000","43-5050","43-5052","Postal Service Mail Carriers",NA
+"43-0000","43-5000","43-5050","43-5053","Postal Service Mail Sorters, Processors, and Processing Machine Operators",NA
+"43-0000","43-5000","43-5060",NA,"Production, Planning, and Expediting Clerks",NA
+"43-0000","43-5000","43-5060","43-5061","Production, Planning, and Expediting Clerks",NA
+"43-0000","43-5000","43-5070",NA,"Shipping, Receiving, and Traffic Clerks",NA
+"43-0000","43-5000","43-5070","43-5071","Shipping, Receiving, and Traffic Clerks",NA
+"43-0000","43-5000","43-5080",NA,"Stock Clerks and Order Fillers",NA
+"43-0000","43-5000","43-5080","43-5081","Stock Clerks and Order Fillers",NA
+"43-0000","43-5000","43-5110",NA,"Weighers, Measurers, Checkers, and Samplers, Recordkeeping",NA
+"43-0000","43-5000","43-5110","43-5111","Weighers, Measurers, Checkers, and Samplers, Recordkeeping",NA
+"43-0000","43-6000","43-5110",NA,"Secretaries and Administrative Assistants",NA
+"43-0000","43-6000","43-6010",NA,"Secretaries and Administrative Assistants",NA
+"43-0000","43-6000","43-6010","43-6011","Executive Secretaries and Executive Administrative Assistants",NA
+"43-0000","43-6000","43-6010","43-6012","Legal Secretaries",NA
+"43-0000","43-6000","43-6010","43-6013","Medical Secretaries",NA
+"43-0000","43-6000","43-6010","43-6014","Secretaries and Administrative Assistants, Except Legal, Medical, and Executive",NA
+"43-0000","43-9000","43-6010",NA,"Other Office and Administrative Support Workers",NA
+"43-0000","43-9000","43-9010",NA,"Computer Operators",NA
+"43-0000","43-9000","43-9010","43-9011","Computer Operators",NA
+"43-0000","43-9000","43-9020",NA,"Data Entry and Information Processing Workers",NA
+"43-0000","43-9000","43-9020","43-9021","Data Entry Keyers",NA
+"43-0000","43-9000","43-9020","43-9022","Word Processors and Typists",NA
+"43-0000","43-9000","43-9030",NA,"Desktop Publishers",NA
+"43-0000","43-9000","43-9030","43-9031","Desktop Publishers",NA
+"43-0000","43-9000","43-9040",NA,"Insurance Claims and Policy Processing Clerks",NA
+"43-0000","43-9000","43-9040","43-9041","Insurance Claims and Policy Processing Clerks",NA
+"43-0000","43-9000","43-9050",NA,"Mail Clerks and Mail Machine Operators, Except Postal Service",NA
+"43-0000","43-9000","43-9050","43-9051","Mail Clerks and Mail Machine Operators, Except Postal Service",NA
+"43-0000","43-9000","43-9060",NA,"Office Clerks, General",NA
+"43-0000","43-9000","43-9060","43-9061","Office Clerks, General",NA
+"43-0000","43-9000","43-9070",NA,"Office Machine Operators, Except Computer",NA
+"43-0000","43-9000","43-9070","43-9071","Office Machine Operators, Except Computer",NA
+"43-0000","43-9000","43-9080",NA,"Proofreaders and Copy Markers",NA
+"43-0000","43-9000","43-9080","43-9081","Proofreaders and Copy Markers",NA
+"43-0000","43-9000","43-9110",NA,"Statistical Assistants",NA
+"43-0000","43-9000","43-9110","43-9111","Statistical Assistants",NA
+"43-0000","43-9000","43-9190",NA,"Miscellaneous Office and Administrative Support Workers",NA
+"43-0000","43-9000","43-9190","43-9199","Office and Administrative Support Workers, All Other",NA
+"45-0000","43-9000","43-9190",NA,"Farming, Fishing, and Forestry Occupations",NA
+"45-0000","45-1000","43-9190",NA,"Supervisors of Farming, Fishing, and Forestry Workers",NA
+"45-0000","45-1000","45-1010",NA,"First-Line Supervisors of Farming, Fishing, and Forestry Workers",NA
+"45-0000","45-1000","45-1010","45-1011","First-Line Supervisors of Farming, Fishing, and Forestry Workers",NA
+"45-0000","45-2000","45-1010",NA,"Agricultural Workers",NA
+"45-0000","45-2000","45-2010",NA,"Agricultural Inspectors",NA
+"45-0000","45-2000","45-2010","45-2011","Agricultural Inspectors",NA
+"45-0000","45-2000","45-2020",NA,"Animal Breeders",NA
+"45-0000","45-2000","45-2020","45-2021","Animal Breeders",NA
+"45-0000","45-2000","45-2040",NA,"Graders and Sorters, Agricultural Products",NA
+"45-0000","45-2000","45-2040","45-2041","Graders and Sorters, Agricultural Products",NA
+"45-0000","45-2000","45-2090",NA,"Miscellaneous Agricultural Workers",NA
+"45-0000","45-2000","45-2090","45-2091","Agricultural Equipment Operators",NA
+"45-0000","45-2000","45-2090","45-2092","Farmworkers and Laborers, Crop, Nursery, and Greenhouse",NA
+"45-0000","45-2000","45-2090","45-2093","Farmworkers, Farm, Ranch, and Aquacultural Animals",NA
+"45-0000","45-2000","45-2090","45-2099","Agricultural Workers, All Other",NA
+"45-0000","45-3000","45-2090",NA,"Fishing and Hunting Workers",NA
+"45-0000","45-3000","45-3010",NA,"Fishers and Related Fishing Workers",NA
+"45-0000","45-3000","45-3010","45-3011","Fishers and Related Fishing Workers",NA
+"45-0000","45-3000","45-3020",NA,"Hunters and Trappers",NA
+"45-0000","45-3000","45-3020","45-3021","Hunters and Trappers",NA
+"45-0000","45-4000","45-3020",NA,"Forest, Conservation, and Logging Workers",NA
+"45-0000","45-4000","45-4010",NA,"Forest and Conservation Workers",NA
+"45-0000","45-4000","45-4010","45-4011","Forest and Conservation Workers",NA
+"45-0000","45-4000","45-4020",NA,"Logging Workers",NA
+"45-0000","45-4000","45-4020","45-4021","Fallers",NA
+"45-0000","45-4000","45-4020","45-4022","Logging Equipment Operators",NA
+"45-0000","45-4000","45-4020","45-4023","Log Graders and Scalers",NA
+"45-0000","45-4000","45-4020","45-4029","Logging Workers, All Other",NA
+"47-0000","45-4000","45-4020",NA,"Construction and Extraction Occupations",NA
+"47-0000","47-1000","45-4020",NA,"Supervisors of Construction and Extraction Workers",NA
+"47-0000","47-1000","47-1010",NA,"First-Line Supervisors of Construction Trades and Extraction Workers",NA
+"47-0000","47-1000","47-1010","47-1011","First-Line Supervisors of Construction Trades and Extraction Workers",NA
+"47-0000","47-2000","47-1010",NA,"Construction Trades Workers",NA
+"47-0000","47-2000","47-2010",NA,"Boilermakers",NA
+"47-0000","47-2000","47-2010","47-2011","Boilermakers",NA
+"47-0000","47-2000","47-2020",NA,"Brickmasons, Blockmasons, and Stonemasons",NA
+"47-0000","47-2000","47-2020","47-2021","Brickmasons and Blockmasons",NA
+"47-0000","47-2000","47-2020","47-2022","Stonemasons",NA
+"47-0000","47-2000","47-2030",NA,"Carpenters",NA
+"47-0000","47-2000","47-2030","47-2031","Carpenters",NA
+"47-0000","47-2000","47-2040",NA,"Carpet, Floor, and Tile Installers and Finishers",NA
+"47-0000","47-2000","47-2040","47-2041","Carpet Installers",NA
+"47-0000","47-2000","47-2040","47-2042","Floor Layers, Except Carpet, Wood, and Hard Tiles",NA
+"47-0000","47-2000","47-2040","47-2043","Floor Sanders and Finishers",NA
+"47-0000","47-2000","47-2040","47-2044","Tile and Marble Setters",NA
+"47-0000","47-2000","47-2050",NA,"Cement Masons, Concrete Finishers, and Terrazzo Workers",NA
+"47-0000","47-2000","47-2050","47-2051","Cement Masons and Concrete Finishers",NA
+"47-0000","47-2000","47-2050","47-2053","Terrazzo Workers and Finishers",NA
+"47-0000","47-2000","47-2060",NA,"Construction Laborers",NA
+"47-0000","47-2000","47-2060","47-2061","Construction Laborers",NA
+"47-0000","47-2000","47-2070",NA,"Construction Equipment Operators",NA
+"47-0000","47-2000","47-2070","47-2071","Paving, Surfacing, and Tamping Equipment Operators",NA
+"47-0000","47-2000","47-2070","47-2072","Pile-Driver Operators",NA
+"47-0000","47-2000","47-2070","47-2073","Operating Engineers and Other Construction Equipment Operators",NA
+"47-0000","47-2000","47-2080",NA,"Drywall Installers, Ceiling Tile Installers, and Tapers",NA
+"47-0000","47-2000","47-2080","47-2081","Drywall and Ceiling Tile Installers",NA
+"47-0000","47-2000","47-2080","47-2082","Tapers",NA
+"47-0000","47-2000","47-2110",NA,"Electricians",NA
+"47-0000","47-2000","47-2110","47-2111","Electricians",NA
+"47-0000","47-2000","47-2120",NA,"Glaziers",NA
+"47-0000","47-2000","47-2120","47-2121","Glaziers",NA
+"47-0000","47-2000","47-2130",NA,"Insulation Workers",NA
+"47-0000","47-2000","47-2130","47-2131","Insulation Workers, Floor, Ceiling, and Wall",NA
+"47-0000","47-2000","47-2130","47-2132","Insulation Workers, Mechanical",NA
+"47-0000","47-2000","47-2140",NA,"Painters and Paperhangers",NA
+"47-0000","47-2000","47-2140","47-2141","Painters, Construction and Maintenance",NA
+"47-0000","47-2000","47-2140","47-2142","Paperhangers",NA
+"47-0000","47-2000","47-2150",NA,"Pipelayers, Plumbers, Pipefitters, and Steamfitters",NA
+"47-0000","47-2000","47-2150","47-2151","Pipelayers",NA
+"47-0000","47-2000","47-2150","47-2152","Plumbers, Pipefitters, and Steamfitters",NA
+"47-0000","47-2000","47-2160",NA,"Plasterers and Stucco Masons",NA
+"47-0000","47-2000","47-2160","47-2161","Plasterers and Stucco Masons",NA
+"47-0000","47-2000","47-2170",NA,"Reinforcing Iron and Rebar Workers",NA
+"47-0000","47-2000","47-2170","47-2171","Reinforcing Iron and Rebar Workers",NA
+"47-0000","47-2000","47-2180",NA,"Roofers",NA
+"47-0000","47-2000","47-2180","47-2181","Roofers",NA
+"47-0000","47-2000","47-2210",NA,"Sheet Metal Workers",NA
+"47-0000","47-2000","47-2210","47-2211","Sheet Metal Workers",NA
+"47-0000","47-2000","47-2220",NA,"Structural Iron and Steel Workers",NA
+"47-0000","47-2000","47-2220","47-2221","Structural Iron and Steel Workers",NA
+"47-0000","47-2000","47-2230",NA,"Solar Photovoltaic Installers",NA
+"47-0000","47-2000","47-2230","47-2231","Solar Photovoltaic Installers",NA
+"47-0000","47-3000","47-2230",NA,"Helpers, Construction Trades",NA
+"47-0000","47-3000","47-3010",NA,"Helpers, Construction Trades",NA
+"47-0000","47-3000","47-3010","47-3011","Helpers--Brickmasons, Blockmasons, Stonemasons, and Tile and Marble Setters",NA
+"47-0000","47-3000","47-3010","47-3012","Helpers--Carpenters",NA
+"47-0000","47-3000","47-3010","47-3013","Helpers--Electricians",NA
+"47-0000","47-3000","47-3010","47-3014","Helpers--Painters, Paperhangers, Plasterers, and Stucco Masons",NA
+"47-0000","47-3000","47-3010","47-3015","Helpers--Pipelayers, Plumbers, Pipefitters, and Steamfitters",NA
+"47-0000","47-3000","47-3010","47-3016","Helpers--Roofers",NA
+"47-0000","47-3000","47-3010","47-3019","Helpers, Construction Trades, All Other",NA
+"47-0000","47-4000","47-3010",NA,"Other Construction and Related Workers",NA
+"47-0000","47-4000","47-4010",NA,"Construction and Building Inspectors",NA
+"47-0000","47-4000","47-4010","47-4011","Construction and Building Inspectors",NA
+"47-0000","47-4000","47-4020",NA,"Elevator Installers and Repairers",NA
+"47-0000","47-4000","47-4020","47-4021","Elevator Installers and Repairers",NA
+"47-0000","47-4000","47-4030",NA,"Fence Erectors",NA
+"47-0000","47-4000","47-4030","47-4031","Fence Erectors",NA
+"47-0000","47-4000","47-4040",NA,"Hazardous Materials Removal Workers",NA
+"47-0000","47-4000","47-4040","47-4041","Hazardous Materials Removal Workers",NA
+"47-0000","47-4000","47-4050",NA,"Highway Maintenance Workers",NA
+"47-0000","47-4000","47-4050","47-4051","Highway Maintenance Workers",NA
+"47-0000","47-4000","47-4060",NA,"Rail-Track Laying and Maintenance Equipment Operators",NA
+"47-0000","47-4000","47-4060","47-4061","Rail-Track Laying and Maintenance Equipment Operators",NA
+"47-0000","47-4000","47-4070",NA,"Septic Tank Servicers and Sewer Pipe Cleaners",NA
+"47-0000","47-4000","47-4070","47-4071","Septic Tank Servicers and Sewer Pipe Cleaners",NA
+"47-0000","47-4000","47-4090",NA,"Miscellaneous Construction and Related Workers",NA
+"47-0000","47-4000","47-4090","47-4091","Segmental Pavers",NA
+"47-0000","47-4000","47-4090","47-4099","Construction and Related Workers, All Other",NA
+"47-0000","47-5000","47-4090",NA,"Extraction Workers",NA
+"47-0000","47-5000","47-5010",NA,"Derrick, Rotary Drill, and Service Unit Operators, Oil, Gas, and Mining",NA
+"47-0000","47-5000","47-5010","47-5011","Derrick Operators, Oil and Gas",NA
+"47-0000","47-5000","47-5010","47-5012","Rotary Drill Operators, Oil and Gas",NA
+"47-0000","47-5000","47-5010","47-5013","Service Unit Operators, Oil, Gas, and Mining",NA
+"47-0000","47-5000","47-5020",NA,"Earth Drillers, Except Oil and Gas",NA
+"47-0000","47-5000","47-5020","47-5021","Earth Drillers, Except Oil and Gas",NA
+"47-0000","47-5000","47-5030",NA,"Explosives Workers, Ordnance Handling Experts, and Blasters",NA
+"47-0000","47-5000","47-5030","47-5031","Explosives Workers, Ordnance Handling Experts, and Blasters",NA
+"47-0000","47-5000","47-5040",NA,"Mining Machine Operators",NA
+"47-0000","47-5000","47-5040","47-5041","Continuous Mining Machine Operators",NA
+"47-0000","47-5000","47-5040","47-5042","Mine Cutting and Channeling Machine Operators",NA
+"47-0000","47-5000","47-5040","47-5049","Mining Machine Operators, All Other",NA
+"47-0000","47-5000","47-5050",NA,"Rock Splitters, Quarry",NA
+"47-0000","47-5000","47-5050","47-5051","Rock Splitters, Quarry",NA
+"47-0000","47-5000","47-5060",NA,"Roof Bolters, Mining",NA
+"47-0000","47-5000","47-5060","47-5061","Roof Bolters, Mining",NA
+"47-0000","47-5000","47-5070",NA,"Roustabouts, Oil and Gas",NA
+"47-0000","47-5000","47-5070","47-5071","Roustabouts, Oil and Gas",NA
+"47-0000","47-5000","47-5080",NA,"Helpers--Extraction Workers",NA
+"47-0000","47-5000","47-5080","47-5081","Helpers--Extraction Workers",NA
+"47-0000","47-5000","47-5090",NA,"Miscellaneous Extraction Workers",NA
+"47-0000","47-5000","47-5090","47-5099","Extraction Workers, All Other",NA
+"49-0000","47-5000","47-5090",NA,"Installation, Maintenance, and Repair Occupations",NA
+"49-0000","49-1000","47-5090",NA,"Supervisors of Installation, Maintenance, and Repair Workers",NA
+"49-0000","49-1000","49-1010",NA,"First-Line Supervisors of Mechanics, Installers, and Repairers",NA
+"49-0000","49-1000","49-1010","49-1011","First-Line Supervisors of Mechanics, Installers, and Repairers",NA
+"49-0000","49-2000","49-1010",NA,"Electrical and Electronic Equipment Mechanics, Installers, and Repairers",NA
+"49-0000","49-2000","49-2010",NA,"Computer, Automated Teller, and Office Machine Repairers",NA
+"49-0000","49-2000","49-2010","49-2011","Computer, Automated Teller, and Office Machine Repairers",NA
+"49-0000","49-2000","49-2020",NA,"Radio and Telecommunications Equipment Installers and Repairers",NA
+"49-0000","49-2000","49-2020","49-2021","Radio, Cellular, and Tower Equipment Installers and Repairs",NA
+"49-0000","49-2000","49-2020","49-2022","Telecommunications Equipment Installers and Repairers, Except Line Installers",NA
+"49-0000","49-2000","49-2090",NA,"Miscellaneous Electrical and Electronic Equipment Mechanics, Installers, and Repairers",NA
+"49-0000","49-2000","49-2090","49-2091","Avionics Technicians",NA
+"49-0000","49-2000","49-2090","49-2092","Electric Motor, Power Tool, and Related Repairers",NA
+"49-0000","49-2000","49-2090","49-2093","Electrical and Electronics Installers and Repairers, Transportation Equipment",NA
+"49-0000","49-2000","49-2090","49-2094","Electrical and Electronics Repairers, Commercial and Industrial Equipment",NA
+"49-0000","49-2000","49-2090","49-2095","Electrical and Electronics Repairers, Powerhouse, Substation, and Relay",NA
+"49-0000","49-2000","49-2090","49-2096","Electronic Equipment Installers and Repairers, Motor Vehicles",NA
+"49-0000","49-2000","49-2090","49-2097","Electronic Home Entertainment Equipment Installers and Repairers",NA
+"49-0000","49-2000","49-2090","49-2098","Security and Fire Alarm Systems Installers",NA
+"49-0000","49-3000","49-2090",NA,"Vehicle and Mobile Equipment Mechanics, Installers, and Repairers",NA
+"49-0000","49-3000","49-3010",NA,"Aircraft Mechanics and Service Technicians",NA
+"49-0000","49-3000","49-3010","49-3011","Aircraft Mechanics and Service Technicians",NA
+"49-0000","49-3000","49-3020",NA,"Automotive Technicians and Repairers",NA
+"49-0000","49-3000","49-3020","49-3021","Automotive Body and Related Repairers",NA
+"49-0000","49-3000","49-3020","49-3022","Automotive Glass Installers and Repairers",NA
+"49-0000","49-3000","49-3020","49-3023","Automotive Service Technicians and Mechanics",NA
+"49-0000","49-3000","49-3030",NA,"Bus and Truck Mechanics and Diesel Engine Specialists",NA
+"49-0000","49-3000","49-3030","49-3031","Bus and Truck Mechanics and Diesel Engine Specialists",NA
+"49-0000","49-3000","49-3040",NA,"Heavy Vehicle and Mobile Equipment Service Technicians and Mechanics",NA
+"49-0000","49-3000","49-3040","49-3041","Farm Equipment Mechanics and Service Technicians",NA
+"49-0000","49-3000","49-3040","49-3042","Mobile Heavy Equipment Mechanics, Except Engines",NA
+"49-0000","49-3000","49-3040","49-3043","Rail Car Repairers",NA
+"49-0000","49-3000","49-3050",NA,"Small Engine Mechanics",NA
+"49-0000","49-3000","49-3050","49-3051","Motorboat Mechanics and Service Technicians",NA
+"49-0000","49-3000","49-3050","49-3052","Motorcycle Mechanics",NA
+"49-0000","49-3000","49-3050","49-3053","Outdoor Power Equipment and Other Small Engine Mechanics",NA
+"49-0000","49-3000","49-3090",NA,"Miscellaneous Vehicle and Mobile Equipment Mechanics, Installers, and Repairers",NA
+"49-0000","49-3000","49-3090","49-3091","Bicycle Repairers",NA
+"49-0000","49-3000","49-3090","49-3092","Recreational Vehicle Service Technicians",NA
+"49-0000","49-3000","49-3090","49-3093","Tire Repairers and Changers",NA
+"49-0000","49-9000","49-3090",NA,"Other Installation, Maintenance, and Repair Occupations",NA
+"49-0000","49-9000","49-9010",NA,"Control and Valve Installers and Repairers",NA
+"49-0000","49-9000","49-9010","49-9011","Mechanical Door Repairers",NA
+"49-0000","49-9000","49-9010","49-9012","Control and Valve Installers and Repairers, Except Mechanical Door",NA
+"49-0000","49-9000","49-9020",NA,"Heating, Air Conditioning, and Refrigeration Mechanics and Installers",NA
+"49-0000","49-9000","49-9020","49-9021","Heating, Air Conditioning, and Refrigeration Mechanics and Installers",NA
+"49-0000","49-9000","49-9030",NA,"Home Appliance Repairers",NA
+"49-0000","49-9000","49-9030","49-9031","Home Appliance Repairers",NA
+"49-0000","49-9000","49-9040",NA,"Industrial Machinery Installation, Repair, and Maintenance Workers",NA
+"49-0000","49-9000","49-9040","49-9041","Industrial Machinery Mechanics",NA
+"49-0000","49-9000","49-9040","49-9043","Maintenance Workers, Machinery",NA
+"49-0000","49-9000","49-9040","49-9044","Millwrights",NA
+"49-0000","49-9000","49-9040","49-9045","Refractory Materials Repairers, Except Brickmasons",NA
+"49-0000","49-9000","49-9050",NA,"Line Installers and Repairers",NA
+"49-0000","49-9000","49-9050","49-9051","Electrical Power-Line Installers and Repairers",NA
+"49-0000","49-9000","49-9050","49-9052","Telecommunications Line Installers and Repairers",NA
+"49-0000","49-9000","49-9060",NA,"Precision Instrument and Equipment Repairers",NA
+"49-0000","49-9000","49-9060","49-9061","Camera and Photographic Equipment Repairers",NA
+"49-0000","49-9000","49-9060","49-9062","Medical Equipment Repairers",NA
+"49-0000","49-9000","49-9060","49-9063","Musical Instrument Repairers and Tuners",NA
+"49-0000","49-9000","49-9060","49-9064","Watch Repairers",NA
+"49-0000","49-9000","49-9060","49-9069","Precision Instrument and Equipment Repairers, All Other",NA
+"49-0000","49-9000","49-9070",NA,"Maintenance and Repair Workers, General",NA
+"49-0000","49-9000","49-9070","49-9071","Maintenance and Repair Workers, General",NA
+"49-0000","49-9000","49-9080",NA,"Wind Turbine Service Technicians",NA
+"49-0000","49-9000","49-9080","49-9081","Wind Turbine Service Technicians",NA
+"49-0000","49-9000","49-9090",NA,"Miscellaneous Installation, Maintenance, and Repair Workers",NA
+"49-0000","49-9000","49-9090","49-9091","Coin, Vending, and Amusement Machine Servicers and Repairers",NA
+"49-0000","49-9000","49-9090","49-9092","Commercial Divers",NA
+"49-0000","49-9000","49-9090","49-9093","Fabric Menders, Except Garment",NA
+"49-0000","49-9000","49-9090","49-9094","Locksmiths and Safe Repairers",NA
+"49-0000","49-9000","49-9090","49-9095","Manufactured Building and Mobile Home Installers",NA
+"49-0000","49-9000","49-9090","49-9096","Riggers",NA
+"49-0000","49-9000","49-9090","49-9097","Signal and Track Switch Repairers",NA
+"49-0000","49-9000","49-9090","49-9098","Helpers--Installation, Maintenance, and Repair Workers",NA
+"49-0000","49-9000","49-9090","49-9099","Installation, Maintenance, and Repair Workers, All Other",NA
+"51-0000","49-9000","49-9090",NA,"Production Occupations",NA
+"51-0000","51-1000","49-9090",NA,"Supervisors of Production Workers",NA
+"51-0000","51-1000","51-1010",NA,"First-Line Supervisors of Production and Operating Workers",NA
+"51-0000","51-1000","51-1010","51-1011","First-Line Supervisors of Production and Operating Workers",NA
+"51-0000","51-2000","51-1010",NA,"Assemblers and Fabricators",NA
+"51-0000","51-2000","51-2010",NA,"Aircraft Structure, Surfaces, Rigging, and Systems Assemblers",NA
+"51-0000","51-2000","51-2010","51-2011","Aircraft Structure, Surfaces, Rigging, and Systems Assemblers",NA
+"51-0000","51-2000","51-2020",NA,"Electrical, Electronics, and Electromechanical Assemblers",NA
+"51-0000","51-2000","51-2020","51-2021","Coil Winders, Tapers, and Finishers",NA
+"51-0000","51-2000","51-2020","51-2022","Electrical and Electronic Equipment Assemblers",NA
+"51-0000","51-2000","51-2020","51-2023","Electromechanical Equipment Assemblers",NA
+"51-0000","51-2000","51-2030",NA,"Engine and Other Machine Assemblers",NA
+"51-0000","51-2000","51-2030","51-2031","Engine and Other Machine Assemblers",NA
+"51-0000","51-2000","51-2040",NA,"Structural Metal Fabricators and Fitters",NA
+"51-0000","51-2000","51-2040","51-2041","Structural Metal Fabricators and Fitters",NA
+"51-0000","51-2000","51-2090",NA,"Miscellaneous Assemblers and Fabricators",NA
+"51-0000","51-2000","51-2090","51-2091","Fiberglass Laminators and Fabricators",NA
+"51-0000","51-2000","51-2090","51-2092","Team Assemblers",NA
+"51-0000","51-2000","51-2090","51-2093","Timing Device Assemblers and Adjusters",NA
+"51-0000","51-2000","51-2090","51-2099","Assemblers and Fabricators, All Other",NA
+"51-0000","51-3000","51-2090",NA,"Food Processing Workers",NA
+"51-0000","51-3000","51-3010",NA,"Bakers",NA
+"51-0000","51-3000","51-3010","51-3011","Bakers",NA
+"51-0000","51-3000","51-3020",NA,"Butchers and Other Meat, Poultry, and Fish Processing Workers",NA
+"51-0000","51-3000","51-3020","51-3021","Butchers and Meat Cutters",NA
+"51-0000","51-3000","51-3020","51-3022","Meat, Poultry, and Fish Cutters and Trimmers",NA
+"51-0000","51-3000","51-3020","51-3023","Slaughterers and Meat Packers",NA
+"51-0000","51-3000","51-3090",NA,"Miscellaneous Food Processing Workers",NA
+"51-0000","51-3000","51-3090","51-3091","Food and Tobacco Roasting, Baking, and Drying Machine Operators and Tenders",NA
+"51-0000","51-3000","51-3090","51-3092","Food Batchmakers",NA
+"51-0000","51-3000","51-3090","51-3093","Food Cooking Machine Operators and Tenders",NA
+"51-0000","51-3000","51-3090","51-3099","Food Processing Workers, All Other",NA
+"51-0000","51-4000","51-3090",NA,"Metal Workers and Plastic Workers",NA
+"51-0000","51-4000","51-4010",NA,"Computer Control Programmers and Operators",NA
+"51-0000","51-4000","51-4010","51-4011","Computer-Controlled Machine Tool Operators, Metal and Plastic",NA
+"51-0000","51-4000","51-4010","51-4012","Computer Numerically Controlled Machine Tool Programmers, Metal and Plastic",NA
+"51-0000","51-4000","51-4020",NA,"Forming Machine Setters, Operators, and Tenders, Metal and Plastic",NA
+"51-0000","51-4000","51-4020","51-4021","Extruding and Drawing Machine Setters, Operators, and Tenders, Metal and Plastic",NA
+"51-0000","51-4000","51-4020","51-4022","Forging Machine Setters, Operators, and Tenders, Metal and Plastic",NA
+"51-0000","51-4000","51-4020","51-4023","Rolling Machine Setters, Operators, and Tenders, Metal and Plastic",NA
+"51-0000","51-4000","51-4030",NA,"Machine Tool Cutting Setters, Operators, and Tenders, Metal and Plastic",NA
+"51-0000","51-4000","51-4030","51-4031","Cutting, Punching, and Press Machine Setters, Operators, and Tenders, Metal and Plastic",NA
+"51-0000","51-4000","51-4030","51-4032","Drilling and Boring Machine Tool Setters, Operators, and Tenders, Metal and Plastic",NA
+"51-0000","51-4000","51-4030","51-4033","Grinding, Lapping, Polishing, and Buffing Machine Tool Setters, Operators, and Tenders, Metal and Plastic",NA
+"51-0000","51-4000","51-4030","51-4034","Lathe and Turning Machine Tool Setters, Operators, and Tenders, Metal and Plastic",NA
+"51-0000","51-4000","51-4030","51-4035","Milling and Planing Machine Setters, Operators, and Tenders, Metal and Plastic",NA
+"51-0000","51-4000","51-4040",NA,"Machinists",NA
+"51-0000","51-4000","51-4040","51-4041","Machinists",NA
+"51-0000","51-4000","51-4050",NA,"Metal Furnace Operators, Tenders, Pourers, and Casters",NA
+"51-0000","51-4000","51-4050","51-4051","Metal-Refining Furnace Operators and Tenders",NA
+"51-0000","51-4000","51-4050","51-4052","Pourers and Casters, Metal",NA
+"51-0000","51-4000","51-4060",NA,"Model Makers and Patternmakers, Metal and Plastic",NA
+"51-0000","51-4000","51-4060","51-4061","Model Makers, Metal and Plastic",NA
+"51-0000","51-4000","51-4060","51-4062","Patternmakers, Metal and Plastic",NA
+"51-0000","51-4000","51-4070",NA,"Molders and Molding Machine Setters, Operators, and Tenders, Metal and Plastic",NA
+"51-0000","51-4000","51-4070","51-4071","Foundry Mold and Coremakers",NA
+"51-0000","51-4000","51-4070","51-4072","Molding, Coremaking, and Casting Machine Setters, Operators, and Tenders, Metal and Plastic",NA
+"51-0000","51-4000","51-4080",NA,"Multiple Machine Tool Setters, Operators, and Tenders, Metal and Plastic",NA
+"51-0000","51-4000","51-4080","51-4081","Multiple Machine Tool Setters, Operators, and Tenders, Metal and Plastic",NA
+"51-0000","51-4000","51-4110",NA,"Tool and Die Makers",NA
+"51-0000","51-4000","51-4110","51-4111","Tool and Die Makers",NA
+"51-0000","51-4000","51-4120",NA,"Welding, Soldering, and Brazing Workers",NA
+"51-0000","51-4000","51-4120","51-4121","Welders, Cutters, Solderers, and Brazers",NA
+"51-0000","51-4000","51-4120","51-4122","Welding, Soldering, and Brazing Machine Setters, Operators, and Tenders",NA
+"51-0000","51-4000","51-4190",NA,"Miscellaneous Metal Workers and Plastic Workers",NA
+"51-0000","51-4000","51-4190","51-4191","Heat Treating Equipment Setters, Operators, and Tenders, Metal and Plastic",NA
+"51-0000","51-4000","51-4190","51-4192","Layout Workers, Metal and Plastic",NA
+"51-0000","51-4000","51-4190","51-4193","Plating and Coating Machine Setters, Operators, and Tenders, Metal and Plastic",NA
+"51-0000","51-4000","51-4190","51-4194","Tool Grinders, Filers, and Sharpeners",NA
+"51-0000","51-4000","51-4190","51-4199","Metal Workers and Plastic Workers, All Other",NA
+"51-0000","51-5100","51-4190",NA,"Printing Workers",NA
+"51-0000","51-5100","51-5110",NA,"Printing Workers",NA
+"51-0000","51-5100","51-5110","51-5111","Prepress Technicians and Workers",NA
+"51-0000","51-5100","51-5110","51-5112","Printing Press Operators",NA
+"51-0000","51-5100","51-5110","51-5113","Print Binding and Finishing Workers",NA
+"51-0000","51-6000","51-5110",NA,"Textile, Apparel, and Furnishings Workers",NA
+"51-0000","51-6000","51-6010",NA,"Laundry and Dry-Cleaning Workers",NA
+"51-0000","51-6000","51-6010","51-6011","Laundry and Dry-Cleaning Workers",NA
+"51-0000","51-6000","51-6020",NA,"Pressers, Textile, Garment, and Related Materials",NA
+"51-0000","51-6000","51-6020","51-6021","Pressers, Textile, Garment, and Related Materials",NA
+"51-0000","51-6000","51-6030",NA,"Sewing Machine Operators",NA
+"51-0000","51-6000","51-6030","51-6031","Sewing Machine Operators",NA
+"51-0000","51-6000","51-6040",NA,"Shoe and Leather Workers",NA
+"51-0000","51-6000","51-6040","51-6041","Shoe and Leather Workers and Repairers",NA
+"51-0000","51-6000","51-6040","51-6042","Shoe Machine Operators and Tenders",NA
+"51-0000","51-6000","51-6050",NA,"Tailors, Dressmakers, and Sewers",NA
+"51-0000","51-6000","51-6050","51-6051","Sewers, Hand",NA
+"51-0000","51-6000","51-6050","51-6052","Tailors, Dressmakers, and Custom Sewers",NA
+"51-0000","51-6000","51-6060",NA,"Textile Machine Setters, Operators, and Tenders",NA
+"51-0000","51-6000","51-6060","51-6061","Textile Bleaching and Dyeing Machine Operators and Tenders",NA
+"51-0000","51-6000","51-6060","51-6062","Textile Cutting Machine Setters, Operators, and Tenders",NA
+"51-0000","51-6000","51-6060","51-6063","Textile Knitting and Weaving Machine Setters, Operators, and Tenders",NA
+"51-0000","51-6000","51-6060","51-6064","Textile Winding, Twisting, and Drawing Out Machine Setters, Operators, and Tenders",NA
+"51-0000","51-6000","51-6090",NA,"Miscellaneous Textile, Apparel, and Furnishings Workers",NA
+"51-0000","51-6000","51-6090","51-6091","Extruding and Forming Machine Setters, Operators, and Tenders, Synthetic and Glass Fibers",NA
+"51-0000","51-6000","51-6090","51-6092","Fabric and Apparel Patternmakers",NA
+"51-0000","51-6000","51-6090","51-6093","Upholsterers",NA
+"51-0000","51-6000","51-6090","51-6099","Textile, Apparel, and Furnishings Workers, All Other",NA
+"51-0000","51-7000","51-6090",NA,"Woodworkers",NA
+"51-0000","51-7000","51-7010",NA,"Cabinetmakers and Bench Carpenters",NA
+"51-0000","51-7000","51-7010","51-7011","Cabinetmakers and Bench Carpenters",NA
+"51-0000","51-7000","51-7020",NA,"Furniture Finishers",NA
+"51-0000","51-7000","51-7020","51-7021","Furniture Finishers",NA
+"51-0000","51-7000","51-7030",NA,"Model Makers and Patternmakers, Wood",NA
+"51-0000","51-7000","51-7030","51-7031","Model Makers, Wood",NA
+"51-0000","51-7000","51-7030","51-7032","Patternmakers, Wood",NA
+"51-0000","51-7000","51-7040",NA,"Woodworking Machine Setters, Operators, and Tenders",NA
+"51-0000","51-7000","51-7040","51-7041","Sawing Machine Setters, Operators, and Tenders, Wood",NA
+"51-0000","51-7000","51-7040","51-7042","Woodworking Machine Setters, Operators, and Tenders, Except Sawing",NA
+"51-0000","51-7000","51-7090",NA,"Miscellaneous Woodworkers",NA
+"51-0000","51-7000","51-7090","51-7099","Woodworkers, All Other",NA
+"51-0000","51-8000","51-7090",NA,"Plant and System Operators",NA
+"51-0000","51-8000","51-8010",NA,"Power Plant Operators, Distributors, and Dispatchers",NA
+"51-0000","51-8000","51-8010","51-8011","Nuclear Power Reactor Operators",NA
+"51-0000","51-8000","51-8010","51-8012","Power Distributors and Dispatchers",NA
+"51-0000","51-8000","51-8010","51-8013","Power Plant Operators",NA
+"51-0000","51-8000","51-8020",NA,"Stationary Engineers and Boiler Operators",NA
+"51-0000","51-8000","51-8020","51-8021","Stationary Engineers and Boiler Operators",NA
+"51-0000","51-8000","51-8030",NA,"Water and Wastewater Treatment Plant and System Operators",NA
+"51-0000","51-8000","51-8030","51-8031","Water and Wastewater Treatment Plant and System Operators",NA
+"51-0000","51-8000","51-8090",NA,"Miscellaneous Plant and System Operators",NA
+"51-0000","51-8000","51-8090","51-8091","Chemical Plant and System Operators",NA
+"51-0000","51-8000","51-8090","51-8092","Gas Plant Operators",NA
+"51-0000","51-8000","51-8090","51-8093","Petroleum Pump System Operators, Refinery Operators, and Gaugers",NA
+"51-0000","51-8000","51-8090","51-8099","Plant and System Operators, All Other",NA
+"51-0000","51-9000","51-8090",NA,"Other Production Occupations",NA
+"51-0000","51-9000","51-9010",NA,"Chemical Processing Machine Setters, Operators, and Tenders",NA
+"51-0000","51-9000","51-9010","51-9011","Chemical Equipment Operators and Tenders",NA
+"51-0000","51-9000","51-9010","51-9012","Separating, Filtering, Clarifying, Precipitating, and Still Machine Setters, Operators, and Tenders",NA
+"51-0000","51-9000","51-9020",NA,"Crushing, Grinding, Polishing, Mixing, and Blending Workers",NA
+"51-0000","51-9000","51-9020","51-9021","Crushing, Grinding, and Polishing Machine Setters, Operators, and Tenders",NA
+"51-0000","51-9000","51-9020","51-9022","Grinding and Polishing Workers, Hand",NA
+"51-0000","51-9000","51-9020","51-9023","Mixing and Blending Machine Setters, Operators, and Tenders",NA
+"51-0000","51-9000","51-9030",NA,"Cutting Workers",NA
+"51-0000","51-9000","51-9030","51-9031","Cutters and Trimmers, Hand",NA
+"51-0000","51-9000","51-9030","51-9032","Cutting and Slicing Machine Setters, Operators, and Tenders",NA
+"51-0000","51-9000","51-9040",NA,"Extruding, Forming, Pressing, and Compacting Machine Setters, Operators, and Tenders",NA
+"51-0000","51-9000","51-9040","51-9041","Extruding, Forming, Pressing, and Compacting Machine Setters, Operators, and Tenders",NA
+"51-0000","51-9000","51-9050",NA,"Furnace, Kiln, Oven, Drier, and Kettle Operators and Tenders",NA
+"51-0000","51-9000","51-9050","51-9051","Furnace, Kiln, Oven, Drier, and Kettle Operators and Tenders",NA
+"51-0000","51-9000","51-9060",NA,"Inspectors, Testers, Sorters, Samplers, and Weighers",NA
+"51-0000","51-9000","51-9060","51-9061","Inspectors, Testers, Sorters, Samplers, and Weighers",NA
+"51-0000","51-9000","51-9070",NA,"Jewelers and Precious Stone and Metal Workers",NA
+"51-0000","51-9000","51-9070","51-9071","Jewelers and Precious Stone and Metal Workers",NA
+"51-0000","51-9000","51-9080",NA,"Medical, Dental, and Ophthalmic Laboratory Technicians",NA
+"51-0000","51-9000","51-9080","51-9081","Dental Laboratory Technicians",NA
+"51-0000","51-9000","51-9080","51-9082","Medical Appliance Technicians",NA
+"51-0000","51-9000","51-9080","51-9083","Ophthalmic Laboratory Technicians",NA
+"51-0000","51-9000","51-9110",NA,"Packaging and Filling Machine Operators and Tenders",NA
+"51-0000","51-9000","51-9110","51-9111","Packaging and Filling Machine Operators and Tenders",NA
+"51-0000","51-9000","51-9120",NA,"Painting Workers",NA
+"51-0000","51-9000","51-9120","51-9121","Coating, Painting, and Spraying Machine Setters, Operators, and Tenders",NA
+"51-0000","51-9000","51-9120","51-9122","Painters, Transportation Equipment",NA
+"51-0000","51-9000","51-9120","51-9123","Painting, Coating, and Decorating Workers",NA
+"51-0000","51-9000","51-9140",NA,"Semiconductor Processors",NA
+"51-0000","51-9000","51-9140","51-9141","Semiconductor Processors",NA
+"51-0000","51-9000","51-9150",NA,"Photographic Process Workers and Processing Machine Operators",NA
+"51-0000","51-9000","51-9150","51-9151","Photographic Process Workers and Processing Machine Operators",NA
+"51-0000","51-9000","51-9190",NA,"Miscellaneous Production Workers",NA
+"51-0000","51-9000","51-9190","51-9191","Adhesive Bonding Machine Operators and Tenders",NA
+"51-0000","51-9000","51-9190","51-9192","Cleaning, Washing, and Metal Pickling Equipment Operators and Tenders",NA
+"51-0000","51-9000","51-9190","51-9193","Cooling and Freezing Equipment Operators and Tenders",NA
+"51-0000","51-9000","51-9190","51-9194","Etchers and Engravers",NA
+"51-0000","51-9000","51-9190","51-9195","Molders, Shapers, and Casters, Except Metal and Plastic",NA
+"51-0000","51-9000","51-9190","51-9196","Paper Goods Machine Setters, Operators, and Tenders",NA
+"51-0000","51-9000","51-9190","51-9197","Tire Builders",NA
+"51-0000","51-9000","51-9190","51-9198","Helpers--Production Workers",NA
+"51-0000","51-9000","51-9190","51-9199","Production Workers, All Other",NA
+"53-0000","51-9000","51-9190",NA,"Transportation and Material Moving Occupations",NA
+"53-0000","53-1000","51-9190",NA,"Supervisors of Transportation and Material Moving Workers",NA
+"53-0000","53-1000","53-1010",NA,"Aircraft Cargo Handling Supervisors",NA
+"53-0000","53-1000","53-1010","53-1011","Aircraft Cargo Handling Supervisors",NA
+"53-0000","53-1000","53-1020",NA,"First-Line Supervisors of Helpers, Laborers, and Material Movers, Hand",NA
+"53-0000","53-1000","53-1020","53-1021","First-Line Supervisors of Helpers, Laborers, and Material Movers, Hand",NA
+"53-0000","53-1000","53-1030",NA,"First-Line Supervisors of Transportation and Material-Moving Machine and Vehicle Operators",NA
+"53-0000","53-1000","53-1030","53-1031","First-Line Supervisors of Transportation and Material-Moving Machine and Vehicle Operators",NA
+"53-0000","53-2000","53-1030",NA,"Air Transportation Workers",NA
+"53-0000","53-2000","53-2010",NA,"Aircraft Pilots and Flight Engineers",NA
+"53-0000","53-2000","53-2010","53-2011","Airline Pilots, Copilots, and Flight Engineers",NA
+"53-0000","53-2000","53-2010","53-2012","Commercial Pilots",NA
+"53-0000","53-2000","53-2020",NA,"Air Traffic Controllers and Airfield Operations Specialists",NA
+"53-0000","53-2000","53-2020","53-2021","Air Traffic Controllers",NA
+"53-0000","53-2000","53-2020","53-2022","Airfield Operations Specialists",NA
+"53-0000","53-2000","53-2030",NA,"Flight Attendants",NA
+"53-0000","53-2000","53-2030","53-2031","Flight Attendants",NA
+"53-0000","53-3000","53-2030",NA,"Motor Vehicle Operators",NA
+"53-0000","53-3000","53-3010",NA,"Ambulance Drivers and Attendants, Except Emergency Medical Technicians",NA
+"53-0000","53-3000","53-3010","53-3011","Ambulance Drivers and Attendants, Except Emergency Medical Technicians",NA
+"53-0000","53-3000","53-3020",NA,"Bus Drivers",NA
+"53-0000","53-3000","53-3020","53-3021","Bus Drivers, Transit and Intercity",NA
+"53-0000","53-3000","53-3020","53-3022","Bus Drivers, School or Special Client",NA
+"53-0000","53-3000","53-3030",NA,"Driver/Sales Workers and Truck Drivers",NA
+"53-0000","53-3000","53-3030","53-3031","Driver/Sales Workers",NA
+"53-0000","53-3000","53-3030","53-3032","Heavy and Tractor-Trailer Truck Drivers",NA
+"53-0000","53-3000","53-3030","53-3033","Light Truck or Delivery Services Drivers",NA
+"53-0000","53-3000","53-3040",NA,"Taxi Drivers and Chauffeurs",NA
+"53-0000","53-3000","53-3040","53-3041","Taxi Drivers and Chauffeurs",NA
+"53-0000","53-3000","53-3090",NA,"Miscellaneous Motor Vehicle Operators",NA
+"53-0000","53-3000","53-3090","53-3099","Motor Vehicle Operators, All Other",NA
+"53-0000","53-4000","53-3090",NA,"Rail Transportation Workers",NA
+"53-0000","53-4000","53-4010",NA,"Locomotive Engineers and Operators",NA
+"53-0000","53-4000","53-4010","53-4011","Locomotive Engineers",NA
+"53-0000","53-4000","53-4010","53-4012","Locomotive Firers",NA
+"53-0000","53-4000","53-4010","53-4013","Rail Yard Engineers, Dinkey Operators, and Hostlers",NA
+"53-0000","53-4000","53-4020",NA,"Railroad Brake, Signal, and Switch Operators",NA
+"53-0000","53-4000","53-4020","53-4021","Railroad Brake, Signal, and Switch Operators",NA
+"53-0000","53-4000","53-4030",NA,"Railroad Conductors and Yardmasters",NA
+"53-0000","53-4000","53-4030","53-4031","Railroad Conductors and Yardmasters",NA
+"53-0000","53-4000","53-4040",NA,"Subway and Streetcar Operators",NA
+"53-0000","53-4000","53-4040","53-4041","Subway and Streetcar Operators",NA
+"53-0000","53-4000","53-4090",NA,"Miscellaneous Rail Transportation Workers",NA
+"53-0000","53-4000","53-4090","53-4099","Rail Transportation Workers, All Other",NA
+"53-0000","53-5000","53-4090",NA,"Water Transportation Workers",NA
+"53-0000","53-5000","53-5010",NA,"Sailors and Marine Oilers",NA
+"53-0000","53-5000","53-5010","53-5011","Sailors and Marine Oilers",NA
+"53-0000","53-5000","53-5020",NA,"Ship and Boat Captains and Operators",NA
+"53-0000","53-5000","53-5020","53-5021","Captains, Mates, and Pilots of Water Vessels",NA
+"53-0000","53-5000","53-5020","53-5022","Motorboat Operators",NA
+"53-0000","53-5000","53-5030",NA,"Ship Engineers",NA
+"53-0000","53-5000","53-5030","53-5031","Ship Engineers",NA
+"53-0000","53-6000","53-5030",NA,"Other Transportation Workers",NA
+"53-0000","53-6000","53-6010",NA,"Bridge and Lock Tenders",NA
+"53-0000","53-6000","53-6010","53-6011","Bridge and Lock Tenders",NA
+"53-0000","53-6000","53-6020",NA,"Parking Lot Attendants",NA
+"53-0000","53-6000","53-6020","53-6021","Parking Lot Attendants",NA
+"53-0000","53-6000","53-6030",NA,"Automotive and Watercraft Service Attendants",NA
+"53-0000","53-6000","53-6030","53-6031","Automotive and Watercraft Service Attendants",NA
+"53-0000","53-6000","53-6040",NA,"Traffic Technicians",NA
+"53-0000","53-6000","53-6040","53-6041","Traffic Technicians",NA
+"53-0000","53-6000","53-6050",NA,"Transportation Inspectors",NA
+"53-0000","53-6000","53-6050","53-6051","Transportation Inspectors",NA
+"53-0000","53-6000","53-6060",NA,"Transportation Attendants, Except Flight Attendants",NA
+"53-0000","53-6000","53-6060","53-6061","Transportation Attendants, Except Flight Attendants",NA
+"53-0000","53-6000","53-6090",NA,"Miscellaneous Transportation Workers",NA
+"53-0000","53-6000","53-6090","53-6099","Transportation Workers, All Other",NA
+"53-0000","53-7000","53-6090",NA,"Material Moving Workers",NA
+"53-0000","53-7000","53-7010",NA,"Conveyor Operators and Tenders",NA
+"53-0000","53-7000","53-7010","53-7011","Conveyor Operators and Tenders",NA
+"53-0000","53-7000","53-7020",NA,"Crane and Tower Operators",NA
+"53-0000","53-7000","53-7020","53-7021","Crane and Tower Operators",NA
+"53-0000","53-7000","53-7030",NA,"Dredge, Excavating, and Loading Machine Operators",NA
+"53-0000","53-7000","53-7030","53-7031","Dredge Operators",NA
+"53-0000","53-7000","53-7030","53-7032","Excavating and Loading Machine and Dragline Operators",NA
+"53-0000","53-7000","53-7030","53-7033","Loading Machine Operators, Underground Mining",NA
+"53-0000","53-7000","53-7040",NA,"Hoist and Winch Operators",NA
+"53-0000","53-7000","53-7040","53-7041","Hoist and Winch Operators",NA
+"53-0000","53-7000","53-7050",NA,"Industrial Truck and Tractor Operators",NA
+"53-0000","53-7000","53-7050","53-7051","Industrial Truck and Tractor Operators",NA
+"53-0000","53-7000","53-7060",NA,"Laborers and Material Movers, Hand",NA
+"53-0000","53-7000","53-7060","53-7061","Cleaners of Vehicles and Equipment",NA
+"53-0000","53-7000","53-7060","53-7062","Laborers and Freight, Stock, and Material Movers, Hand",NA
+"53-0000","53-7000","53-7060","53-7063","Machine Feeders and Offbearers",NA
+"53-0000","53-7000","53-7060","53-7064","Packers and Packagers, Hand",NA
+"53-0000","53-7000","53-7070",NA,"Pumping Station Operators",NA
+"53-0000","53-7000","53-7070","53-7071","Gas Compressor and Gas Pumping Station Operators",NA
+"53-0000","53-7000","53-7070","53-7072","Pump Operators, Except Wellhead Pumpers",NA
+"53-0000","53-7000","53-7070","53-7073","Wellhead Pumpers",NA
+"53-0000","53-7000","53-7080",NA,"Refuse and Recyclable Material Collectors",NA
+"53-0000","53-7000","53-7080","53-7081","Refuse and Recyclable Material Collectors",NA
+"53-0000","53-7000","53-7110",NA,"Mine Shuttle Car Operators",NA
+"53-0000","53-7000","53-7110","53-7111","Mine Shuttle Car Operators",NA
+"53-0000","53-7000","53-7120",NA,"Tank Car, Truck, and Ship Loaders",NA
+"53-0000","53-7000","53-7120","53-7121","Tank Car, Truck, and Ship Loaders",NA
+"53-0000","53-7000","53-7190",NA,"Miscellaneous Material Moving Workers",NA
+"53-0000","53-7000","53-7190","53-7199","Material Moving Workers, All Other",NA
+"55-0000","53-7000","53-7190",NA,"Military Specific Occupations",NA
+"55-0000","55-1000","53-7190",NA,"Military Officer Special and Tactical Operations Leaders",NA
+"55-0000","55-1000","55-1010",NA,"Military Officer Special and Tactical Operations Leaders",NA
+"55-0000","55-1000","55-1010","55-1011","Air Crew Officers",NA
+"55-0000","55-1000","55-1010","55-1012","Aircraft Launch and Recovery Officers",NA
+"55-0000","55-1000","55-1010","55-1013","Armored Assault Vehicle Officers",NA
+"55-0000","55-1000","55-1010","55-1014","Artillery and Missile Officers",NA
+"55-0000","55-1000","55-1010","55-1015","Command and Control Center Officers",NA
+"55-0000","55-1000","55-1010","55-1016","Infantry Officers",NA
+"55-0000","55-1000","55-1010","55-1017","Special Forces Officers",NA
+"55-0000","55-1000","55-1010","55-1019","Military Officer Special and Tactical Operations Leaders, All Other",NA
+"55-0000","55-2000","55-1010",NA,"First-Line Enlisted Military Supervisors",NA
+"55-0000","55-2000","55-2010",NA,"First-Line Enlisted Military Supervisors",NA
+"55-0000","55-2000","55-2010","55-2011","First-Line Supervisors of Air Crew Members",NA
+"55-0000","55-2000","55-2010","55-2012","First-Line Supervisors of Weapons Specialists/Crew Members",NA
+"55-0000","55-2000","55-2010","55-2013","First-Line Supervisors of All Other Tactical Operations Specialists",NA
+"55-0000","55-3000","55-2010",NA,"Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members",NA
+"55-0000","55-3000","55-3010",NA,"Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members",NA
+"55-0000","55-3000","55-3010","55-3011","Air Crew Members",NA
+"55-0000","55-3000","55-3010","55-3012","Aircraft Launch and Recovery Specialists",NA
+"55-0000","55-3000","55-3010","55-3013","Armored Assault Vehicle Crew Members",NA
+"55-0000","55-3000","55-3010","55-3014","Artillery and Missile Crew Members",NA
+"55-0000","55-3000","55-3010","55-3015","Command and Control Center Specialists",NA
+"55-0000","55-3000","55-3010","55-3016","Infantry",NA
+"55-0000","55-3000","55-3010","55-3017","Radar and Sonar Technicians",NA
+"55-0000","55-3000","55-3010","55-3018","Special Forces",NA
+"55-0000","55-3000","55-3010","55-3019","Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members, All Other",NA

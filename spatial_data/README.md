@@ -22,12 +22,9 @@ The complete commit history for these files is visible in GitHub Bash and GitHub
 * **[school_dist_to_region.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/school_dist_to_region.csv)** = Crosswalk between King County school districts and KC regions
 * **[tract_to_county_council_dist.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/tract_to_county_council_dist.csv)** = Crosswalk between 2010 census tracts and King County Council Districts.
 * **[tract10_to_puma.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/tract10_to_puma.csv)** = Crosswalk between 2010 census tracts and PUMAs (Public Use Microdata Areas) 
-* **[zip_admin.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/zip_admin.csv)** = 122 zip codes with zip type and city, used to define King County in admnistative data (e.g., claims, housing, etc.)
-* **[zip_city_region_vid.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/zip_city_region_vid.csv)** = Crosswalk between 120 zip codes (with cities) to KC regions [**DATA IS NOT CLEANLY FORMATTED**]
-* **[zip_hca.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/zip_hca.csv)** = 133 zip codes, with zip type, city, primary_city, used to define King County in HCA Medicaid data extracts. Includes 98354 and 98422, 
-which barely cross into south KC). ZIPs spanning county lines are noted in the two_counties field.
-* **[zip_to_city_council_dist.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/zip_to_city_council_dist.csv)** = Crosswalk between 25 zip codes and Seattle City Council Districts
-* **[zip_to_region.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/zip_to_region.csv)** = Crosswalk between 120 zip codes and Communities Count regions
+* **[zip_city_region_scc.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/zip_city_region_scc.csv)** = Crosswalk between 123 zip codes that define King County for most APDE's work and cities, regions, and Seattle City Council districts. This file consolidates 4 previous ZIP mapping files. Note that not all Seattle-based ZIPs map to a SCC district since PO box and other special ZIPs are not mapped.
+* **[zip_hca.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/zip_hca.csv)** = 133 zip codes, with zip type, city, primary_city, used to define King County in Health Care Authority Medicaid data extracts. Includes 98354 and 98422, 
+which barely cross into south KC). ZIPs spanning county lines are noted in the geo_multi_county field.
 
 ### Legacy
 * **[blocks00_to_hra.csv](https://github.com/PHSKC-APDE/reference-data/blob/master/spatial_data/blocks00_to_hra.csv)** = Cross-walk between 2000 (?) census blocks and HRA names ... legacy, no longer used

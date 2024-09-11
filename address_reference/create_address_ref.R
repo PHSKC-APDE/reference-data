@@ -9,8 +9,8 @@
 #' 
 #' @TODO
 #' Long-term version of HMIS file iteration
-#' Clean up geocoding mcaid
-#' Add HMIS geocoding
+#' Investigate why some pharmacies are not listed as 01 code
+#' Further ways to break out "Office" category, maybe using txnmy
 #' 
 
 ## Clear memory, load packages, set up constants ----
@@ -24,7 +24,7 @@ recode_hmis_addresses <- F
 
 crosswalk_location <- "C:/Users/kfukutaki.KC/OneDrive - King County/Videos/Shared Documents - HHSAW Users/Ref schema/address_reference_crosswalk.xlsx"
 hmis_location <- "C:/Users/kfukutaki.KC/OneDrive - King County/Documents/Data/HMIS Facility Information June 2024.xlsx"
-pos_code_location <- "C:/Users/kfukutaki.KC/OneDrive - King County/Documents/Data/20240702_mcaid_pos_codes.xlsx"
+hmis_date <- as.Date("2024-06-01")
 
 ## Prevent scientific notation except for huge numbers ----
 options("scipen"=999) # turn off scientific notation
@@ -43,6 +43,10 @@ setnames(hmis,
          c("Programs.Address", "Programs.City", "Programs.ZIP.Code"),
          c("geo_add1_raw", "geo_city_raw", "geo_zip_raw"))
 rads::string_clean(hmis)
+hmis[, source_last_updated := hmis_date]
+# Optional code to subset end dates to no more than current date
+# hmis[, Programs.Operating.End.Date:=ifelse(Programs.Operating.End.Date > Sys.Date(), Sys.Date(), Programs.Operating.End.Date)]
+
 
 # KC zip codes
 kc_zips <- as.character(rads.data::spatial_zip_to_hra20_geog[]$ZIP)
@@ -51,10 +55,13 @@ kc_zips <- as.character(rads.data::spatial_zip_to_hra20_geog[]$ZIP)
 mcaid_schema <- "claims"
 mcaid_tbl_name <- "stage_mcaid_claim"
 mcaid <- setDT(DBI::dbGetQuery(db_hhsaw, glue::glue_sql(
-  "SELECT DISTINCT PRVDR_LAST_NAME, PRVDR_FIRST_NAME, TXNMY_NAME, BILLING_PRVDR_ADDRESS, SERVICING_PRVDR_ADDRESS, FCLTY_TYPE_CODE
+  "SELECT DISTINCT PRVDR_LAST_NAME, PRVDR_FIRST_NAME, TXNMY_NAME,
+     BILLING_PRVDR_ADDRESS, SERVICING_PRVDR_ADDRESS, FCLTY_TYPE_CODE,
+     SYSTEM_IN_DATE
    FROM {`mcaid_schema`}.{`mcaid_tbl_name`}",
   .con = db_hhsaw)))
 mcaid <- rads::string_clean(mcaid)
+mcaid[, SYSTEM_IN_DATE := max(SYSTEM_IN_DATE)]
 
 # Remove non-KC zip codes
 mcaid$service_zip <- str_sub(mcaid$SERVICING_PRVDR_ADDRESS, - 5, - 1)
@@ -62,9 +69,6 @@ mcaid$billing_zip <- str_sub(mcaid$BILLING_PRVDR_ADDRESS, - 5, - 1)
 mcaid <- mcaid[(mcaid$service_zip %in% kc_zips) | (mcaid$billing_zip %in% kc_zips),]
 mcaid[,service_zip:=NULL]
 mcaid[,billing_zip:=NULL]
-
-# Read point of service codes table
-pos_codes <- openxlsx::read.xlsx(pos_code_location)
 
 # from/to date info
 srvc_newest <- rads::string_clean(setDT(DBI::dbGetQuery(db_hhsaw, glue::glue_sql(
@@ -99,6 +103,10 @@ mcaid$BILLING_PRVDR_ADDRESS <- gsub("ID ONLY","", mcaid$BILLING_PRVDR_ADDRESS)
 mcaid$SERVICING_PRVDR_ADDRESS <- gsub("^*(\\D+ | PO | P O)", "", mcaid$SERVICING_PRVDR_ADDRESS)
 mcaid$BILLING_PRVDR_ADDRESS <- gsub("^*(\\D+ | PO | P O)", "", mcaid$BILLING_PRVDR_ADDRESS)
 
+# Manually change some facility codes based on names
+mcaid[, FCLTY_TYPE_CODE := ifelse((like(toupper(PRVDR_LAST_NAME),"PHARMACY") & is.na(FCLTY_TYPE_CODE)),
+                                  "01",
+                                  FCLTY_TYPE_CODE)]
 
 # Create lists of unique mcaid addresses for cleaning
 mcaid_srvc <- unique(mcaid$SERVICING_PRVDR_ADDRESS)
@@ -141,7 +149,8 @@ if (recode_mcaid_addresses){
   })
   srvc_cleaned = rbindlist(srvc_cleaned, fill=TRUE)
   DBI::dbWriteTable(conn = db_hhsaw, 
-                    name = DBI::Id(schema = "claims", table = "raw_servicing_provider_address"),
+                    name = DBI::Id(schema = "claims",
+                                   table = "raw_servicing_provider_address"),
                     value = srvc_cleaned,
                     overwrite = T)
   # srvc_cleaned <- setDT(DBI::dbGetQuery(db_hhsaw, glue::glue_sql(
@@ -208,36 +217,40 @@ if (recode_mcaid_addresses){
 # Load if not already loaded
 if (!exists("srvc_geocoded")){
   srvc_geocoded <- setDT(DBI::dbGetQuery(db_hhsaw, glue::glue_sql(
-    "SELECT input, geo_hash_raw, geo_hash_clean
+    "SELECT input, geo_hash_raw, geo_hash_clean, geocode_success
      FROM claims.final_servicing_provider_address",
     .con = db_hhsaw)))
 } else{
-  srvc_geocoded <- srvc_geocoded[,c("input", "geo_hash_raw", "geo_hash_clean")]
+  srvc_geocoded <- srvc_geocoded[,c("input", "geo_hash_raw", "geo_hash_clean",
+                                    "geocode_success")]
   srvc_geocoded$addr_type <- "servicing_provider"
 }
 if (!exists("bllng_geocoded")){
   bllng_geocoded <- setDT(DBI::dbGetQuery(db_hhsaw, glue::glue_sql(
-    "SELECT input, geo_hash_raw, geo_hash_clean
+    "SELECT input, geo_hash_raw, geo_hash_clean, geocode_success
      FROM claims.final_billing_provider_address",
     .con = db_hhsaw)))
 } else{
-  bllng_geocoded <- bllng_geocoded[,c("input", "geo_hash_raw", "geo_hash_clean")]
+  bllng_geocoded <- bllng_geocoded[,c("input", "geo_hash_raw", "geo_hash_clean",
+                                      "geocode_success")]
   bllng_geocoded$addr_type <- "billing_provider"
 }
 if (!exists("hmis_geocoded")){
   hmis_geocoded <- setDT(DBI::dbGetQuery(db_hhsaw, glue::glue_sql(
     "SELECT geo_add1_raw, geo_city_raw, geo_zip_raw,
-      geo_hash_raw, geo_hash_clean
+      geo_hash_raw, geo_hash_clean, geocode_success
      FROM kfukutaki.hmis_provider_geocoded",
     .con = db_hhsaw)))
   hmis_geocoded$addr_type <- "HMIS"
 } else{
   hmis_geocoded <- hmis_geocoded[,c("geo_add1_raw", "geo_city_raw",
-                                  "geo_zip_raw", "geo_hash_raw", "geo_hash_clean")]
+                                  "geo_zip_raw", "geo_hash_raw", "geo_hash_clean",
+                                  "geocode_success")]
   hmis_geocoded$addr_type <- "HMIS"
 }
 
-# Check for new addresses - if there are any, change recode_mcaid_addresses to T and go back to rerun that section
+# Check for new addresses - if there are any, change recode_mcaid_addresses to T
+# and go back to rerun that section
 setdiff(mcaid_srvc, srvc_geocoded$input)
 setdiff(mcaid_bllng, bllng_geocoded$input)
 
@@ -257,9 +270,11 @@ all_srvc <- all_srvc[!is.na(SERVICING_PRVDR_ADDRESS),]
 all_bllng <- all_bllng[!is.na(BILLING_PRVDR_ADDRESS),]
 
 all_srvc <- all_srvc[,c("SERVICING_PRVDR_ADDRESS", "PRVDR_LAST_NAME", "PRVDR_FIRST_NAME",
-                        "TXNMY_NAME", "FCLTY_TYPE_CODE", "geo_hash_clean", "geocode_success")]
+                        "TXNMY_NAME", "FCLTY_TYPE_CODE", "geo_hash_clean", "geocode_success",
+                        "SYSTEM_IN_DATE")]
 all_bllng <- all_bllng[,c("BILLING_PRVDR_ADDRESS", "PRVDR_LAST_NAME", "PRVDR_FIRST_NAME",
-                          "TXNMY_NAME", "FCLTY_TYPE_CODE", "geo_hash_clean", "geocode_success")]
+                          "TXNMY_NAME", "FCLTY_TYPE_CODE", "geo_hash_clean", "geocode_success",
+                          "SYSTEM_IN_DATE")]
 
 all_srvc[, bllng_or_srvc:="S"]
 all_bllng[, bllng_or_srvc:="B"]
@@ -270,11 +285,11 @@ all_bllng <- merge(all_bllng, bllng_newest, by = "BILLING_PRVDR_ADDRESS", all.x 
 all_bllng <- merge(all_bllng, bllng_oldest, by = "BILLING_PRVDR_ADDRESS", all.x = T)
 
 setnames(all_srvc,
-         c("SERVICING_PRVDR_ADDRESS"),
-         c("Address"))
+         c("SERVICING_PRVDR_ADDRESS", "SYSTEM_IN_DATE"),
+         c("Address", "source_last_updated"))
 setnames(all_bllng,
-         c("BILLING_PRVDR_ADDRESS"),
-         c("Address"))
+         c("BILLING_PRVDR_ADDRESS", "SYSTEM_IN_DATE"),
+         c("Address", "source_last_updated"))
 
 all_addr <- rbindlist(list(all_srvc, all_bllng), use.names=T, fill=T)
 
@@ -308,8 +323,8 @@ all_addr <- merge(all_addr, crosswalk, by.x=c("FCLTY_TYPE_CODE", "code_source"),
 # Add unknown codes for those who have no code
 all_addr[, health := ifelse(code_source == "Medicaid - Place of Service", 1, 0)]
 all_addr[, housing := ifelse(code_source == "HMIS", 1, 0)]
-all_addr[, lvl_2_desc := ifelse((code_source == "Medicaid - Place of Service") & is.na(FCLTY_TYPE_CODE), "Unknown Health Facility", address_midlevel_desc)]
-all_addr[, lvl_2_desc := ifelse((code_source == "HMIS") & is.na(FCLTY_TYPE_CODE), "Unknown Housing Assistance", address_midlevel_desc)]
+all_addr[, address_midlevel_desc := ifelse((code_source == "Medicaid - Place of Service") & is.na(FCLTY_TYPE_CODE), "Unknown Health Facility", address_midlevel_desc)]
+all_addr[, address_midlevel_desc := ifelse((code_source == "HMIS") & is.na(FCLTY_TYPE_CODE), "Unknown Housing Assistance", address_midlevel_desc)]
 
 ## Final column cleaning ----
 setnames(all_addr,
@@ -323,12 +338,22 @@ setnames(all_addr,
            "bed_type_emergency_shelters", "health", "housing",
            "address_midlevel_desc", "address_detail_desc")
          )
-setcolorder(all_addr, c("geo_hash_clean", "geocode_success", "address_orig", "address_midlevel_desc",
+all_addr <- all_addr[,c("geo_hash_clean", "geocode_success", "address_orig",
+                        "provider_name", "address_midlevel_desc",
                         "address_detail_desc", "fclty_type_code", "code_source",
-                        "provider_name", "provider_first_name", "txnmy_name",
-                        "bllng_or_srvc", "operating_latest_date", "operating_earliest_date",
-                        "bed_type_emergency_shelters", "health", "housing"
+                        "bed_type_emergency_shelters", "health", "housing",
+                        "txnmy_name", "bllng_or_srvc", "operating_latest_date",
+                        "operating_earliest_date", "source_last_updated"
+                       )]
+setcolorder(all_addr, c("geo_hash_clean", "geocode_success", "address_orig",
+                        "provider_name", "address_midlevel_desc",
+                        "address_detail_desc", "fclty_type_code", "code_source",
+                        "bed_type_emergency_shelters", "health", "housing",
+                        "txnmy_name", "bllng_or_srvc", "operating_latest_date",
+                        "operating_earliest_date", "source_last_updated"
                         ))
+all_addr[, last_r_run := Sys.Date()]
+
 
 ## Upload ----
 DBI::dbWriteTable(conn = db_hhsaw, 

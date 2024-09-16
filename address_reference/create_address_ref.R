@@ -54,14 +54,16 @@ kc_zips <- as.character(rads.data::spatial_zip_to_hra20_geog[]$ZIP)
 # Read in stage_mcaid_claim with unique combos of PRVDR_LAST_NAME, PRVDR_FIRST_NAME, TXNMY_NAME, BILLING_PRVDR_ADDRESS, SERVICING_PRVDR_ADDRESS, FCLTY_TYPE_CODE
 mcaid_schema <- "claims"
 mcaid_tbl_name <- "stage_mcaid_claim"
-mcaid <- setDT(DBI::dbGetQuery(db_hhsaw, glue::glue_sql(
+mcaid <- rads::string_clean(setDT(DBI::dbGetQuery(db_hhsaw, glue::glue_sql(
   "SELECT DISTINCT PRVDR_LAST_NAME, PRVDR_FIRST_NAME, TXNMY_NAME,
-     BILLING_PRVDR_ADDRESS, SERVICING_PRVDR_ADDRESS, FCLTY_TYPE_CODE,
+     BILLING_PRVDR_ADDRESS, SERVICING_PRVDR_ADDRESS AS SERVICING_PRVDR_ADDRESS, FCLTY_TYPE_CODE,
      SYSTEM_IN_DATE
-   FROM {`mcaid_schema`}.{`mcaid_tbl_name`}",
-  .con = db_hhsaw)))
-mcaid <- rads::string_clean(mcaid)
+   FROM {`mcaid_schema`}.{`mcaid_tbl_name`}
+  ",
+  .con = db_hhsaw))))
 mcaid[, SYSTEM_IN_DATE := max(SYSTEM_IN_DATE)]
+mcaid$SERVICING_PRVDR_ADDRESS <- toupper(mcaid$SERVICING_PRVDR_ADDRESS)
+mcaid$BILLING_PRVDR_ADDRESS <- toupper(mcaid$BILLING_PRVDR_ADDRESS)
 
 # Remove non-KC zip codes
 mcaid$service_zip <- str_sub(mcaid$SERVICING_PRVDR_ADDRESS, - 5, - 1)
@@ -77,7 +79,7 @@ srvc_newest <- rads::string_clean(setDT(DBI::dbGetQuery(db_hhsaw, glue::glue_sql
     GROUP BY SERVICING_PRVDR_ADDRESS",
   .con = db_hhsaw))))
 srvc_oldest <- rads::string_clean(setDT(DBI::dbGetQuery(db_hhsaw, glue::glue_sql(
-  "SELECT SERVICING_PRVDR_ADDRESS, MIN(TO_SRVC_DATE) AS operating_earliest_date
+  "SELECT SERVICING_PRVDR_ADDRESS, MIN(FROM_SRVC_DATE) AS operating_earliest_date
     FROM {`mcaid_schema`}.{`mcaid_tbl_name`}
     GROUP BY SERVICING_PRVDR_ADDRESS",
   .con = db_hhsaw))))
@@ -87,14 +89,24 @@ bllng_newest <- rads::string_clean(setDT(DBI::dbGetQuery(db_hhsaw, glue::glue_sq
     GROUP BY BILLING_PRVDR_ADDRESS",
   .con = db_hhsaw))))
 bllng_oldest <- rads::string_clean(setDT(DBI::dbGetQuery(db_hhsaw, glue::glue_sql(
-  "SELECT BILLING_PRVDR_ADDRESS, MIN(TO_SRVC_DATE) AS operating_earliest_date
+  "SELECT BILLING_PRVDR_ADDRESS, MIN(FROM_SRVC_DATE) AS operating_earliest_date
     FROM {`mcaid_schema`}.{`mcaid_tbl_name`}
     GROUP BY BILLING_PRVDR_ADDRESS",
   .con = db_hhsaw))))
+srvc_newest$SERVICING_PRVDR_ADDRESS <- toupper(srvc_newest$SERVICING_PRVDR_ADDRESS)
+srvc_oldest$SERVICING_PRVDR_ADDRESS <- toupper(srvc_oldest$SERVICING_PRVDR_ADDRESS)
+bllng_newest$BILLING_PRVDR_ADDRESS <- toupper(bllng_newest$BILLING_PRVDR_ADDRESS)
+bllng_oldest$BILLING_PRVDR_ADDRESS <- toupper(bllng_oldest$BILLING_PRVDR_ADDRESS)
+
+srvc_dates <- merge(mcaid, srvc_oldest, by="SERVICING_PRVDR_ADDRESS", incomparables = NA)
+srvc_dates <- merge(srvc_dates, srvc_newest, by="SERVICING_PRVDR_ADDRESS", incomparables = NA)
+bllng_dates <- merge(mcaid, bllng_oldest, by="BILLING_PRVDR_ADDRESS", incomparables = NA)
+bllng_dates <- merge(bllng_dates, bllng_newest, by="BILLING_PRVDR_ADDRESS", incomparables = NA)
+mcaid <- rbind(srvc_dates, bllng_dates)
+mcaid <- unique(mcaid)
+rm(srvc_dates, bllng_dates)
 
 # Do a little cleaning to help the geocoder
-mcaid$SERVICING_PRVDR_ADDRESS <- toupper(mcaid$SERVICING_PRVDR_ADDRESS)
-mcaid$BILLING_PRVDR_ADDRESS <- toupper(mcaid$BILLING_PRVDR_ADDRESS)
 mcaid$SERVICING_PRVDR_ADDRESS <- gsub("(ID ONLY)","", mcaid$SERVICING_PRVDR_ADDRESS)
 mcaid$SERVICING_PRVDR_ADDRESS <- gsub("ID ONLY","", mcaid$SERVICING_PRVDR_ADDRESS)
 mcaid$BILLING_PRVDR_ADDRESS <- gsub("(ID ONLY)","", mcaid$BILLING_PRVDR_ADDRESS)
@@ -263,26 +275,21 @@ setnames(bllng_geocoded,
          c("BILLING_PRVDR_ADDRESS"))
 
 ## Merge cleaned addresses for mcaid ----
-all_srvc <- merge(mcaid, srvc_geocoded, by="SERVICING_PRVDR_ADDRESS", all = F)
-all_bllng <- merge(mcaid, bllng_geocoded, by="BILLING_PRVDR_ADDRESS", all = F)
+all_srvc <- merge(mcaid, srvc_geocoded, by="SERVICING_PRVDR_ADDRESS", all = F, incomparables = NA)
+all_bllng <- merge(mcaid, bllng_geocoded, by="BILLING_PRVDR_ADDRESS", all = F, incomparables = NA)
 
 all_srvc <- all_srvc[!is.na(SERVICING_PRVDR_ADDRESS),]
 all_bllng <- all_bllng[!is.na(BILLING_PRVDR_ADDRESS),]
 
 all_srvc <- all_srvc[,c("SERVICING_PRVDR_ADDRESS", "PRVDR_LAST_NAME", "PRVDR_FIRST_NAME",
                         "TXNMY_NAME", "FCLTY_TYPE_CODE", "geo_hash_clean", "geocode_success",
-                        "SYSTEM_IN_DATE")]
+                        "SYSTEM_IN_DATE", "operating_earliest_date", "operating_latest_date")]
 all_bllng <- all_bllng[,c("BILLING_PRVDR_ADDRESS", "PRVDR_LAST_NAME", "PRVDR_FIRST_NAME",
                           "TXNMY_NAME", "FCLTY_TYPE_CODE", "geo_hash_clean", "geocode_success",
-                          "SYSTEM_IN_DATE")]
+                          "SYSTEM_IN_DATE", "operating_earliest_date", "operating_latest_date")]
 
 all_srvc[, bllng_or_srvc:="S"]
 all_bllng[, bllng_or_srvc:="B"]
-
-all_srvc <- merge(all_srvc, srvc_newest, by = "SERVICING_PRVDR_ADDRESS", all.x = T)
-all_srvc <- merge(all_srvc, srvc_oldest, by = "SERVICING_PRVDR_ADDRESS", all.x = T)
-all_bllng <- merge(all_bllng, bllng_newest, by = "BILLING_PRVDR_ADDRESS", all.x = T)
-all_bllng <- merge(all_bllng, bllng_oldest, by = "BILLING_PRVDR_ADDRESS", all.x = T)
 
 setnames(all_srvc,
          c("SERVICING_PRVDR_ADDRESS", "SYSTEM_IN_DATE"),
@@ -339,20 +346,22 @@ setnames(all_addr,
            "address_midlevel_desc", "address_detail_desc")
          )
 all_addr <- all_addr[,c("geo_hash_clean", "geocode_success", "address_orig",
-                        "provider_name", "address_midlevel_desc",
-                        "address_detail_desc", "fclty_type_code", "code_source",
-                        "bed_type_emergency_shelters", "health", "housing",
-                        "txnmy_name", "bllng_or_srvc", "operating_latest_date",
-                        "operating_earliest_date", "source_last_updated"
+                        "provider_name", "code_source", "source_last_updated",
+                        "bllng_or_srvc", "health", "housing",
+                        "operating_earliest_date", "operating_latest_date",
+                        "address_midlevel_desc", "address_detail_desc",
+                        "fclty_type_code", "txnmy_name", 
+                        "bed_type_emergency_shelters"
                        )]
 setcolorder(all_addr, c("geo_hash_clean", "geocode_success", "address_orig",
-                        "provider_name", "address_midlevel_desc",
-                        "address_detail_desc", "fclty_type_code", "code_source",
-                        "bed_type_emergency_shelters", "health", "housing",
-                        "txnmy_name", "bllng_or_srvc", "operating_latest_date",
-                        "operating_earliest_date", "source_last_updated"
+                        "provider_name", "code_source", "source_last_updated",
+                        "bllng_or_srvc", "health", "housing",
+                        "operating_earliest_date", "operating_latest_date",
+                        "address_midlevel_desc", "address_detail_desc",
+                        "fclty_type_code", "txnmy_name", 
+                        "bed_type_emergency_shelters"
                         ))
-all_addr[, last_r_run := Sys.Date()]
+all_addr[, last_run := Sys.time()]
 
 
 ## Upload ----

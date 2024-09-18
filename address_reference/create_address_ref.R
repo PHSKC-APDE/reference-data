@@ -23,8 +23,8 @@ recode_mcaid_addresses <- F  # run if new mcaid servicing/billing provider addre
 recode_hmis_addresses <- F
 
 crosswalk_location <- "C:/Users/kfukutaki.KC/OneDrive - King County/Videos/Shared Documents - HHSAW Users/Ref schema/address_reference_crosswalk.xlsx"
-hmis_location <- "C:/Users/kfukutaki.KC/OneDrive - King County/Documents/Data/HMIS Facility Information June 2024.xlsx"
-hmis_date <- as.Date("2024-06-01")
+hmis_location <- "C:/Users/kfukutaki.KC/OneDrive - King County/Documents/Data/HMIS Facility Information September 2024.xlsx"
+hmis_date <- as.Date("2024-09-17")
 
 ## Prevent scientific notation except for huge numbers ----
 options("scipen"=999) # turn off scientific notation
@@ -42,6 +42,7 @@ hmis <- setDT(openxlsx::read.xlsx(hmis_location, detectDates = T))
 setnames(hmis,
          c("Programs.Address", "Programs.City", "Programs.ZIP.Code"),
          c("geo_add1_raw", "geo_city_raw", "geo_zip_raw"))
+hmis <- hmis[, -c("Bed and Unit Inventory Bed Type")]
 rads::string_clean(hmis)
 hmis[, source_last_updated := hmis_date]
 # Optional code to subset end dates to no more than current date
@@ -301,19 +302,18 @@ setnames(all_bllng,
 all_addr <- rbindlist(list(all_srvc, all_bllng), use.names=T, fill=T)
 
 all_addr[, code_source:="Medicaid - Place of Service"]
-all_addr$bed_type_emergency_shelters <- NA
 
 ## Rbind HMIS ----
 all_hmis <- merge(hmis, hmis_geocoded, by=c("geo_add1_raw", "geo_city_raw", "geo_zip_raw"))
 all_hmis <- setDT(tidyr::unite(all_hmis, Address, geo_add1_raw:geo_zip_raw, sep = ' '))
 setnames(all_hmis,
-         c("Agency.Name", "Program.Name", "Project.Type", "Address", "geo_hash_raw",
+         c("Agencies.Agency.Name", "Programs.Name", "Programs.Project.Type.Code", "Address", "geo_hash_raw",
            "Programs.Operating.Start.Date", "Programs.Operating.End.Date",
-           "Programs.Housing.Type", "Bed.Type.(Emergency.Shelters.Only)",
+           "Programs.Housing.Type",
            "addr_type"),
          c("PRVDR_FIRST_NAME", "PRVDR_LAST_NAME", "FCLTY_TYPE_CODE", "Address", "geo_hash_raw",
            "operating_earliest_date", "operating_latest_date",
-           "TXNMY_NAME", "bed_type_emergency_shelters",
+           "TXNMY_NAME",
            "code_source"))
 all_hmis[, bllng_or_srvc:="S"]
 
@@ -337,12 +337,12 @@ all_addr[, address_midlevel_desc := ifelse((code_source == "HMIS") & is.na(FCLTY
 setnames(all_addr,
          c("FCLTY_TYPE_CODE", "code_source", "Address", "PRVDR_LAST_NAME",
            "PRVDR_FIRST_NAME", "TXNMY_NAME", "geo_hash_clean",
-           "bllng_or_srvc", "operating_latest_date", "operating_earliest_date", "bed_type_emergency_shelters", "health", "housing",
+           "bllng_or_srvc", "operating_latest_date", "operating_earliest_date", "health", "housing",
            "address_midlevel_desc", "address_detail_desc"),
          c("fclty_type_code", "code_source", "address_orig", "provider_name",
            "provider_first_name", "txnmy_name", "geo_hash_clean",
            "bllng_or_srvc", "operating_latest_date", "operating_earliest_date",
-           "bed_type_emergency_shelters", "health", "housing",
+           "health", "housing",
            "address_midlevel_desc", "address_detail_desc")
          )
 all_addr <- all_addr[,c("geo_hash_clean", "geocode_success", "address_orig",
@@ -350,16 +350,14 @@ all_addr <- all_addr[,c("geo_hash_clean", "geocode_success", "address_orig",
                         "bllng_or_srvc", "health", "housing",
                         "operating_earliest_date", "operating_latest_date",
                         "address_midlevel_desc", "address_detail_desc",
-                        "fclty_type_code", "txnmy_name", 
-                        "bed_type_emergency_shelters"
+                        "fclty_type_code", "txnmy_name"
                        )]
 setcolorder(all_addr, c("geo_hash_clean", "geocode_success", "address_orig",
                         "provider_name", "code_source", "source_last_updated",
                         "bllng_or_srvc", "health", "housing",
                         "operating_earliest_date", "operating_latest_date",
                         "address_midlevel_desc", "address_detail_desc",
-                        "fclty_type_code", "txnmy_name", 
-                        "bed_type_emergency_shelters"
+                        "fclty_type_code", "txnmy_name"
                         ))
 all_addr[, last_run := Sys.time()]
 

@@ -99,6 +99,10 @@ srvc_oldest$SERVICING_PRVDR_ADDRESS <- toupper(srvc_oldest$SERVICING_PRVDR_ADDRE
 bllng_newest$BILLING_PRVDR_ADDRESS <- toupper(bllng_newest$BILLING_PRVDR_ADDRESS)
 bllng_oldest$BILLING_PRVDR_ADDRESS <- toupper(bllng_oldest$BILLING_PRVDR_ADDRESS)
 
+# if latest date is > today, change it to today (fifelse preserves date type)
+srvc_newest[, operating_latest_date := fifelse(operating_latest_date > Sys.Date(), Sys.Date(), operating_latest_date)]
+bllng_newest[, operating_latest_date := fifelse(operating_latest_date > Sys.Date(), Sys.Date(), operating_latest_date)]
+
 srvc_dates <- merge(mcaid, srvc_oldest, by="SERVICING_PRVDR_ADDRESS", incomparables = NA)
 srvc_dates <- merge(srvc_dates, srvc_newest, by="SERVICING_PRVDR_ADDRESS", incomparables = NA)
 bllng_dates <- merge(mcaid, bllng_oldest, by="BILLING_PRVDR_ADDRESS", incomparables = NA)

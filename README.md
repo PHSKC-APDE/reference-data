@@ -7,4 +7,6 @@ THE SPATIAL, OCCUPATION, AND POPULATION REFERENCE FILES HAVE BEEN MOVED TO https
 
 # reference-data
 
-This respository contains useful reference lists that span multiple other repositories/projects used by Public Health—Seattle & King County. See readme files in subfolders for more detailed descriptions of each reference file.
+This respository contains useful code and reference lists that span multiple other repositories/projects used by Public Health—Seattle & King County. See readme files in subfolders for more detailed descriptions of each reference file.
+
+Nowadays, this primarily contains the code used for creating the address reference table. See that subfolder for more information. There are also some tables related to claims CCW and CCS information.

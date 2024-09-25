@@ -15,14 +15,16 @@
 
 ## Clear memory, load packages, set up constants ----
 rm(list=ls())
-pacman::p_load(data.table, lubridate, kcgeocode, stringr, openxlsx, rads, rads.data, readr, iotools, odbc, sqldf, stringr)
+pacman::p_load(data.table, iotools, kcgeocode, lubridate, openxlsx, rads, rads.data, odbc, stringr)
 devtools::source_url("https://raw.githubusercontent.com/PHSKC-APDE/apde/main/R/create_db_connection.R")
 
 # Constants
 recode_mcaid_addresses <- F  # run if new mcaid servicing/billing provider addresses come in
+recode_all_mcaid <- F  # If you need a full recode of all mcaid addresses instead of just new ones, which is unlikely
 recode_hmis_addresses <- F
 
 crosswalk_location <- "C:/Users/kfukutaki.KC/OneDrive - King County/Videos/Shared Documents - HHSAW Users/Ref schema/address_reference_crosswalk.xlsx"
+# The HMIS location will change to HHSAW on the next round of updates, so we won't need to update this manually anymore
 hmis_location <- "C:/Users/kfukutaki.KC/OneDrive - King County/Documents/Data/HMIS Facility Information September 2024.xlsx"
 hmis_date <- as.Date("2024-09-17")
 
@@ -31,6 +33,58 @@ options("scipen"=999) # turn off scientific notation
 
 ## CONNECT SERVERS ----
 db_hhsaw <- create_db_connection("hhsaw", interactive = F, prod = T)
+
+## DEFINE FUNCTIONS ----
+submit_ads_to_geocoder <- function(conn,
+                                   ads,
+                                   schema_name = c("claims", "hmis"),
+                                   table_name = c("raw_billing_provider_address",
+                                                  "raw_servicing_provider_address")) {
+  cleaned_ads = lapply(ads, function(a){
+    x = kc_singleline(a, unparsed = T)
+    if (is.null(x$candidates)){
+      r = (data.table(input = a))
+    } else if (((length(x$candidates)==0))){
+      r = (data.table(input=a))
+    } else{
+      r = as.data.table(x$candidates[[1]]$attributes)[,c(1:28)]
+      r[, input := a]
+    }
+    return(r)
+  })
+  cleaned_ads = rbindlist(cleaned_ads, fill=TRUE)
+  # Write intermediate results
+  DBI::dbWriteTable(conn = conn, 
+                    name = DBI::Id(schema = schema_name,
+                                   table = table_name),
+                    value = cleaned_ads,
+                    append = T)
+  cleaned_ads <- cleaned_ads[,c("StAddr", "City", "County", "State", "ZIP", "input")]
+  setnames(cleaned_ads,
+           c("StAddr", "City", "ZIP", "County", "State"),
+           c("geo_add1_raw","geo_city_raw", "geo_zip_raw", "geo_county_raw", "geo_state_raw"))
+  cleaned_ads <- cleaned_ads[, `:=` (geo_add2_raw=NA, geo_add3_raw=NA)]
+  uped = submit_ads_for_cleaning(cleaned_ads, con = db_hhsaw)
+  return(cleaned_ads)
+} 
+
+fetch_and_save_ads <- function(conn,
+                               ads_to_fetch,
+                               schema_name = c("claims", "hmis"),
+                               final_table_name = c("final_servicing_provider_address",
+                                                    "final_billing_provider_address")) {
+  a1 = fetch_addresses(ads_to_fetch, input_type = 'raw', geocode = TRUE, con = db_hhsaw, deduplicate = T)
+  ads_geocoded <- cbind(ads_to_fetch, a1)
+  ads_geocoded[, geocode_success:=ifelse(!is.na(geo_address_geocoded), 1, 0)]
+  ads_geocoded <- ads_geocoded[,c("input", "geo_hash_raw", "geo_hash_clean", "geocode_success")]
+  
+  DBI::dbWriteTable(conn = db_hhsaw,
+                    name = DBI::Id(schema = schema_name,
+                                   table = final_table_name),
+                    value = ads_geocoded,
+                    append = T)
+  return(ads_geocoded)
+}
 
 ## READ DATA ----
 # Read address_reference_crosswalk table
@@ -67,8 +121,8 @@ mcaid$SERVICING_PRVDR_ADDRESS <- toupper(mcaid$SERVICING_PRVDR_ADDRESS)
 mcaid$BILLING_PRVDR_ADDRESS <- toupper(mcaid$BILLING_PRVDR_ADDRESS)
 
 # Remove non-KC zip codes
-mcaid$service_zip <- str_sub(mcaid$SERVICING_PRVDR_ADDRESS, - 5, - 1)
-mcaid$billing_zip <- str_sub(mcaid$BILLING_PRVDR_ADDRESS, - 5, - 1)
+mcaid$service_zip <- stringr::str_sub(mcaid$SERVICING_PRVDR_ADDRESS, - 5, - 1)
+mcaid$billing_zip <- stringr::str_sub(mcaid$BILLING_PRVDR_ADDRESS, - 5, - 1)
 mcaid <- mcaid[(mcaid$service_zip %in% kc_zips) | (mcaid$billing_zip %in% kc_zips),]
 mcaid[,service_zip:=NULL]
 mcaid[,billing_zip:=NULL]
@@ -130,9 +184,8 @@ mcaid_srvc <- unique(mcaid$SERVICING_PRVDR_ADDRESS)
 mcaid_bllng <- unique(mcaid$BILLING_PRVDR_ADDRESS)
 
 
-## Geocoder address cleaning ----
+## HMIS Geocoder ----
 if (recode_hmis_addresses) {
-  # HMIS geocoding
   hmis_ads <- unique(hmis[, c("geo_add1_raw", "geo_city_raw", "geo_zip_raw")])
   hmis_ads <- hmis_ads[, `:=` (geo_add2_raw=NA, geo_add3_raw=NA, geo_state_raw="WA")]
   uped = submit_ads_for_cleaning(hmis_ads, con = db_hhsaw)
@@ -150,108 +203,8 @@ if (recode_hmis_addresses) {
   print("HMIS geocoding done!")
 }
 
-if (recode_mcaid_addresses){
-  # Separate city and zip with kc_singleline
-  srvc_cleaned = lapply(mcaid_srvc, function(a){
-    x = kc_singleline(a, unparsed = T)
-    if (is.null(x$candidates)){
-      r = (data.table(input = a))
-    } else if (((length(x$candidates)==0))){
-      r = (data.table(input=a))
-    } else{
-      r = as.data.table(x$candidates[[1]]$attributes)[,c(1:28)]
-      r[, input := a]
-    }
-    return(r)
-  })
-  srvc_cleaned = rbindlist(srvc_cleaned, fill=TRUE)
-  DBI::dbWriteTable(conn = db_hhsaw, 
-                    name = DBI::Id(schema = "claims",
-                                   table = "raw_servicing_provider_address"),
-                    value = srvc_cleaned,
-                    overwrite = T)
-  # srvc_cleaned <- setDT(DBI::dbGetQuery(db_hhsaw, glue::glue_sql(
-  #   "SELECT * FROM claims.raw_servicing_provider_address",
-  #   .con = db_hhsaw)))
-  srvc_cleaned <- srvc_cleaned[,c("StAddr", "City", "County", "State", "ZIP", "input")]
-  setnames(srvc_cleaned,
-           c("StAddr", "City", "ZIP", "County", "State"),
-           c("geo_add1_raw","geo_city_raw", "geo_zip_raw", "geo_county_raw", "geo_state_raw"))
-  srvc_cleaned <- srvc_cleaned[, `:=` (geo_add2_raw=NA, geo_add3_raw=NA)]
-  uped = submit_ads_for_cleaning(srvc_cleaned, con = db_hhsaw)
-  # wait a bit before continuing!
-  a1 = fetch_addresses(srvc_cleaned, input_type = 'raw', geocode = TRUE, con = db_hhsaw, deduplicate = T)
-  srvc_geocoded <- cbind(srvc_cleaned, a1)
-  srvc_geocoded[, geocode_success:=ifelse(!is.na(geo_address_geocoded), 1, 0)]
-  srvc_geocoded <- srvc_geocoded[,c("input", "geo_hash_raw", "geo_hash_clean", "geocode_success")]
-  
-  DBI::dbWriteTable(conn = db_hhsaw,
-                    name = DBI::Id(schema = "claims", table = "final_servicing_provider_address"),
-                    value = srvc_geocoded,
-                    overwrite = T)
-  print("Service geocoding done!")
-  
-  bllng_cleaned = lapply(mcaid_bllng, function(a){
-    x = kc_singleline(a, unparsed = T)
-    if (is.null(x$candidates)){
-      r = (data.table(input = a))
-    } else if (((length(x$candidates)==0))){
-      r = (data.table(input=a))
-    } else{
-      r = as.data.table(x$candidates[[1]]$attributes)[,c(1:28)]
-      r[, input := a]
-    }
-    return(r)
-  })
-  bllng_cleaned = rbindlist(bllng_cleaned, fill=TRUE)
-  DBI::dbWriteTable(conn = db_hhsaw, 
-                    name = DBI::Id(schema = "claims", table = "raw_billing_provider_address"),
-                    value = bllng_cleaned,
-                    overwrite = T)
-  # bllng_cleaned <- setDT(DBI::dbGetQuery(db_hhsaw, glue::glue_sql(
-  #   "SELECT * FROM claims.raw_billing_provider_address",
-  #   .con = db_hhsaw)))
-  bllng_cleaned <- bllng_cleaned[,c("StAddr", "City", "County", "State", "ZIP", "input")]
-  setnames(bllng_cleaned,
-           c("StAddr", "City", "ZIP", "County", "State"),
-           c("geo_add1_raw","geo_city_raw", "geo_zip_raw", "geo_county_raw", "geo_state_raw"))
-  bllng_cleaned <- bllng_cleaned[, `:=` (geo_add2_raw=NA, geo_add3_raw=NA)]
-  uped = submit_ads_for_cleaning(bllng_cleaned, con = db_hhsaw)
-  # wait a bit before continuing!
-  a1 = fetch_addresses(bllng_cleaned, input_type = 'raw', geocode = TRUE, con = db_hhsaw, deduplicate = T)
-  bllng_geocoded <- cbind(bllng_cleaned, a1)
-  bllng_geocoded[, geocode_success:=ifelse(!is.na(geo_address_geocoded), 1, 0)]
-  bllng_geocoded <- bllng_geocoded[,c("input", "geo_hash_raw", "geo_hash_clean", "geocode_success")]
-  
-  DBI::dbWriteTable(conn = db_hhsaw,
-                    name = DBI::Id(schema = "claims", table = "final_billing_provider_address"),
-                    value = bllng_geocoded,
-                    overwrite = T)
-  print("Billing geocoding done!")
-}
-
 ## Load data ----
-# Load if not already loaded
-if (!exists("srvc_geocoded")){
-  srvc_geocoded <- setDT(DBI::dbGetQuery(db_hhsaw, glue::glue_sql(
-    "SELECT input, geo_hash_raw, geo_hash_clean, geocode_success
-     FROM claims.final_servicing_provider_address",
-    .con = db_hhsaw)))
-} else{
-  srvc_geocoded <- srvc_geocoded[,c("input", "geo_hash_raw", "geo_hash_clean",
-                                    "geocode_success")]
-  srvc_geocoded$addr_type <- "servicing_provider"
-}
-if (!exists("bllng_geocoded")){
-  bllng_geocoded <- setDT(DBI::dbGetQuery(db_hhsaw, glue::glue_sql(
-    "SELECT input, geo_hash_raw, geo_hash_clean, geocode_success
-     FROM claims.final_billing_provider_address",
-    .con = db_hhsaw)))
-} else{
-  bllng_geocoded <- bllng_geocoded[,c("input", "geo_hash_raw", "geo_hash_clean",
-                                      "geocode_success")]
-  bllng_geocoded$addr_type <- "billing_provider"
-}
+# Load HMIS if not already loaded from geocoder section
 if (!exists("hmis_geocoded")){
   hmis_geocoded <- setDT(DBI::dbGetQuery(db_hhsaw, glue::glue_sql(
     "SELECT geo_add1_raw, geo_city_raw, geo_zip_raw,
@@ -261,16 +214,76 @@ if (!exists("hmis_geocoded")){
   hmis_geocoded$addr_type <- "HMIS"
 } else{
   hmis_geocoded <- hmis_geocoded[,c("geo_add1_raw", "geo_city_raw",
-                                  "geo_zip_raw", "geo_hash_raw", "geo_hash_clean",
-                                  "geocode_success")]
+                                    "geo_zip_raw", "geo_hash_raw", "geo_hash_clean",
+                                    "geocode_success")]
   hmis_geocoded$addr_type <- "HMIS"
 }
+# Load mcaid data
+srvc_geocoded <- setDT(DBI::dbGetQuery(db_hhsaw, glue::glue_sql(
+  "SELECT input, geo_hash_raw, geo_hash_clean, geocode_success
+   FROM claims.final_servicing_provider_address",
+  .con = db_hhsaw)))
 
-# Check for new addresses - if there are any, change recode_mcaid_addresses to T
-# and go back to rerun that section
-setdiff(mcaid_srvc, srvc_geocoded$input)
-setdiff(mcaid_bllng, bllng_geocoded$input)
+bllng_geocoded <- setDT(DBI::dbGetQuery(db_hhsaw, glue::glue_sql(
+  "SELECT input, geo_hash_raw, geo_hash_clean, geocode_success
+   FROM claims.final_billing_provider_address",
+  .con = db_hhsaw)))
 
+## GEOCODE NEW MCAID ADDRESSES IF NEEDED ---
+# Check for new mcaid addresses - if there are any, change recode_mcaid_addresses to T
+# and run the if/else section below manually pausing in between the sections
+srvc_diff <- setdiff(mcaid_srvc, srvc_geocoded$input)
+bllng_diff <- setdiff(mcaid_bllng, bllng_geocoded$input)
+
+if (recode_mcaid_addresses == T) {
+  if (recode_all_mcaid == T) {
+    srvc_fetch_ads <- submit_ads_to_geocoder(conn = db_hhsaw,
+                           ads = mcaid_srvc,
+                           schema_name = "claims",
+                           table_name = "raw_servicing_provider_address")
+    bllng_fetch_ads <- submit_ads_to_geocoder(conn = db_hhsaw,
+                           ads = mcaid_bllng,
+                           schema_name = "claims",
+                           table_name = "raw_billing_provider_address")
+  }else{
+    srvc_fetch_ads <- submit_ads_to_geocoder(conn = db_hhsaw,
+                           ads = srvc_diff,
+                           schema_name = "claims",
+                           table_name = "raw_servicing_provider_address")
+    bllng_fetch_ads <- submit_ads_to_geocoder(conn = db_hhsaw,
+                           ads = bllng_diff,
+                           schema_name = "claims",
+                           table_name = "raw_billing_provider_address")
+  }
+}
+# WAIT A BIT and then run this section
+if (recode_mcaid_addresses == T) {
+  if (recode_all_mcaid == T) {
+    srvc_geocoded <- fetch_and_save_ads(conn,
+                                       srvc_fetch_ads,
+                                       schema_name = "claims",
+                                       final_table_name = c("final_servicing_provider_address",
+                                                            "final_billing_provider_address"))
+    bllng_geocoded <- fetch_and_save_ads(conn,
+                                         bllng_fetch_ads,
+                                         schema_name = "claims",
+                                         final_table_name = c("final_servicing_provider_address",
+                                                             "final_billing_provider_address"))
+  }else{
+    srvc_geocoded <- fetch_and_save_ads(conn,
+                                        srvc_fetch_ads,
+                                        schema_name = "claims",
+                                        final_table_name = c("final_servicing_provider_address",
+                                                             "final_billing_provider_address"))
+    bllng_geocoded <- fetch_and_save_ads(conn,
+                                         bllng_fetch_ads,
+                                         schema_name = "claims",
+                                         final_table_name = c("final_servicing_provider_address",
+                                                              "final_billing_provider_address"))
+  }
+}
+
+## Merge cleaned addresses for mcaid ----
 # Rename columns
 setnames(srvc_geocoded,
          c("input"),
@@ -279,13 +292,15 @@ setnames(bllng_geocoded,
          c("input"),
          c("BILLING_PRVDR_ADDRESS"))
 
-## Merge cleaned addresses for mcaid ----
+# Add on the geocode information
 all_srvc <- merge(mcaid, srvc_geocoded, by="SERVICING_PRVDR_ADDRESS", all = F, incomparables = NA)
 all_bllng <- merge(mcaid, bllng_geocoded, by="BILLING_PRVDR_ADDRESS", all = F, incomparables = NA)
 
+# Remove any null addresses (shouldn't be many, if any)
 all_srvc <- all_srvc[!is.na(SERVICING_PRVDR_ADDRESS),]
 all_bllng <- all_bllng[!is.na(BILLING_PRVDR_ADDRESS),]
 
+# Subset to the desired columns
 all_srvc <- all_srvc[,c("SERVICING_PRVDR_ADDRESS", "PRVDR_LAST_NAME", "PRVDR_FIRST_NAME",
                         "TXNMY_NAME", "FCLTY_TYPE_CODE", "geo_hash_clean", "geocode_success",
                         "SYSTEM_IN_DATE", "operating_earliest_date", "operating_latest_date")]
@@ -293,6 +308,7 @@ all_bllng <- all_bllng[,c("BILLING_PRVDR_ADDRESS", "PRVDR_LAST_NAME", "PRVDR_FIR
                           "TXNMY_NAME", "FCLTY_TYPE_CODE", "geo_hash_clean", "geocode_success",
                           "SYSTEM_IN_DATE", "operating_earliest_date", "operating_latest_date")]
 
+# Add a flag for whether it's a billing or service provider
 all_srvc[, bllng_or_srvc:="S"]
 all_bllng[, bllng_or_srvc:="B"]
 
@@ -303,8 +319,8 @@ setnames(all_bllng,
          c("BILLING_PRVDR_ADDRESS", "SYSTEM_IN_DATE"),
          c("Address", "source_last_updated"))
 
+# Bind service and billing ads together
 all_addr <- rbindlist(list(all_srvc, all_bllng), use.names=T, fill=T)
-
 all_addr[, code_source:="Medicaid - Place of Service"]
 
 ## Rbind HMIS ----
@@ -319,8 +335,7 @@ setnames(all_hmis,
            "operating_earliest_date", "operating_latest_date",
            "TXNMY_NAME",
            "code_source"))
-all_hmis[, bllng_or_srvc:="S"]
-
+all_hmis[, bllng_or_srvc:="S"]  # HMIS counts as service provider, not billing
 all_addr <- rbindlist(list(all_addr, all_hmis), use.names=T, fill=T)
 all_addr <- rads::string_clean(all_addr)
 all_addr <- unique(all_addr,

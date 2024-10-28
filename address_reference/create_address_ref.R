@@ -33,13 +33,8 @@ recode_mcaid_addresses <- F  # run if new mcaid servicing/billing provider addre
 recode_all_mcaid <- F  # If you need a full recode of all mcaid addresses instead of just new ones, which is unlikely
 recode_hmis_addresses <- F
 
-crosswalk_location <- "C:/Users/kfukutaki.KC/OneDrive - King County/Videos/Shared Documents - HHSAW Users/Ref schema/address_reference_crosswalk.xlsx"
-# The HMIS location will change to HHSAW on the next round of updates, so we won't need to update this manually anymore
-hmis_location <- "C:/Users/kfukutaki.KC/OneDrive - King County/Documents/Data/HMIS Facility Information September 2024.xlsx"
-hmis_date <- as.Date("2024-09-17")
-
-## Prevent scientific notation except for huge numbers ----
-options("scipen" = 999) # turn off scientific notation
+# Change this to your shortcut if needed
+crosswalk_location <- "C:/Users/kfukutaki.KC/OneDrive - King County/Shared Documents - HHSAW Users/Ref schema/address_reference_crosswalk.xlsx"
 
 ## CONNECT SERVERS ----
 db_hhsaw <- create_db_connection("hhsaw", interactive = F, prod = T)
@@ -121,17 +116,36 @@ crosswalk <- setDT(openxlsx::read.xlsx(crosswalk_location))
 crosswalk <- rads::string_clean(crosswalk)
 
 # Read in HMIS table
-hmis <- setDT(openxlsx::read.xlsx(hmis_location, detectDates = T))
+hmis_schema <- "hmis"
+hmis_tbl <- "HMISFacilityReference"
+hmis <- rads::string_clean(setDT(DBI::dbGetQuery(
+  db_hhsaw,
+  glue::glue_sql(
+    "SELECT Agency
+      ,Program
+      ,ProjectType
+      ,Address
+      ,City
+      ,Zip
+      ,OperatingStartDate
+      ,OperatingEndDate
+      ,HousingType
+      ,LastUpdated
+   FROM {`hmis_schema`}.{`hmis_tbl`}
+  ",
+    .con = db_hhsaw
+  )
+)))
 setnames(
   hmis,
-  c("Programs.Address", "Programs.City", "Programs.ZIP.Code"),
+  c("Address", "City", "Zip"),
   c("geo_add1_raw", "geo_city_raw", "geo_zip_raw")
 )
-hmis <- hmis[, -c("Bed and Unit Inventory Bed Type")]
+hmis$OperatingStartDate <- as.Date(hmis$OperatingStartDate)
+hmis$OperatingEndDate <- as.Date(hmis$OperatingEndDate)
 rads::string_clean(hmis)
-hmis[, source_last_updated := hmis_date]
 # Optional code to subset end dates to no more than current date
-# hmis[, Programs.Operating.End.Date:=ifelse(Programs.Operating.End.Date > Sys.Date(), Sys.Date(), Programs.Operating.End.Date)]
+# hmis[, OperatingEndDate:=ifelse(OperatingEndDate > Sys.Date(), Sys.Date(), OperatingEndDate)]
 
 
 # KC zip codes
@@ -483,14 +497,14 @@ all_hmis <- setDT(tidyr::unite(all_hmis, Address, geo_add1_raw:geo_zip_raw, sep 
 setnames(
   all_hmis,
   c(
-    "Agencies.Agency.Name",
-    "Programs.Name",
-    "Programs.Project.Type.Code",
+    "Agency",
+    "Program",
+    "ProjectType",
     "Address",
     "geo_hash_raw",
-    "Programs.Operating.Start.Date",
-    "Programs.Operating.End.Date",
-    "Programs.Housing.Type",
+    "OperatingStartDate",
+    "OperatingEndDate",
+    "HousingType",
     "addr_type"
   ),
   c(

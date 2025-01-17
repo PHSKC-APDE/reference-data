@@ -32,9 +32,14 @@ devtools::source_url(
 recode_mcaid_addresses <- F  # run if new mcaid servicing/billing provider addresses come in
 recode_all_mcaid <- F  # If you need a full recode of all mcaid addresses instead of just new ones, which is unlikely
 recode_hmis_addresses <- F
+remote_desktop <- T  # whether running on remote desktop or local machine
 
 # Change this to your shortcut if needed
-crosswalk_location <- "C:/Users/kfukutaki.KC/OneDrive - King County/Shared Documents - HHSAW Users/Ref schema/address_reference_crosswalk.xlsx"
+if (remote_desktop){
+  crosswalk_location <- "C:/Users/kfukutaki.KC/OneDrive - King County (KC1)/Shared Documents - HHSAW Users/Ref schema/address_reference_crosswalk.xlsx"
+} else{
+  crosswalk_location <- "C:/Users/kfukutaki.KC/OneDrive - King County/Shared Documents - HHSAW Users/Ref schema/address_reference_crosswalk.xlsx"
+}
 
 ## CONNECT SERVERS ----
 db_hhsaw <- create_db_connection("hhsaw", interactive = F, prod = T)
@@ -86,7 +91,10 @@ fetch_and_save_ads <- function(conn,
                                ads_to_fetch,
                                schema_name = c("claims", "hmis"),
                                final_table_name = c("final_servicing_provider_address",
-                                                    "final_billing_provider_address")) {
+                                                    "final_billing_provider_address"),
+                               overwrite = F) {
+  append <- !overwrite
+  
   a1 = fetch_addresses(
     ads_to_fetch,
     input_type = 'raw',
@@ -105,7 +113,8 @@ fetch_and_save_ads <- function(conn,
     conn = db_hhsaw,
     name = DBI::Id(schema = schema_name, table = final_table_name),
     value = ads_geocoded,
-    append = T
+    overwrite = overwrite,
+    append = append
   )
   return(ads_geocoded)
 }
@@ -339,7 +348,7 @@ bllng_geocoded <- setDT(DBI::dbGetQuery(
   )
 ))
 
-## GEOCODE NEW MCAID ADDRESSES IF NEEDED ---
+## GEOCODE NEW MCAID ADDRESSES IF NEEDED ----
 # Check for new mcaid addresses - if there are any, change recode_mcaid_addresses to T
 # and run the if/else section below manually pausing in between the sections
 srvc_diff <- setdiff(mcaid_srvc, srvc_geocoded$input)
@@ -381,38 +390,30 @@ if (recode_mcaid_addresses == T) {
       conn,
       srvc_fetch_ads,
       schema_name = "claims",
-      final_table_name = c(
-        "final_servicing_provider_address",
-        "final_billing_provider_address"
-      )
+      final_table_name = "final_servicing_provider_address",
+      overwrite = T
     )
     bllng_geocoded <- fetch_and_save_ads(
       conn,
       bllng_fetch_ads,
       schema_name = "claims",
-      final_table_name = c(
-        "final_servicing_provider_address",
-        "final_billing_provider_address"
-      )
+      final_table_name = "final_billing_provider_address",
+      overwrite = T
     )
   } else{
     srvc_geocoded <- fetch_and_save_ads(
       conn,
       srvc_fetch_ads,
       schema_name = "claims",
-      final_table_name = c(
-        "final_servicing_provider_address",
-        "final_billing_provider_address"
-      )
+      final_table_name = "final_servicing_provider_address",
+      overwrite = F
     )
     bllng_geocoded <- fetch_and_save_ads(
       conn,
       bllng_fetch_ads,
       schema_name = "claims",
-      final_table_name = c(
-        "final_servicing_provider_address",
-        "final_billing_provider_address"
-      )
+      final_table_name = "final_billing_provider_address",
+      overwrite = F
     )
   }
 }
@@ -630,6 +631,7 @@ all_addr[, last_run := Sys.time()]
 
 
 ## Upload ----
+# Around 26,000 rows
 DBI::dbWriteTable(
   conn = db_hhsaw,
   name = DBI::Id(schema = "ref", table = "address_reference"),

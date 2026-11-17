@@ -8,7 +8,6 @@
 #' https://www.cms.gov/medicare/medicare-fee-for-service-payment/physicianfeesched/downloads/website-pos-database.pdf
 #'
 #' @TODO
-#' Long-term version of HMIS file iteration
 #' Investigate why some pharmacies are not listed as 01 code
 #' Further ways to break out "Office" category, maybe using txnmy
 #'
@@ -23,26 +22,22 @@ pacman::p_load(data.table,
                rads,
                rads.data,
                odbc,
-               stringr)
-devtools::source_url(
-  "https://raw.githubusercontent.com/PHSKC-APDE/apde/main/R/create_db_connection.R"
-)
+               stringr,
+               Microsoft365R,
+               apde.connect)
 
 # Constants
-recode_mcaid_addresses <- F  # run if new mcaid servicing/billing provider addresses come in
+recode_mcaid_addresses <- T  # run if new mcaid servicing/billing provider addresses come in
 recode_all_mcaid <- F  # If you need a full recode of all mcaid addresses instead of just new ones, which is unlikely
 recode_hmis_addresses <- F
-remote_desktop <- T  # whether running on remote desktop or local machine
-
-# Change this to your shortcut if needed
-if (remote_desktop){
-  crosswalk_location <- "C:/Users/kfukutaki.KC/OneDrive - King County (KC1)/Shared Documents - HHSAW Users/Ref schema/address_reference_crosswalk.xlsx"
-} else{
-  crosswalk_location <- "C:/Users/kfukutaki.KC/OneDrive - King County/Shared Documents - HHSAW Users/Ref schema/address_reference_crosswalk.xlsx"
-}
+remote_desktop <- F  # whether running on remote desktop or local machine
 
 ## CONNECT SERVERS ----
-db_hhsaw <- create_db_connection("hhsaw", interactive = F, prod = T)
+db_hhsaw <- apde.connect::connect(database = "hhsaw",
+                                  prod = T,
+                                  auth = "auto")
+team <- get_team("HHSAW Users")
+team_drive <- team$get_drive()
 
 ## DEFINE FUNCTIONS ----
 submit_ads_to_geocoder <- function(conn,
@@ -121,40 +116,35 @@ fetch_and_save_ads <- function(conn,
 
 ## READ DATA ----
 # Read address_reference_crosswalk table
-crosswalk <- setDT(openxlsx::read.xlsx(crosswalk_location))
-crosswalk <- rads::string_clean(crosswalk)
+temp_path <- tempfile(fileext = ".xlsx")
+team_drive$download_file("Ref schema/address_reference_crosswalk.xlsx", dest = temp_path)
+crosswalk <- setDT(openxlsx::read.xlsx(temp_path))
 
 # Read in HMIS table
-hmis_schema <- "hmis"
-hmis_tbl <- "HMISFacilityReference"
+hmis_schema <- "ref"
+hmis_tbl <- "hmisaddress"
 hmis <- rads::string_clean(setDT(DBI::dbGetQuery(
   db_hhsaw,
   glue::glue_sql(
-    "SELECT Agency
-      ,Program
-      ,ProjectType
+    "SELECT AgencyName
+      ,ProgramName
+      ,ProjectTypeCode
       ,Address
-      ,City
-      ,Zip
       ,OperatingStartDate
       ,OperatingEndDate
-      ,HousingType
-      ,LastUpdated
+      ,HousingStockType
+      ,DataAsOfDate
+      ,ProgramID
+      ,Inventory_Site
    FROM {`hmis_schema`}.{`hmis_tbl`}
   ",
     .con = db_hhsaw
   )
 )))
-setnames(
-  hmis,
-  c("Address", "City", "Zip"),
-  c("geo_add1_raw", "geo_city_raw", "geo_zip_raw")
-)
 hmis$OperatingStartDate <- as.Date(hmis$OperatingStartDate)
 hmis$OperatingEndDate <- as.Date(hmis$OperatingEndDate)
+hmis$DataAsOfDate <- as.Date(hmis$DataAsOfDate)
 rads::string_clean(hmis)
-# Optional code to subset end dates to no more than current date
-# hmis[, OperatingEndDate:=ifelse(OperatingEndDate > Sys.Date(), Sys.Date(), OperatingEndDate)]
 
 
 # KC zip codes
@@ -270,16 +260,35 @@ mcaid_bllng <- unique(mcaid$BILLING_PRVDR_ADDRESS)
 
 ## HMIS Geocoder ----
 if (recode_hmis_addresses) {
-  hmis_ads <- unique(hmis[, c("geo_add1_raw", "geo_city_raw", "geo_zip_raw")])
-  hmis_ads <- hmis_ads[, `:=` (
+  hmis_ads <- unique(hmis[, c("Address")])
+  ads = lapply(hmis_ads$Address, function(ad){
+    sing = kcgeocode::kc_singleline(ad, unparsed = T)
+    if(length(sing$candidates)>0){
+      ans = sing$candidates[[1]]$attributes
+      ans$input = ad
+    }else{
+      ans = data.frame(input = ad)
+    }
+    ans
+  })
+  ads <- data.table::rbindlist(ads, fill = T)
+  ads <- ads[,c('Match_addr', 'Addr_type', 'AddNum', 'StName', 'StType', 'City', 'Postal', c('X', 'Y'))]
+  ads$geo_add1_raw <- paste(ads$AddNum, ads$StName, ads$StType, sep=" ")
+  setnames(
+    ads,
+    c("City", "Postal"),
+    c("geo_city_raw", "geo_zip_raw")
+  )
+  ads <- ads[, `:=` (
     geo_add2_raw = NA,
     geo_add3_raw = NA,
     geo_state_raw = "WA"
   )]
-  uped = submit_ads_for_cleaning(hmis_ads, con = db_hhsaw)
+  ads <- ads[, c("geo_add1_raw", "geo_add2_raw", "geo_add3_raw", "geo_city_raw", "geo_zip_raw", "geo_state_raw")]
+  uped = submit_ads_for_cleaning(ads, con = db_hhsaw)
   # wait a bit before continuing!
   a1 = fetch_addresses(
-    hmis_ads,
+    ads,
     input_type = 'raw',
     geocode = TRUE,
     con = db_hhsaw,
@@ -288,6 +297,7 @@ if (recode_hmis_addresses) {
   hmis_cleaned <- cbind(hmis_ads, a1)
   hmis_cleaned[, geocode_success := ifelse(!is.na(geo_address_geocoded), 1, 0)]
   hmis_geocoded <- hmis_cleaned[, c(
+    "Address",
     "geo_add1_raw",
     "geo_add2_raw",
     "geo_city_raw",
@@ -298,7 +308,7 @@ if (recode_hmis_addresses) {
   )]
   DBI::dbWriteTable(
     conn = db_hhsaw,
-    name = DBI::Id(schema = "kfukutaki", table = "hmis_provider_geocoded"),
+    name = DBI::Id(schema = "kfukutaki", table = "hmisaddress_geocoded"),
     value = hmis_geocoded,
     overwrite = T
   )
@@ -311,18 +321,15 @@ if (!exists("hmis_geocoded")) {
   hmis_geocoded <- setDT(DBI::dbGetQuery(
     db_hhsaw,
     glue::glue_sql(
-      "SELECT geo_add1_raw, geo_city_raw, geo_zip_raw,
-      geo_hash_raw, geo_hash_clean, geocode_success
-     FROM kfukutaki.hmis_provider_geocoded",
+      "SELECT Address, geo_hash_raw, geo_hash_clean, geocode_success
+     FROM kfukutaki.hmisaddress_geocoded",
       .con = db_hhsaw
     )
   ))
   hmis_geocoded$addr_type <- "HMIS"
 } else{
   hmis_geocoded <- hmis_geocoded[, c(
-    "geo_add1_raw",
-    "geo_city_raw",
-    "geo_zip_raw",
+    "Address",
     "geo_hash_raw",
     "geo_hash_clean",
     "geocode_success"
@@ -493,19 +500,20 @@ all_addr[, code_source := "Medicaid - Place of Service"]
 ## Rbind HMIS ----
 all_hmis <- merge(hmis,
                   hmis_geocoded,
-                  by = c("geo_add1_raw", "geo_city_raw", "geo_zip_raw"))
-all_hmis <- setDT(tidyr::unite(all_hmis, Address, geo_add1_raw:geo_zip_raw, sep = ' '))
+                  by = c("Address"))
+# all_hmis <- setDT(tidyr::unite(all_hmis, Address, geo_add1_raw:geo_zip_raw, sep = ' '))
 setnames(
   all_hmis,
   c(
-    "Agency",
-    "Program",
-    "ProjectType",
+    "AgencyName",
+    "ProgramName",
+    "ProjectTypeCode",
     "Address",
     "geo_hash_raw",
     "OperatingStartDate",
     "OperatingEndDate",
-    "HousingType",
+    "HousingStockType",
+    "DataAsOfDate",
     "addr_type"
   ),
   c(
@@ -517,6 +525,7 @@ setnames(
     "operating_earliest_date",
     "operating_latest_date",
     "TXNMY_NAME",
+    "source_last_updated",
     "code_source"
   )
 )
@@ -526,7 +535,7 @@ all_addr <- rbindlist(list(all_addr, all_hmis),
                       fill = T)
 all_addr <- rads::string_clean(all_addr)
 all_addr <- unique(all_addr,
-                   by = c("Address", "code_source", "bllng_or_srvc", "FCLTY_TYPE_CODE"))
+                   by = c("Address", "code_source", "bllng_or_srvc", "FCLTY_TYPE_CODE", "ProgramID"))
 
 ## Rollup logic ----
 # Merge on code and code_source
@@ -551,6 +560,8 @@ all_addr[, address_midlevel_desc := ifelse((code_source == "HMIS") &
                                            "Unknown Housing Assistance",
                                            address_midlevel_desc
 )]
+
+all_addr <- all_addr[!is.na(all_addr$geo_hash_clean)]
 
 ## Final column cleaning ----
 setnames(
@@ -604,7 +615,9 @@ all_addr <- all_addr[, c(
   "address_midlevel_desc",
   "address_detail_desc",
   "fclty_type_code",
-  "txnmy_name"
+  "txnmy_name",
+  "ProgramID",
+  "Inventory_Site"
 )]
 setcolorder(
   all_addr,
@@ -624,7 +637,9 @@ setcolorder(
     "address_midlevel_desc",
     "address_detail_desc",
     "fclty_type_code",
-    "txnmy_name"
+    "txnmy_name",
+    "ProgramID",
+    "Inventory_Site"
   )
 )
 all_addr[, last_run := Sys.time()]

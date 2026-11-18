@@ -27,7 +27,7 @@ pacman::p_load(data.table,
                apde.connect)
 
 # Constants
-recode_mcaid_addresses <- T  # run if new mcaid servicing/billing provider addresses come in
+recode_mcaid_addresses <- F  # run if new mcaid servicing/billing provider addresses come in
 recode_all_mcaid <- F  # If you need a full recode of all mcaid addresses instead of just new ones, which is unlikely
 recode_hmis_addresses <- F
 remote_desktop <- F  # whether running on remote desktop or local machine
@@ -95,7 +95,7 @@ fetch_and_save_ads <- function(conn,
     input_type = 'raw',
     geocode = TRUE,
     con = db_hhsaw,
-    deduplicate = T
+    deduplicate = F
   )
   ads_geocoded <- cbind(ads_to_fetch, a1)
   ads_geocoded[, geocode_success := ifelse(!is.na(geo_address_geocoded), 1, 0)]
@@ -286,6 +286,16 @@ if (recode_hmis_addresses) {
   )]
   ads <- ads[, c("geo_add1_raw", "geo_add2_raw", "geo_add3_raw", "geo_city_raw", "geo_zip_raw", "geo_state_raw")]
   uped = submit_ads_for_cleaning(ads, con = db_hhsaw)
+  # Code to delay and wait for geocoder process to finish
+  while(is.na(check_status(uped$timestamp[1], con = db_hhsaw)$address_geocode) && iter < 10){
+    Sys.sleep(7 * 60)
+    print(paste('complete waiting period:', iter))
+    iter = iter + 1
+  }
+  if(iter == 10){
+    print(check_status(uped$timestamp[1], con = db_hhsaw))
+    stop('TIMEOUT. Make sure the geocoder is working')
+  }
   # wait a bit before continuing!
   a1 = fetch_addresses(
     ads,
@@ -295,7 +305,7 @@ if (recode_hmis_addresses) {
     deduplicate = T
   )
   hmis_cleaned <- cbind(hmis_ads, a1)
-  hmis_cleaned[, geocode_success := ifelse(!is.na(geo_address_geocoded), 1, 0)]
+  hmis_cleaned[, geocode_success := ifelse(geo_add_type_grade %in% c("A", "B", "C", "D"), 1, 0)]
   hmis_geocoded <- hmis_cleaned[, c(
     "Address",
     "geo_add1_raw",
